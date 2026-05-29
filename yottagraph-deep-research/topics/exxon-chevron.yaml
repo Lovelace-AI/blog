@@ -1,0 +1,10 @@
+slug: exxon-chevron
+archetype: competitive_financial_profile
+question: Which company has the stronger financial profile to sustain leadership through the energy transition?
+roles:
+  company_a: Exxon Mobil
+  company_b: Chevron
+market_theme: integrated energy leadership through the energy transition
+seed_entities:
+  - Exxon Mobil
+  - Chevron

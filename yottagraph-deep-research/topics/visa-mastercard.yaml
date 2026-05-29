@@ -1,0 +1,10 @@
+slug: visa-mastercard
+archetype: competitive_financial_profile
+question: Which company has the stronger financial profile to sustain leadership in global payments networks?
+roles:
+  company_a: Visa Inc.
+  company_b: Mastercard Incorporated
+market_theme: global payments network leadership
+seed_entities:
+  - Visa Inc.
+  - Mastercard Incorporated

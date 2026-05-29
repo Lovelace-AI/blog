@@ -1,0 +1,63 @@
+{
+  "datasource": "deep-research",
+  "agent": "deep-research-max-preview-04-2026",
+  "passed": true,
+  "iterations": 1,
+  "report_words": 5351,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=10.0): The report is an exceptional, decision-grade analysis that masterfully synthesizes complex regulatory settlements, specific segment-level financial recoveries, and quantified technological growth drivers with precise citation and zero material omissions. [financial_grounding=10, business_specificity=10, growth_specificity=10, risk_assessment=10, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 5351,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 66,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Business Model And Segments",
+          "Financial Profile",
+          "Growth Drivers",
+          "Risk Factors",
+          "Investment View"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "business_specificity": 10,
+          "growth_specificity": 10,
+          "risk_assessment": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 10.0,
+        "reason": "The report is an exceptional, decision-grade analysis that masterfully synthesizes complex regulatory settlements, specific segment-level financial recoveries, and quantified technological growth drivers with precise citation and zero material omissions.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 21434,
+          "output_tokens": 127,
+          "thought_tokens": 0,
+          "total_tokens": 21561
+        }
+      }
+    }
+  },
+  "total_input_tokens": 318389,
+  "total_output_tokens": 85154,
+  "total_elapsed_s": 809.4,
+  "rejudged_with_modified_judge": true,
+  "rejudge_model": "gemini-3-flash-preview",
+  "judge_scale": "1-10"
+}

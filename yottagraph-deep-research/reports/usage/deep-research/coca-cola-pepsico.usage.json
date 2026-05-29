@@ -1,0 +1,63 @@
+{
+  "datasource": "deep-research",
+  "agent": "deep-research-max-preview-04-2026",
+  "passed": true,
+  "iterations": 1,
+  "report_words": 4540,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.8): The report provides an exceptional, decision-grade comparison with precise 2025 fiscal data, effectively contrasting Coca-Cola's asset-light margin efficiency against PepsiCo's capital-intensive scale. [financial_grounding=10, company_a_specificity=10, company_b_specificity=10, risk_assessment=9, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 4540,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 105,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Company A Financial Profile",
+          "Company B Financial Profile",
+          "Head-to-Head Comparison",
+          "Risk Analysis",
+          "Valuation"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "company_a_specificity": 10,
+          "company_b_specificity": 10,
+          "risk_assessment": 9,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.83,
+        "reason": "The report provides an exceptional, decision-grade comparison with precise 2025 fiscal data, effectively contrasting Coca-Cola's asset-light margin efficiency against PepsiCo's capital-intensive scale.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 19563,
+          "output_tokens": 133,
+          "thought_tokens": 0,
+          "total_tokens": 19696
+        }
+      }
+    }
+  },
+  "total_input_tokens": 2198,
+  "total_output_tokens": 103416,
+  "total_elapsed_s": 955.4,
+  "rejudged_with_modified_judge": true,
+  "rejudge_model": "gemini-3-flash-preview",
+  "judge_scale": "1-10"
+}

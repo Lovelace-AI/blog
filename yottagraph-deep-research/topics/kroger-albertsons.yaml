@@ -1,0 +1,9 @@
+slug: kroger-albertsons
+archetype: strategic_alternatives
+question: Should Albertsons be valued as a standalone grocery operator or as a strategic acquisition candidate for Kroger?
+roles:
+  target: Albertsons
+  buyer: Kroger
+seed_entities:
+  - Albertsons
+  - Kroger

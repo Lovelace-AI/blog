@@ -1,0 +1,135 @@
+{
+  "datasource": "structured-retrieval",
+  "model": "gemini-3.1-flash-lite-preview",
+  "passed": true,
+  "total_plan_calls": 14,
+  "items_retrieved": 1476,
+  "items_in_context": 288,
+  "unique_sources": 20,
+  "report_words": 3265,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.8): The report provides an exceptionally detailed and data-driven analysis, utilizing specific 2026 fiscal data and legal context to build a coherent case, though it could slightly strengthen the buyer logic by quantifying specific synergy targets. [financial_grounding=10, target_specificity=10, buyer_logic=9, deal_feasibility=10, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3265,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 90,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Target Standalone Case",
+          "Strategic Buyer Case",
+          "Deal Feasibility",
+          "Valuation",
+          "Alternative Paths"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "target_specificity": 10,
+          "buyer_logic": 9,
+          "deal_feasibility": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.83,
+        "reason": "The report provides an exceptionally detailed and data-driven analysis, utilizing specific 2026 fiscal data and legal context to build a coherent case, though it could slightly strengthen the buyer logic by quantifying specific synergy targets.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 9361,
+          "output_tokens": 132,
+          "thought_tokens": 0,
+          "total_tokens": 9493
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 316.4,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 32075,
+  "total_synthesis_elapsed_s": 29.7,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 85261,
+      "output_tokens": 21058,
+      "thought_tokens": 1542,
+      "total_tokens": 107861
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4064,
+        "output_tokens": 694,
+        "thought_tokens": 0,
+        "total_tokens": 4758
+      },
+      "curator": {
+        "input_tokens": 39761,
+        "output_tokens": 12534,
+        "thought_tokens": 0,
+        "total_tokens": 52295
+      },
+      "synthesis": {
+        "input_tokens": 32075,
+        "output_tokens": 7698,
+        "thought_tokens": 1542,
+        "total_tokens": 41315
+      },
+      "judge": {
+        "input_tokens": 9361,
+        "output_tokens": 132,
+        "thought_tokens": 0,
+        "total_tokens": 9493
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 4064,
+        "output_tokens": 694,
+        "thought_tokens": 0,
+        "total_tokens": 4758
+      },
+      {
+        "phase": "curator",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 39761,
+        "output_tokens": 12534,
+        "thought_tokens": 0,
+        "total_tokens": 52295,
+        "elapsed_s": 69.7
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 32075,
+        "output_tokens": 7698,
+        "thought_tokens": 1542,
+        "total_tokens": 41315,
+        "elapsed_s": 29.7
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 9361,
+        "output_tokens": 132,
+        "thought_tokens": 0,
+        "total_tokens": 9493
+      }
+    ]
+  }
+}

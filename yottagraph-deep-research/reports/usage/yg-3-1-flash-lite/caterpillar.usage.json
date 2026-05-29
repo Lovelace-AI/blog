@@ -1,0 +1,135 @@
+{
+  "datasource": "structured-retrieval",
+  "model": "gemini-3.1-flash-lite-preview",
+  "passed": true,
+  "total_plan_calls": 10,
+  "items_retrieved": 1181,
+  "items_in_context": 216,
+  "unique_sources": 15,
+  "report_words": 3246,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.8): The report is exceptionally well-grounded in specific financial data and strategic targets, providing a clear and quantified bridge between Caterpillar's traditional hardware business and its technology-driven service evolution. [financial_grounding=10, business_specificity=10, growth_specificity=10, risk_assessment=9, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3246,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 121,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Business Model And Segments",
+          "Financial Profile",
+          "Growth Drivers",
+          "Risk Factors",
+          "Investment View"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "business_specificity": 10,
+          "growth_specificity": 10,
+          "risk_assessment": 9,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.83,
+        "reason": "The report is exceptionally well-grounded in specific financial data and strategic targets, providing a clear and quantified bridge between Caterpillar's traditional hardware business and its technology-driven service evolution.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 9638,
+          "output_tokens": 124,
+          "thought_tokens": 0,
+          "total_tokens": 9762
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 220.1,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 30057,
+  "total_synthesis_elapsed_s": 36.7,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 72829,
+      "output_tokens": 19904,
+      "thought_tokens": 1783,
+      "total_tokens": 94516
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4040,
+        "output_tokens": 569,
+        "thought_tokens": 0,
+        "total_tokens": 4609
+      },
+      "curator": {
+        "input_tokens": 29094,
+        "output_tokens": 11228,
+        "thought_tokens": 0,
+        "total_tokens": 40322
+      },
+      "synthesis": {
+        "input_tokens": 30057,
+        "output_tokens": 7983,
+        "thought_tokens": 1783,
+        "total_tokens": 39823
+      },
+      "judge": {
+        "input_tokens": 9638,
+        "output_tokens": 124,
+        "thought_tokens": 0,
+        "total_tokens": 9762
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 4040,
+        "output_tokens": 569,
+        "thought_tokens": 0,
+        "total_tokens": 4609
+      },
+      {
+        "phase": "curator",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 29094,
+        "output_tokens": 11228,
+        "thought_tokens": 0,
+        "total_tokens": 40322,
+        "elapsed_s": 32.6
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 30057,
+        "output_tokens": 7983,
+        "thought_tokens": 1783,
+        "total_tokens": 39823,
+        "elapsed_s": 36.7
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 9638,
+        "output_tokens": 124,
+        "thought_tokens": 0,
+        "total_tokens": 9762
+      }
+    ]
+  }
+}

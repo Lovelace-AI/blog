@@ -1,0 +1,9 @@
+slug: cvs-cigna
+archetype: strategic_alternatives
+question: Should CVS Health be valued as a standalone healthcare platform or as a strategic acquisition candidate for Cigna?
+roles:
+  target: CVS Health
+  buyer: Cigna
+seed_entities:
+  - CVS Health
+  - Cigna

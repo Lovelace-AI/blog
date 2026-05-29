@@ -1,0 +1,64 @@
+{
+  "datasource": "no-context",
+  "model": "gemini-3-flash-preview",
+  "passed": false,
+  "report_words": 3476,
+  "verdict": {
+    "passed": false,
+    "reason": "LLM scorecard failed (mean=7.3, threshold=0.0): While the report provides excellent quantitative detail and sophisticated comparative analysis for both companies, it fails the citation requirement entirely by using '[UNCITED]' placeholders for every material claim. [financial_grounding=8, company_a_specificity=9, company_b_specificity=9, risk_assessment=8, analytical_coherence=9, citation_coverage=1]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3476,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 0,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Company A Financial Profile",
+          "Company B Financial Profile",
+          "Head-to-Head Comparison",
+          "Risk Analysis",
+          "Valuation"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": false,
+        "scores": {
+          "financial_grounding": 8,
+          "company_a_specificity": 9,
+          "company_b_specificity": 9,
+          "risk_assessment": 8,
+          "analytical_coherence": 9,
+          "citation_coverage": 1
+        },
+        "mean_score": 7.33,
+        "reason": "While the report provides excellent quantitative detail and sophisticated comparative analysis for both companies, it fails the citation requirement entirely by using '[UNCITED]' placeholders for every material claim.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 6988,
+          "output_tokens": 119,
+          "thought_tokens": 0,
+          "total_tokens": 7107
+        }
+      }
+    }
+  },
+  "elapsed_s": 47.7,
+  "usage": {
+    "input_tokens": 608,
+    "output_tokens": 5326,
+    "thought_tokens": 1840,
+    "total_tokens": 7774
+  },
+  "total_elapsed_s": 59.6
+}

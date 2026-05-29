@@ -1,0 +1,63 @@
+{
+  "datasource": "deep-research",
+  "agent": "deep-research-max-preview-04-2026",
+  "passed": true,
+  "iterations": 1,
+  "report_words": 5595,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.5): The report provides an exceptionally detailed and quantified analysis of Marvell's technological moat and the regulatory 'poison pills' that make a Broadcom acquisition impossible, though it occasionally relies on future-dated speculative events (e.g., 2026 investments) as established facts. [financial_grounding=9, target_specificity=10, buyer_logic=9, deal_feasibility=10, analytical_coherence=10, citation_coverage=9]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 5595,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 77,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Target Standalone Case",
+          "Strategic Buyer Case",
+          "Deal Feasibility",
+          "Valuation",
+          "Alternative Paths"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 9,
+          "target_specificity": 10,
+          "buyer_logic": 9,
+          "deal_feasibility": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 9
+        },
+        "mean_score": 9.5,
+        "reason": "The report provides an exceptionally detailed and quantified analysis of Marvell's technological moat and the regulatory 'poison pills' that make a Broadcom acquisition impossible, though it occasionally relies on future-dated speculative events (e.g., 2026 investments) as established facts.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 23768,
+          "output_tokens": 143,
+          "thought_tokens": 0,
+          "total_tokens": 23911
+        }
+      }
+    }
+  },
+  "total_input_tokens": 100469,
+  "total_output_tokens": 70689,
+  "total_elapsed_s": 862.2,
+  "rejudged_with_modified_judge": true,
+  "rejudge_model": "gemini-3-flash-preview",
+  "judge_scale": "1-10"
+}

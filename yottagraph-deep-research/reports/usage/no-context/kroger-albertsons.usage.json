@@ -1,0 +1,64 @@
+{
+  "datasource": "no-context",
+  "model": "gemini-3-flash-preview",
+  "passed": false,
+  "report_words": 4156,
+  "verdict": {
+    "passed": false,
+    "reason": "LLM scorecard failed (mean=6.8, threshold=0.0): The report provides a high-quality strategic and financial analysis with specific figures and deal terms, but it fails the evaluation due to a total lack of citations for its material claims. [financial_grounding=7, target_specificity=8, buyer_logic=8, deal_feasibility=8, analytical_coherence=9, citation_coverage=1]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 4156,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 0,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Target Standalone Case",
+          "Strategic Buyer Case",
+          "Deal Feasibility",
+          "Valuation",
+          "Alternative Paths"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": false,
+        "scores": {
+          "financial_grounding": 7,
+          "target_specificity": 8,
+          "buyer_logic": 8,
+          "deal_feasibility": 8,
+          "analytical_coherence": 9,
+          "citation_coverage": 1
+        },
+        "mean_score": 6.83,
+        "reason": "The report provides a high-quality strategic and financial analysis with specific figures and deal terms, but it fails the evaluation due to a total lack of citations for its material claims.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 8009,
+          "output_tokens": 118,
+          "thought_tokens": 0,
+          "total_tokens": 8127
+        }
+      }
+    }
+  },
+  "elapsed_s": 65.2,
+  "usage": {
+    "input_tokens": 590,
+    "output_tokens": 6346,
+    "thought_tokens": 1457,
+    "total_tokens": 8393
+  },
+  "total_elapsed_s": 199.5
+}

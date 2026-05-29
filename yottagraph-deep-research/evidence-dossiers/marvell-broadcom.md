@@ -1,0 +1,583 @@
+## Non-SEC Evidence Dossier
+## Situation Overview
+Why this evidence matters: This section establishes the competitive landscape, the core product focus of both companies, and the recent market momentum driving the valuation debate.
+
+- [1]: Marvell Technology|produces|Data Infrastructure
+- [2]: Marvell Technology|produces|Network Solutions
+- [3]: Broadcom Inc.|produces|Artificial Intelligence-Powere
+- [4]: Broadcom Inc.|produces|custom AI and networking produ
+- [5]: Broadcom Inc.|produces|networking and infrastructure
+- [6]: Marvell Technology|competes_with|NVIDIA Corporation
+- [7]: Marvell Technology|competes_with|Cisco Systems, Inc.
+- [8]: Marvell Technology|partnered_with|Big Tech Companies
+- [9]: Broadcom Inc.|competes_with|Network Management Software Ma
+- [10]: Marvell Technology Recent Events 2026-03-06 Record Q4 FY2026 Earnings Report and Stock Jump description: Marvell Technology announced a record Q4 FY2026 earnings report with $2.22 billion in revenue, which led to its stock (MRVL) jumping nearly 15% in early trading.
+- [11]: Marvell Technology Inc. Earnings Report description: Marvell Technology Inc. reported strong earnings for the full fiscal year ending January 31, 2026, with a $2.67 billion net income (reversing an $885 million net loss in fiscal 2025) and a 42% jump in net revenues to $8.2 billion. Q4 net in…
+- [12]: Marvell Technology Inc. (MRVL) as one of the top 5 stocks to buy in February, citing its growth trajectory as an AI company despite recent market volatility and pullbacks.
+- [13]: Marvell Technology's accelerating data center revenue (21% growth) is a catalyst that could lead to approximately 50% potential upside in 2026 if AI demand continues.
+- [14]: AI stocks, including Broadcom, Nvidia, and Micron Technology, fell due to concerns over OpenAI's massive spending on data centers and missed user/revenue targets, as reported by the Wall Street Journal.
+- [15]: Nvidia, Broadcom, TSMC, Micron, and Seagate have been standout performers in recent sessions within the Nasdaq, reflecting ongoing capital spending on data centers and AI training infrastructure.
+- [16]: Market Commentary on SOXQ Performance and AI Spending description: The article provides commentary on the strong performance of the Invesco PHLX Semiconductor ETF (SOXQ), which surged 64% over the past year and gained 15% year-to-date in 2026.
+- [17]: Tech Sector Leads Early 2026 Trading description: On the first trading day of 2026, technology stocks, including the Magnificent Seven, Nvidia, Alphabet, Broadcom, Palantir, and Oracle, led the market higher, indicating a continuation of the AI-reliant market trend from the previous year.
+- [18]: AI Infrastructure Boom Drives Chip Company Revenue Growth description: Chipmakers Nvidia, AMD, and Broadcom have emerged as major beneficiaries of the spending wave on AI infrastructure, leading to sharply climbing valuations.
+- [19]: 2026 IT-Semiconductor Ecosystem Integration Forecast description: Alan Goldberg forecasts that the structural integration of IT with the semiconductor ecosystem, exemplified by companies like NVIDIA, ASML, Broadcom, and TSMC, will reinforce value concentration and potential for targeted outperformance in …
+
+## Target Standalone Case
+Why this evidence matters: This section highlights Marvell's specific technological advantages in AI infrastructure, custom silicon, and high-speed interconnects that support its standalone growth narrative.
+
+- [20]: Marvell Technology|produces|ASIC design
+- [21]: Marvell Technology|produces|data center switching solution
+- [22]: Marvell Technology|produces|full optics platform
+- [23]: Marvell Technology|produces|custom CXL expanders
+- [24]: Marvell Technology|produces|Trainium 4
+- [25]: Marvell Technology|produces|ASIC projects
+- [26]: Marvell Technology|produces|IPoDWDM ZR/ZR+ optical pluggab
+- [27]: Marvell Technology|trades_with|Amazon Web Services, Inc.
+- [28]: Marvell Technology|partnered_with|Microsoft Corporation
+- [29]: Wells Fargo Projects Marvell Technology's Trainium-only Revenue description: Wells Fargo projects Marvell Technology's Trainium-only revenue could reach $5.5 billion to $6 billion plus per annum, based on Trainium deployment at approximately $3 billion per gigawatt.
+- [30]: Marvell Technology's custom application-specific integrated circuit (ASIC) design wins began converting to volume production, leading to increased revenue and a significant stock surge.
+- [31]: Marvell Technology, Inc. announced the launch of the industry's first Secure 1.6T ZR and ZR+ DCI modules, powered by its new 2-nanometer Coherent DSP.
+- [32]: Marvell Technology, Inc. expanded its ZR/ZR+ and coherent DSP product lineup by introducing the COLORZ 1600 (the first 1.6T ZR/ZR+ pluggable featuring Electra 2nm coherent DSP) and the Libra 2nm coherent DSP powering the new COLORZ 800 plug…
+- [33]: Marvell Technology is reportedly in discussions with Google to develop two new application-specific integrated circuits (ASICs), including a memory processing unit (XPU attached) and a new tensor processing unit built for inference.
+- [34]: Jim Cramer's Bullish Commentary on Marvell Technology, Inc. (Trainium) description: On February 6, 2026, Jim Cramer expressed bullish sentiment for Marvell Technology, Inc., highlighting its partnership with Amazon for the Trainium chip and praising CEO Matt Murphy's work.
+- [35]: Marvell Technology introduced the Structera S 60260, a 260-lane PCIe 6.0 switch designed for AI data centers, offering double the lane density of its competitors.
+- [36]: Marvell Technology launched new 3.2T optical modules, which, along with 1.6T modules, enable faster data transfer in data centers and solidify its leadership in high-speed interconnects.
+- [37]: TrendForce forecasts that ASIC shipments are expected to grow by 45% in 2026, which is significantly higher than the estimated 16% increase for GPU shipments, placing Marvell Technology in a strong market position.
+
+## Strategic Buyer Case
+Why this evidence matters: This section explores Broadcom's strategic focus on AI accelerators and networking, providing the rationale for why they might view Marvell as a complementary asset.
+
+- [38]: Broadcom Inc.|produces|high-radix Ethernet switches
+- [39]: Broadcom Inc.|produces|Optical Transceivers Market
+- [4]: Broadcom Inc.|produces|custom AI and networking produ
+- [40]: Broadcom Inc.|produces|Broadcom Ethernet networking
+- [41]: Broadcom Inc.|produces|networking and broadband acces
+- [42]: Broadcom Inc.|produces|Mixed Signal System-on-Chip (M
+- [43]: Accelerated Deployment of Broadcom's Custom Chips by Customers description: Broadcom's six AI customers, including Alphabet, Meta Platforms, Anthropic, and OpenAI, are expected to significantly accelerate the deployment of Broadcom's custom chips in 2027.
+- [44]: Bank of America projects that Taiwan Semiconductor Manufacturing Company (TSMC) will see significant revenue growth in 2026, with Broadcom's TPU business requiring 150,000 advanced front-end capacity support and contributing $4.5 billion in…
+- [45]: Broadcom is translating its roadmap into real-world deployment with Tomahawk 6, addressing industry needs for large-scale, low-latency fabrics.
+- [46]: Broadcom publicly refuted concerns that its custom chip business would have lower gross margins, stating that its AI hardware margins would remain unchanged as the business scales.
+- [47]: Broadcom's custom artificial intelligence (AI) accelerator chips are gaining significant popularity and are predicted to challenge Nvidia for dominance in AI computing during 2026.
+- [48]: Broadcom is undergoing a significant business shift, focusing its efforts on building out its custom AI accelerator chip business, moving away from its diverse product lines.
+
+## Deal Feasibility
+Why this evidence matters: This section examines the regulatory and financial context of potential M&A, including Broadcom's history of large-scale acquisitions and the competitive environment.
+
+- [49]: Broadcom Inc. unveiled VMware Telco Cloud Platform 9 (TCP 9) at Mobile World Congress in Barcelona. This is the next version of the company’s private cloud platform for telecom data centers.
+- [50]: Fidelity Investments and Broadcom Inc. reached an agreement to resolve a legal dispute, with Broadcom agreeing to continue supplying software and services to a Fidelity subsidiary.
+- [51]: acquisition_payments: 25.4b
+- [52]: acquisition_payments: 10.9b
+- [53]: acquisition_payments: 3.58b
+- [54]: acquisition_payments: 10.9b
+- [55]: acquisition_payments: 3.55b
+- [56]: acquisition_payments: 16b
+- [57]: acquisition_payments: 16b
+- [58]: acquisition_payments: 4.8b
+- [59]: acquisition_payments: 26b
+- [60]: acquisition_payments: 10.1b
+- [61]: acquisition_payments: 10.1b
+
+## Valuation
+Why this evidence matters: This section provides the current market pricing for Marvell and Broadcom, analyst sentiment, and growth projections that inform valuation multiples.
+
+- [62]: Rosenblatt Securities lifted its price target on Marvell Technology from $115.00 to $140.00 and gave the company a “buy” rating.
+- [63]: 20 analysts have revised their earnings forecasts upwards for Marvell Technology for the upcoming period, with a consensus forecasting $3.85 in EPS for fiscal 2027.
+- [64]: Several institutional investors, including Ellsworth Advisors LLC, Taylor Frigon Capital Management LLC, Waterfront Wealth Inc., BOCHK Asset Management Ltd, and Westbourne Investments Inc., either purchased new positions or increased their …
+- [65]: Sandeep Bharathi, President of the Data Center Group at Marvell Technology, sold 66,892 shares of common stock for approximately $8.7 million at a weighted average price of $130.35.
+- [66]: Barclays upgraded Marvell Technology's stock (MRVL) to 'Overweight' and raised its price target to $150, citing strong optical/networking demand through 2027.
+- [67]: Citi analyst Atif Malik raised his price target on Broadcom from $475 to $500 and maintained a Buy rating, designating it as the firm's top semiconductor pick for 2026.
+- [68]: JPMorgan raised its price target for Broadcom Inc. (NASDAQ:AVGO) to $500 from $475 and maintained an “Overweight” rating.
+- [69]: MRVL 2026-05-29T13:30:00Z|close_price=200.8499
+- [70]: MRVL 2026-05-29T13:15:00Z|close_price=202.99
+- [71]: MRVL 2026-05-29T12:30:00Z|close_price=202.4
+- [72]: MRVL 2026-05-29T12:15:00Z|close_price=201.62
+- [73]: MRVL 2026-05-29T12:00:00Z|close_price=202.0349
+- [74]: MRVL 2026-05-29T11:45:00Z|close_price=202.75
+- [75]: MRVL 2026-05-29T11:30:00Z|close_price=202.9703
+- [76]: MRVL 2026-05-29T10:45:00Z|close_price=202.51
+- [77]: MRVL 2026-05-29T10:30:00Z|close_price=202.05
+- [78]: MRVL 2026-05-29T10:00:00Z|close_price=200.6875
+- [79]: MRVL 2026-05-29T09:15:00Z|close_price=202.75
+- [80]: MRVL 2026-05-29T08:00:00Z|close_price=204.25
+
+## Alternative Paths
+Why this evidence matters: This section identifies other potential competitive dynamics, including partnerships and market shifts that could provide alternatives to a Broadcom acquisition.
+
+- [81]: Marvell Technology|competes_with|MACOM Technology Solutions Hol
+- [82]: Marvell Technology|competes_with|Corning Incorporated
+- [83]: Marvell Technology|competes_with|Silicon Motion Technology Corp
+- [84]: Marvell Technology|competes_with|Astera Labs, Inc.
+- [85]: Marvell Technology|competes_with|Advanced Micro Devices, Inc.
+- [86]: Marvell Technology|competes_with|Microchip Technology Incorpora
+- [87]: Marvell Technology|competes_with|Arm Holdings, Inc.
+- [88]: Marvell Technology|competes_with|Sono-Tek Corporation
+- [89]: Marvell Technology|competes_with|NXP Semiconductors N.V.
+- [90]: Marvell Technology|competes_with|Samsung Electronics Co., Ltd.
+- [91]: Marvell Technology|competes_with|ASIX Electronics Corp.
+- [92]: Marvell Technology|partnered_with|Inorganic Intelligence, Inc.
+- [93]: Marvell Technology|partnered_with|Advanced Micro Devices, Inc.
+- [94]: Marvell Technology|partnered_with|Micron Technology, Inc.
+- [95]: Marvell Technology|partnered_with|Alchip Technologies, Limited
+- [96]: Marvell Technology|partnered_with|POET Technologies Inc.
+- [97]: Marvell Technology|customer_of|Micron Technology, Inc.
+- [98]: Marvell Technology|customer_of|POET Technologies Inc.
+- [99]: Broadcom Inc.|competes_with|Microchip Technology Incorpora
+- [100]: Broadcom Inc.|competes_with|International Business Machine
+- [101]: Broadcom Inc.|competes_with|Taiwan Semiconductor Manufactu
+- [102]: Broadcom Inc.|competes_with|Optical Transceiver For 5g Mar
+- [103]: Broadcom Inc.|partnered_with|Samsung Electronics Co., Ltd.
+- [104]: Broadcom Inc.|INDUSTRY_PEER|Astera Labs, Inc.
+- [105]: Broadcom Inc.|INDUSTRY_PEER|Inphi Corporation
+- [106]: Astera Labs, Marvell Technology, and Credo Technology, identified as Amazon suppliers, saw their stock prices climb following news of Amazon's investment in Anthropic.
+- [107]: Mojo Vision, a Saratoga-based company developing micro-LED display technology, received $17.5 million in new funding.
+
+## SEC Evidence Dossier
+## Situation Overview
+Why this evidence matters: This section establishes the current financial scale and operational footprint of both entities to frame the potential for a standalone growth trajectory versus a strategic acquisition.
+
+- [108]: Marvell Technology Holdings, Inc. | Annual Reports: total_revenue: 8.19b
+- [109]: Marvell Technology Holdings, Inc. | Annual Reports: net_income: 2.67b
+- [110]: Marvell Technology Holdings, Inc. | Annual Reports: total_assets: 22.3b
+- [111]: Marvell Technology Holdings, Inc. | Annual Reports: total_liabilities: 7.98b
+- [112]: Marvell Technology Holdings, Inc. | Annual Reports: shares_outstanding: 847m
+- [113]: Marvell Technology Holdings, Inc. | Annual Reports: research_and_development: 2.08b
+- [114]: Broadcom Inc. | Quarterly Reports: total_revenue: 14.1b
+- [115]: Broadcom Inc. | Quarterly Reports: net_income: 8.2b
+- [116]: Broadcom Inc. | Quarterly Reports: total_assets: 170b
+- [117]: Broadcom Inc. | Quarterly Reports: total_liabilities: 90b
+- [118]: Broadcom Inc. | Annual Reports: total_revenue: 44.8b
+- [119]: Broadcom Inc. | Annual Reports: net_income: 22.7b
+- [120]: Broadcom Inc. | Annual Reports: total_assets: 171b
+- [121]: Broadcom Inc. | Annual Reports: total_liabilities: 89.8b
+- [122]: Broadcom Inc. | Annual Reports: total_debt: 67.1b
+- [123]: Broadcom Inc. | Annual Reports: research_and_development: 11b
+
+## Target Standalone Case
+Why this evidence matters: This section highlights Marvell's R&D investment and cash flow generation, which are critical indicators of its ability to sustain independent growth as an AI infrastructure compounder.
+
+- [109]: Marvell Technology Holdings, Inc. | Annual Reports: net_income: 2.67b
+- [124]: Marvell Technology Holdings, Inc. | Annual Reports: gross_profit: 4.18b
+- [125]: Marvell Technology Holdings, Inc. | Annual Reports: operating_cash_flow: 1.75b
+- [113]: Marvell Technology Holdings, Inc. | Annual Reports: research_and_development: 2.08b
+- [126]: Marvell Technology Holdings, Inc. | Quarterly Reports: operating_cash_flow: 1.38b
+- [127]: Marvell Technology Holdings, Inc. | Quarterly Reports: operating_cash_flow: 794m
+- [128]: Marvell Technology Holdings, Inc. | Annual Reports: operating_cash_flow: 1.68b
+- [129]: Marvell Technology Holdings, Inc. | Annual Reports: research_and_development: 1.95b
+- [130]: Marvell Technology Holdings, Inc. | Annual Reports: operating_cash_flow: 1.37b
+- [131]: Marvell Technology Holdings, Inc. | Annual Reports: research_and_development: 1.9b
+- [132]: Marvell Technology Holdings, Inc. | Annual Reports: operating_cash_flow: 1.29b
+- [133]: Marvell Technology Holdings, Inc. | Annual Reports: research_and_development: 1.78b
+
+## Strategic Buyer Case
+Why this evidence matters: This section examines Broadcom's massive scale, high operating cash flow, and R&D capacity, which demonstrate its capability to absorb and integrate a company of Marvell's size.
+
+- [114]: Broadcom Inc. | Quarterly Reports: total_revenue: 14.1b
+- [134]: Broadcom Inc. | Quarterly Reports: operating_cash_flow: 8.26b
+- [118]: Broadcom Inc. | Annual Reports: total_revenue: 44.8b
+- [135]: Broadcom Inc. | Annual Reports: operating_cash_flow: 27.5b
+- [123]: Broadcom Inc. | Annual Reports: research_and_development: 11b
+- [136]: Broadcom Inc. | Quarterly Reports: operating_cash_flow: 19.8b
+- [137]: Broadcom Inc. | Quarterly Reports: operating_cash_flow: 12.7b
+- [138]: Broadcom Inc. | Annual Reports: total_revenue: 30.4b
+- [139]: Broadcom Inc. | Annual Reports: operating_cash_flow: 20b
+- [140]: Broadcom Inc. | Annual Reports: research_and_development: 9.31b
+- [141]: Broadcom Inc. | Quarterly Reports: operating_cash_flow: 14.4b
+- [142]: Broadcom Inc. | Quarterly Reports: operating_cash_flow: 9.39b
+
+## Deal Feasibility
+Why this evidence matters: This section compares the liquidity and debt profiles of both companies to assess the financial viability of a potential acquisition.
+
+- [143]: Marvell Technology Holdings, Inc. | Annual Reports: cash_and_cash_equivalents: 2.64b
+- [144]: Broadcom Inc. | Quarterly Reports: cash_and_cash_equivalents: 14.2b
+- [122]: Broadcom Inc. | Annual Reports: total_debt: 67.1b
+- [145]: Broadcom Inc. | Annual Reports: cash_and_cash_equivalents: 16.2b
+- [146]: Broadcom Inc. | Quarterly Reports: cash_and_cash_equivalents: 10.7b
+- [147]: Broadcom Inc. | Quarterly Reports: cash_and_cash_equivalents: 9.47b
+- [148]: Broadcom Inc. | Quarterly Reports: cash_and_cash_equivalents: 9.31b
+- [149]: Broadcom Inc. | Annual Reports: cash_and_cash_equivalents: 9.35b
+- [150]: Broadcom Inc. | Quarterly Reports: cash_and_cash_equivalents: 9.95b
+- [151]: Broadcom Inc. | Quarterly Reports: cash_and_cash_equivalents: 9.81b
+- [152]: Broadcom Inc. | Quarterly Reports: cash_and_cash_equivalents: 11.9b
+- [153]: Broadcom Inc. | Annual Reports: total_debt: 41.5b
+
+## Valuation
+Why this evidence matters: This section provides the earnings and equity data necessary to calculate valuation multiples for both companies.
+
+- [109]: Marvell Technology Holdings, Inc. | Annual Reports: net_income: 2.67b
+- [154]: Marvell Technology Holdings, Inc. | Annual Reports: shareholders_equity: 14.3b
+- [112]: Marvell Technology Holdings, Inc. | Annual Reports: shares_outstanding: 847m
+- [155]: Marvell Technology Holdings, Inc. | Annual Reports: eps_diluted_xbrl: 3.07
+- [115]: Broadcom Inc. | Quarterly Reports: net_income: 8.2b
+- [156]: Broadcom Inc. | Quarterly Reports: eps_diluted_xbrl: 1.5
+- [119]: Broadcom Inc. | Annual Reports: net_income: 22.7b
+- [157]: Broadcom Inc. | Annual Reports: shares_outstanding: 4.69b
+- [158]: Broadcom Inc. | Annual Reports: eps_diluted_xbrl: 4.77
+- [159]: Broadcom Inc. | Annual Reports: net_income: 5.89b
+- [160]: Broadcom Inc. | Annual Reports: shares_outstanding: 4.69b
+- [161]: Broadcom Inc. | Annual Reports: eps_diluted_xbrl: 1.23
+
+## Alternative Paths
+Why this evidence matters: This section considers the volatility in Marvell's historical earnings, which suggests that alternative paths (such as organic restructuring or partnerships) might be necessary if the standalone or acquisition cases face headwinds.
+
+- [162]: Marvell Technology Holdings, Inc. | Annual Reports: net_income: -885m
+- [163]: Marvell Technology Holdings, Inc. | Annual Reports: net_income_loss: -885m
+- [164]: Marvell Technology Holdings, Inc. | Annual Reports: eps_diluted_xbrl: -1.02
+- [165]: Marvell Technology Holdings, Inc. | Annual Reports: net_income: -933m
+- [166]: Marvell Technology Holdings, Inc. | Annual Reports: net_income_loss: -933m
+- [167]: Marvell Technology Holdings, Inc. | Annual Reports: eps_diluted_xbrl: -1.08
+- [168]: Marvell Technology Holdings, Inc. | Quarterly Reports: net_income: -676m
+- [169]: Marvell Technology Holdings, Inc. | Quarterly Reports: net_income_loss: -676m
+- [170]: Marvell Technology Holdings, Inc. | Quarterly Reports: eps_diluted_xbrl: -0.78
+- [171]: Marvell Technology Holdings, Inc. | Quarterly Reports: net_income: -193m
+- [172]: Marvell Technology Holdings, Inc. | Quarterly Reports: net_income_loss: -193m
+- [173]: Marvell Technology Holdings, Inc. | Quarterly Reports: eps_diluted_xbrl: -0.22
+
+## Bibliography
+- [1] Structured evidence record
+  - Fact: `Marvell Technology product evidence: Data Infrastructure`
+- [2] Structured evidence record
+  - Fact: `Marvell Technology product evidence: Network Solutions`
+- [3] Structured evidence record
+  - Fact: `Broadcom product evidence: Artificial Intelligence-Powere`
+- [4] Structured evidence record
+  - Fact: `Broadcom product evidence: custom AI and networking produ`
+- [5] Structured evidence record
+  - Fact: `Broadcom product evidence: networking and infrastructure`
+- [6] Structured evidence record
+  - Fact: `Marvell Technology competitor evidence: NVIDIA Corporation`
+- [7] Structured evidence record
+  - Fact: `Marvell Technology competitor evidence: Cisco Systems, Inc.`
+- [8] Structured evidence record
+  - Fact: `Marvell Technology partnership evidence: Big Tech Companies`
+- [9] Structured evidence record
+  - Fact: `Broadcom competitor evidence: Network Management Software Ma`
+- [10] [Record Q4 FY2026 Earnings Report and Stock Jump](https://news.investingcube.com/shares/gap-up-then-what-marvell-technologies-stocks-15-uptick-and-ai-blind-spot/) - News (2026-03-06T16:40:46Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026-03-06 Record Q4 FY2026 Earnings Report and Stock Jump description: Marvell Technology announced a record Q4 FY2026 earnings report with $2.22 billion in revenue, which led to its stock (MRVL) jumping nearly 15% in early trading.`
+- [11] [Marvell Technology Inc. Earnings Report](https://www.insidermonkey.com/blog/5-stocks-to-watch-right-now-1711098/) - News (2026-03-07T01:28:27Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026-01-31 Marvell Technology Inc. Earnings Report description: Marvell Technology Inc. reported strong earnings for the full fiscal year ending January 31, 2026, with a $2.67 billion net income (reversing an $885 million net loss in fiscal 2025) and a 42% jump in net revenues to $8.2 billion. Q4 net in…`
+- [12] [Recommendation for Marvell Technology Stock](https://www.fool.com/investing/2026/02/15/5-best-stocks-to-buy-in-february/) - News (2026-02-15T13:56:00Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026-01-31 Recommendation for Marvell Technology Stock description: An unnamed analyst or content creator recommends Marvell Technology (MRVL) as one of the top 5 stocks to buy in February, citing its growth trajectory as an AI company despite recent market volatility and pullbacks.`
+- [13] [Market Commentary on Data Center Revenue Growth](https://www.tickerreport.com/banking-finance/13394218/marvell-technology-nasdaqmrvl-insider-sandeep-bharathi-sells-44414-shares.html) - News (2026-03-29T08:04:47Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026 Market Commentary on Data Center Revenue Growth description: The Motley Fool published commentary suggesting Marvell Technology's accelerating data center revenue (21% growth) is a catalyst that could lead to approximately 50% potential upside in 2026 if AI demand continues.`
+- [14] [Decline in AI Stocks due to OpenAI Concerns](https://us.headtopics.com/news/wall-street-retreats-as-ai-stocks-fall-and-oil-prices-rise-82792474) - News (2026-04-28T22:06:46Z; Event Description)
+  - Fact: `Broadcom Recent Events 2026-04-29 AI Capex-Sensitive Stocks Fall Due to OpenAI Growth Concerns description: AI stocks, including Broadcom, Nvidia, and Micron Technology, fell due to concerns over OpenAI's massive spending on data centers and missed user/revenue targets, as reported by the Wall Street Journal.`
+- [15] [AI-related Tech Stocks Lead Nasdaq Gains](https://www.ibtimes.com.au/nasdaq-composite-surges-14-23507-tech-rally-powers-past-iran-war-jitters-1866563) - News (2026-04-14T15:30:33Z; Event Description)
+  - Fact: `Broadcom Recent Events 2026-04 AI-related Tech Stocks Lead Nasdaq Gains description: Nvidia, Broadcom, TSMC, Micron, and Seagate have been standout performers in recent sessions within the Nasdaq, reflecting ongoing capital spending on data centers and AI training infrastructure.`
+- [16] [Market Commentary on SOXQ Performance and AI Spending](https://247wallst.com/investing/2026/02/12/soxq-holds-1-billion-in-ai-chip-stocks-as-hyperscaler-capex-dictates-what-happen-next/) - News (2026-02-12T13:41:28Z; Event Description)
+  - Fact: `Broadcom Recent Events 2026-02-09 Market Commentary on SOXQ Performance and AI Spending description: The article provides commentary on the strong performance of the Invesco PHLX Semiconductor ETF (SOXQ), which surged 64% over the past year and gained 15% year-to-date in 2026. This performance is attributed to investor confidence in AI inf…`
+- [17] [Tech Sector Leads Early 2026 Trading](https://www.cnbc.com/2026/01/02/meet-the-2026-stock-market-its-the-same-ai-reliant-market-of-2025.html) - News (2026-01-02T13:43:40Z; Event Description)
+  - Fact: `Broadcom Recent Events 2026-01 Tech Sector Leads Early 2026 Trading description: On the first trading day of 2026, technology stocks, including the Magnificent Seven, Nvidia, Alphabet, Broadcom, Palantir, and Oracle, led the market higher, indicating a continuation of the AI-reliant market trend from the previous year.`
+- [18] [Chipmakers Benefiting from AI Spending Wave](https://www.tekedia.com/jim-cramer-says-ai-and-data-center-boom-is-rewiring-markets-beyond-oil-and-geopolitical-shocks-recommends-types-of-stocks-to-own/) - News (2026-05-05T15:32:39Z; Event Description)
+  - Fact: `Broadcom Recent Events 2026 AI Infrastructure Boom Drives Chip Company Revenue Growth description: Chipmakers Nvidia, AMD, and Broadcom have emerged as major beneficiaries of the spending wave on AI infrastructure, leading to sharply climbing valuations.`
+- [19] [2026 IT-Semiconductor Ecosystem Integration Forecast](https://www.digitaljournal.com/?p=3827635) - News (2026-01-19T21:57:11Z; Event Description)
+  - Fact: `Broadcom Recent Events 2026 2026 IT-Semiconductor Ecosystem Integration Forecast description: Alan Goldberg forecasts that the structural integration of IT with the semiconductor ecosystem, exemplified by companies like NVIDIA, ASML, Broadcom, and TSMC, will reinforce value concentration and potential for targeted outperformance in …`
+- [20] Structured evidence record
+  - Fact: `Marvell Technology product evidence: ASIC design`
+- [21] Structured evidence record
+  - Fact: `Marvell Technology product evidence: data center switching solution`
+- [22] Structured evidence record
+  - Fact: `Marvell Technology product evidence: full optics platform`
+- [23] Structured evidence record
+  - Fact: `Marvell Technology product evidence: custom CXL expanders`
+- [24] Structured evidence record
+  - Fact: `Marvell Technology product evidence: Trainium 4`
+- [25] Structured evidence record
+  - Fact: `Marvell Technology product evidence: ASIC projects`
+- [26] Structured evidence record
+  - Fact: `Marvell Technology product evidence: IPoDWDM ZR/ZR+ optical pluggab`
+- [27] Structured evidence record
+  - Fact: `Marvell Technology commercial relationship evidence: Amazon Web Services, Inc.`
+- [28] Structured evidence record
+  - Fact: `Marvell Technology partnership evidence: Microsoft Corporation`
+- [29] [Wells Fargo Projects Marvell Technology's Trainium-only Revenue](https://www.investing.com/news/analyst-ratings/wells-fargo-raises-marvell-stock-price-target-on-aws-trainium-growth-93CH-4700796) - News (2026-05-20T10:35:03Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2027 Wells Fargo Projects Marvell Technology's Trainium-only Revenue description: Wells Fargo projects Marvell Technology's Trainium-only revenue could reach $5.5 billion to $6 billion plus per annum, based on Trainium deployment at approximately $3 billion per gigawatt.`
+- [30] [Marvell ASIC Volume Production](https://247wallst.com/investing/2026/05/01/arm-marvell-or-vertiv-which-ai-infrastructure-stock-crushed-it-in-april/) - News (2026-05-01T18:07:14Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026-04 Marvell ASIC Volume Production description: Marvell Technology's custom application-specific integrated circuit (ASIC) design wins began converting to volume production, leading to increased revenue and a significant stock surge.`
+- [31] [Marvell launches Secure 1.6T ZR and ZR+ DCI modules](https://www.insidermonkey.com/blog/marvell-technology-inc-nasdaqmrvl-q4-2026-earnings-call-transcript-1711376/) - News (2026-03-07T13:04:50Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026-03-05 Marvell launches Secure 1.6T ZR and ZR+ DCI modules description: Marvell Technology, Inc. announced the launch of the industry's first Secure 1.6T ZR and ZR+ DCI modules, powered by its new 2-nanometer Coherent DSP.`
+- [32] [Marvell Technology, Inc. introduces new ZR/ZR+ and coherent DSP products](https://www.insidermonkey.com/blog/11-best-kid-friendly-stocks-to-invest-in-1712032/) - News (2026-03-09T22:58:26Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026-03-05 Marvell Technology, Inc. introduces new ZR/ZR+ and coherent DSP products description: Marvell Technology, Inc. expanded its ZR/ZR+ and coherent DSP product lineup by introducing the COLORZ 1600 (the first 1.6T ZR/ZR+ pluggable featuring Electra 2nm coherent DSP) and the Libra 2nm coherent DSP powering the new COLORZ 800 plug…`
+- [33] [Marvell Technology in discussions with Google for custom chips](https://ng.investing.com/news/stock-market-news/marvell-technology-stock-gains-attention-on-google-chip-talks-93CH-2449292) - News (2026-04-20T13:30:13Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026-03 Marvell Technology in discussions with Google for custom chips description: Marvell Technology is reportedly in discussions with Google to develop two new application-specific integrated circuits (ASICs), including a memory processing unit (XPU attached) and a new tensor processing unit built for inference.`
+- [34] [Jim Cramer's Bullish Commentary on Marvell Technology, Inc. (Trainium)](https://www.insidermonkey.com/blog/14-stocks-on-jim-cramers-radar-4-1707808/) - News (2026-03-03T07:34:49Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026-02-06 Jim Cramer's Bullish Commentary on Marvell Technology, Inc. (Trainium) description: On February 6, 2026, Jim Cramer expressed bullish sentiment for Marvell Technology, Inc., highlighting its partnership with Amazon for the Trainium chip and praising CEO Matt Murphy's work, despite the stock's modest gains.`
+- [35] [Marvell Technology launches Structera S 60260](https://au.investing.com/news/analyst-ratings/marvell-stock-gets-stifel-buy-rating-reiteration-on-nvidia-partnership-93CH-4340628) - News (2026-03-31T19:42:12Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026 Marvell Technology launches Structera S 60260 description: Marvell Technology introduced the Structera S 60260, a 260-lane PCIe 6.0 switch designed for AI data centers, offering double the lane density of its competitors.`
+- [36] [Launch of 3.2T Optical Modules](https://news.investingcube.com/shares/gap-up-then-what-marvell-technologies-stocks-15-uptick-and-ai-blind-spot/) - News (2026-03-06T16:40:46Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026 Launch of 3.2T Optical Modules description: Marvell Technology launched new 3.2T optical modules, which, along with 1.6T modules, enable faster data transfer in data centers and solidify its leadership in high-speed interconnects.`
+- [37] [TrendForce Forecasts Significant ASIC Shipment Growth by 2026](https://www.insidermonkey.com/blog/?p=1670136) - News (2026-01-06T02:37:02Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026 Projected Growth in ASIC Shipments by TrendForce description: TrendForce forecasts that ASIC shipments are expected to grow by 45% in 2026, which is significantly higher than the estimated 16% increase for GPU shipments, placing Marvell Technology in a strong market position.`
+- [38] Structured evidence record
+  - Fact: `Broadcom product evidence: high-radix Ethernet switches`
+- [39] Structured evidence record
+  - Fact: `Broadcom product evidence: Optical Transceivers Market`
+- [40] Structured evidence record
+  - Fact: `Broadcom product evidence: Broadcom Ethernet networking`
+- [41] Structured evidence record
+  - Fact: `Broadcom product evidence: networking and broadband acces`
+- [42] Structured evidence record
+  - Fact: `Broadcom product evidence: Mixed Signal System-on-Chip (M`
+- [43] [Accelerated Deployment of Broadcom's Custom Chips by Customers](https://www.fool.com/investing/2026/03/12/better-ai-stock-broadcom-vs-amd/) - News (2026-03-12T15:30:00Z; Event Description)
+  - Fact: `Broadcom Recent Events 2027 Accelerated Deployment of Broadcom's Custom Chips by Customers description: Broadcom's six AI customers, including Alphabet, Meta Platforms, Anthropic, and OpenAI, are expected to significantly accelerate the deployment of Broadcom's custom chips in 2027.`
+- [44] [TSMC Projected Revenue Growth from AI Chip Demand](https://au.investing.com/news/stock-market-news/bofa-names-top-asiapacific-semiconductor-stocks-on-ai-chip-demand-93CH-4353311) - News (2026-04-09T05:32:09Z; Event Description)
+  - Fact: `Broadcom Recent Events 2027 TSMC Projected Revenue Growth from AI Chip Demand description: Bank of America projects that Taiwan Semiconductor Manufacturing Company (TSMC) will see significant revenue growth in 2026, with Broadcom's TPU business requiring 150,000 advanced front-end capacity support and contributing $4.5 billion in…`
+- [45] [Dell’ Oro Group Analyst comments on Tomahawk 6 deployment](https://www.globenewswire.com/fr/news-release/2026/03/12/3255072/19933/en/Broadcom-Now-Shipping-World-s-First-102-4-Tbps-Switch-in-Production-Volume.html) - News (2026-03-12T20:00:00Z; Event Description)
+  - Fact: `Broadcom Recent Events 2026-03-12 Dell’ Oro Group Analyst comments on Tomahawk 6 deployment description: Sameh Boujelbene, Vice President and Analyst at Dell’ Oro Group, commented that Broadcom is translating its roadmap into real-world deployment with Tomahawk 6, addressing industry needs for large-scale, low-latency fabrics.`
+- [46] [Broadcom Refutes AI Hardware Margin Concerns](https://www.fool.com/investing/2026/04/08/artificial-intelligence-ai-stocks-won-buy-pltr/) - News (2026-04-08T16:05:00Z; Event Description)
+  - Fact: `Broadcom Recent Events 2026 Broadcom Refutes AI Hardware Margin Concerns description: Broadcom publicly refuted concerns that its custom chip business would have lower gross margins, stating that its AI hardware margins would remain unchanged as the business scales.`
+- [47] [Broadcom's AI Accelerator Chips Challenging Nvidia](https://www.fool.com/investing/2026/01/23/where-will-broadcom-stock-be-by-december-2026/) - News (2026-01-23T21:40:00Z; Event Description)
+  - Fact: `Broadcom Recent Events 2026 Broadcom's AI Accelerator Chips Challenging Nvidia description: Broadcom's custom artificial intelligence (AI) accelerator chips are gaining significant popularity and are predicted to challenge Nvidia for dominance in AI computing during 2026.`
+- [48] [Broadcom's Business Shift to AI Accelerator Chips](https://www.fool.com/investing/2026/01/23/where-will-broadcom-stock-be-by-december-2026/) - News (2026-01-23T21:40:00Z; Event Description)
+  - Fact: `Broadcom Recent Events 2026 Broadcom's Business Shift to AI Accelerator Chips description: Broadcom is undergoing a significant business shift, focusing its efforts on building out its custom AI accelerator chip business, moving away from its diverse product lines.`
+- [49] [Broadcom Inc. Unveils VMware Telco Cloud Platform 9](https://www.insidermonkey.com/blog/10-best-blue-chip-stocks-to-buy-for-the-long-term-1708249/) - News (2026-03-04T08:33:26Z; Event Description)
+  - Fact: `Broadcom Recent Events 2026-03-02 Broadcom Inc. Unveils VMware Telco Cloud Platform 9 description: Broadcom Inc. unveiled VMware Telco Cloud Platform 9 (TCP 9) at Mobile World Congress in Barcelona. This is the next version of the company’s private cloud platform for telecom data centers, built on VMware Cloud Foundation 9, and designed …`
+- [50] [Fidelity-Broadcom Legal Dispute Resolution](https://www.insidermonkey.com/blog/fidelity-resolves-legal-dispute-around-business-critical-broadcom-software-access-1687078/) - News (2026-02-02T14:11:17Z; Event Description)
+  - Fact: `Broadcom Recent Events 2026-01-28 Fidelity-Broadcom Legal Dispute Resolution description: Fidelity Investments and Broadcom Inc. reached an agreement to resolve a legal dispute, with Broadcom agreeing to continue supplying software and services to a Fidelity subsidiary, leading to Fidelity dismissing its lawsuit.`
+- [51] SEC EDGAR - SEC EDGAR (2024-03-14; Acquisition Payments)
+  - Fact: `acquisition_payments: 25.4b`
+- [52] SEC EDGAR - SEC EDGAR (2020-03-13; Acquisition Payments)
+  - Fact: `acquisition_payments: 10.9b`
+- [53] SEC EDGAR - SEC EDGAR (2013-01-30; Acquisition Payments)
+  - Fact: `acquisition_payments: 3.58b`
+- [54] SEC EDGAR - SEC EDGAR (2020-12-18; Acquisition Payments)
+  - Fact: `acquisition_payments: 10.9b`
+- [55] SEC EDGAR - SEC EDGAR (2022-03-10; Acquisition Payments)
+  - Fact: `acquisition_payments: 3.55b`
+- [56] SEC EDGAR - SEC EDGAR (2019-03-15; Acquisition Payments)
+  - Fact: `acquisition_payments: 16b`
+- [57] SEC EDGAR - SEC EDGAR (2019-12-20; Acquisition Payments)
+  - Fact: `acquisition_payments: 16b`
+- [58] SEC EDGAR - SEC EDGAR (2018-12-21; Acquisition Payments)
+  - Fact: `acquisition_payments: 4.8b`
+- [59] SEC EDGAR - SEC EDGAR (2024-12-20; Acquisition Payments)
+  - Fact: `acquisition_payments: 26b`
+- [60] SEC EDGAR - SEC EDGAR (2016-12-23; Acquisition Payments)
+  - Fact: `acquisition_payments: 10.1b`
+- [61] SEC EDGAR - SEC EDGAR (2016-12-23; Acquisition Payments)
+  - Fact: `acquisition_payments: 10.1b`
+- [62] [Rosenblatt Securities upgrades Marvell Technology rating](https://www.thelincolnianonline.com/2026/05/06/marvell-technology-inc-mrvl-shares-sold-by-sbi-securities-co-ltd.html) - News (2026-05-06T10:51:12Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2027-03-06 Rosenblatt Securities upgrades Marvell Technology rating description: Rosenblatt Securities lifted its price target on Marvell Technology from $115.00 to $140.00 and gave the company a “buy” rating.`
+- [63] [Analysts revise Marvell Technology's earnings upwards](https://za.investing.com/news/analyst-ratings/barclays-upgrades-marvell-stock-rating-on-optical-growth-outlook-93CH-4203581) - News (2026-04-09T07:38:09Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2027 Analysts revise Marvell earnings upwards for fiscal 2027 description: 20 analysts have revised their earnings forecasts upwards for Marvell Technology for the upcoming period, with a consensus forecasting $3.85 in EPS for fiscal 2027.`
+- [64] [Institutional Investors Increase Stakes in Marvell Technology](https://www.tickerreport.com/banking-finance/13316219/marvell-technology-nasdaqmrvl-shares-down-2-2-whats-next.html) - News (2026-01-14T23:42:56Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026-09 Institutional Investors Increase Stakes in Marvell Technology description: Several institutional investors, including Ellsworth Advisors LLC, Taylor Frigon Capital Management LLC, Waterfront Wealth Inc., BOCHK Asset Management Ltd, and Westbourne Investments Inc., either purchased new positions or increased their …`
+- [65] [Marvell Technology President Sells Shares](https://ph.investing.com/news/insider-trading-news/marvell-technology-president-sells-87-million-in-shares-93CH-2337987) - News (2026-04-17T00:42:14Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026-04-16 Marvell Technology President Sells Shares description: Sandeep Bharathi, President of the Data Center Group at Marvell Technology, sold 66,892 shares of common stock for approximately $8.7 million at a weighted average price of $130.35.`
+- [66] [Barclays Upgrades MRVL Rating and Raises Price Target](https://www.watchlistnews.com/cantor-fitzgerald-issues-positive-forecast-for-marvell-technology-nasdaqmrvl-stock-price/11044636.html) - News (2026-04-10T09:42:44Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026-04 Barclays Upgrades MRVL Rating and Raises Price Target description: Barclays upgraded Marvell Technology's stock (MRVL) to 'Overweight' and raised its price target to $150, citing strong optical/networking demand through 2027.`
+- [67] [Citi analyst upgrades Broadcom stock](https://finance.yahoo.com/markets/stocks/articles/citi-names-broadcom-stock-top-191300964.html) - News (2026-05-23T19:13:00Z; Event Description)
+  - Fact: `Broadcom Recent Events 2026-05-12 Citi Analyst Raises Price Target for Broadcom Inc. description: Citi analyst Atif Malik raised his price target on Broadcom from $475 to $500 and maintained a Buy rating, designating it as the firm's top semiconductor pick for 2026.`
+- [68] [JPMorgan Raises Price Target for Broadcom](https://www.insidermonkey.com/blog/anlaysts-bullish-on-broadcom-avgo-despite-gross-margins-concerns-1730027/) - News (2026-04-01T16:44:40Z; Event Description)
+  - Fact: `Broadcom Recent Events 2026-03-05 JPMorgan Raises Price Target for Broadcom description: JPMorgan raised its price target for Broadcom Inc. (NASDAQ:AVGO) to $500 from $475 and maintained an “Overweight” rating, following stronger-than-expected January-quarter results and a robust sales forecast for the April quarter.`
+- [69] Structured evidence record
+  - Fact: `STOCK|Stock Price History|Marvell Technology|MRVL 2026-05-29T13:30:00Z|close_price=200.8499, open_price=204.43, high_price=205.14, low_price=199.83, trading_volume=1294820`
+- [70] Structured evidence record
+  - Fact: `STOCK|Stock Price History|Marvell Technology|MRVL 2026-05-29T13:15:00Z|close_price=202.99, open_price=203.21, high_price=203.47, low_price=202.46, trading_volume=9768`
+- [71] Structured evidence record
+  - Fact: `STOCK|Stock Price History|Marvell Technology|MRVL 2026-05-29T12:30:00Z|close_price=202.4, open_price=202.15, high_price=202.86, low_price=201.66, trading_volume=5101`
+- [72] Structured evidence record
+  - Fact: `STOCK|Stock Price History|Marvell Technology|MRVL 2026-05-29T12:15:00Z|close_price=201.62, open_price=201.85, high_price=202.28, low_price=201.27, trading_volume=9919`
+- [73] Structured evidence record
+  - Fact: `STOCK|Stock Price History|Marvell Technology|MRVL 2026-05-29T12:00:00Z|close_price=202.0349, open_price=202.77, high_price=204.83, low_price=198.11, trading_volume=13255`
+- [74] Structured evidence record
+  - Fact: `STOCK|Stock Price History|Marvell Technology|MRVL 2026-05-29T11:45:00Z|close_price=202.75, open_price=202.452, high_price=202.9, low_price=202.452, trading_volume=8288`
+- [75] Structured evidence record
+  - Fact: `STOCK|Stock Price History|Marvell Technology|MRVL 2026-05-29T11:30:00Z|close_price=202.9703, open_price=203.405, high_price=204.83, low_price=202, trading_volume=8719`
+- [76] Structured evidence record
+  - Fact: `STOCK|Stock Price History|Marvell Technology|MRVL 2026-05-29T10:45:00Z|close_price=202.51, open_price=202.4, high_price=202.75, low_price=202.1529, trading_volume=2836`
+- [77] Structured evidence record
+  - Fact: `STOCK|Stock Price History|Marvell Technology|MRVL 2026-05-29T10:30:00Z|close_price=202.05, open_price=201.89, high_price=202.0777, low_price=201.62, trading_volume=860`
+- [78] Structured evidence record
+  - Fact: `STOCK|Stock Price History|Marvell Technology|MRVL 2026-05-29T10:00:00Z|close_price=200.6875, open_price=201.23, high_price=201.5, low_price=199.71, trading_volume=9435`
+- [79] Structured evidence record
+  - Fact: `STOCK|Stock Price History|Marvell Technology|MRVL 2026-05-29T09:15:00Z|close_price=202.75, open_price=202.05, high_price=202.75, low_price=202.0391, trading_volume=276`
+- [80] Structured evidence record
+  - Fact: `STOCK|Stock Price History|Marvell Technology|MRVL 2026-05-29T08:00:00Z|close_price=204.25, open_price=203.8, high_price=206.09, low_price=203.15, trading_volume=73562`
+- [81] Structured evidence record
+  - Fact: `Marvell Technology competitor evidence: MACOM Technology Solutions Hol`
+- [82] Structured evidence record
+  - Fact: `Marvell Technology competitor evidence: Corning Incorporated`
+- [83] Structured evidence record
+  - Fact: `Marvell Technology competitor evidence: Silicon Motion Technology Corp`
+- [84] Structured evidence record
+  - Fact: `Marvell Technology competitor evidence: Astera Labs, Inc.`
+- [85] Structured evidence record
+  - Fact: `Marvell Technology competitor evidence: Advanced Micro Devices, Inc.`
+- [86] Structured evidence record
+  - Fact: `Marvell Technology competitor evidence: Microchip Technology Incorpora`
+- [87] Structured evidence record
+  - Fact: `Marvell Technology competitor evidence: Arm Holdings, Inc.`
+- [88] Structured evidence record
+  - Fact: `Marvell Technology competitor evidence: Sono-Tek Corporation`
+- [89] Structured evidence record
+  - Fact: `Marvell Technology competitor evidence: NXP Semiconductors N.V.`
+- [90] Structured evidence record
+  - Fact: `Marvell Technology competitor evidence: Samsung Electronics Co., Ltd.`
+- [91] Structured evidence record
+  - Fact: `Marvell Technology competitor evidence: ASIX Electronics Corp.`
+- [92] Structured evidence record
+  - Fact: `Marvell Technology partnership evidence: Inorganic Intelligence, Inc.`
+- [93] Structured evidence record
+  - Fact: `Marvell Technology partnership evidence: Advanced Micro Devices, Inc.`
+- [94] Structured evidence record
+  - Fact: `Marvell Technology partnership evidence: Micron Technology, Inc.`
+- [95] Structured evidence record
+  - Fact: `Marvell Technology partnership evidence: Alchip Technologies, Limited`
+- [96] Structured evidence record
+  - Fact: `Marvell Technology partnership evidence: POET Technologies Inc.`
+- [97] Structured evidence record
+  - Fact: `Marvell Technology customer relationship evidence: Micron Technology, Inc.`
+- [98] Structured evidence record
+  - Fact: `Marvell Technology customer relationship evidence: POET Technologies Inc.`
+- [99] Structured evidence record
+  - Fact: `Broadcom competitor evidence: Microchip Technology Incorpora`
+- [100] Structured evidence record
+  - Fact: `Broadcom competitor evidence: International Business Machine`
+- [101] Structured evidence record
+  - Fact: `Broadcom competitor evidence: Taiwan Semiconductor Manufactu`
+- [102] Structured evidence record
+  - Fact: `Broadcom competitor evidence: Optical Transceiver For 5g Mar`
+- [103] Structured evidence record
+  - Fact: `Broadcom partnership evidence: Samsung Electronics Co., Ltd.`
+- [104] Structured evidence record
+  - Fact: `INDUSTRY_PEER|Broadcom|SEMICONDUCTORS & RELATED DEVIC|Astera Labs, Inc. (sic_description=Semiconductors & Related Devices; wikibase_shortdesc=American semiconductor and AI company)`
+- [105] Structured evidence record
+  - Fact: `INDUSTRY_PEER|Broadcom|SEMICONDUCTORS & RELATED DEVIC|Inphi Corporation (sic_description=Semiconductors & Related Devices; wikibase_shortdesc=American technology company)`
+- [106] [Amazon Suppliers Stock Rally](https://www.barchart.com/story/news/1427178/stocks-erase-early-gains-as-crude-prices-jump-on-iran-concerns) - News (2026-04-21T15:26:28Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026-04-19 Amazon Suppliers Stock Rally description: Astera Labs, Marvell Technology, and Credo Technology, identified as Amazon suppliers, saw their stock prices climb following news of Amazon's investment in Anthropic.`
+- [107] [Mojo Vision secures $17.5M in funding](https://alleywatch.com/2026/03/the-weekly-notable-startup-funding-report-3-30-26/) - News (2026-03-30T12:27:19Z; Event Description)
+  - Fact: `Marvell Technology Recent Events 2026-03-21 Mojo Vision Secures $17.5M in Funding description: Mojo Vision, a Saratoga-based company developing micro-LED display technology, received $17.5 million in new funding, contributing to a total of $362.4 million in equity funding.`
+- [108] edgar_10k - edgar_10k (2026-03-11; Total Revenue)
+  - Fact: `Annual Reports: total_revenue: 8.19b`
+- [109] edgar_10k - edgar_10k (2026-03-11; Net Income)
+  - Fact: `Annual Reports: net_income: 2.67b`
+- [110] edgar_10k - edgar_10k (2026-03-11; Total Assets)
+  - Fact: `Annual Reports: total_assets: 22.3b`
+- [111] edgar_10k - edgar_10k (2026-03-11; Total Liabilities)
+  - Fact: `Annual Reports: total_liabilities: 7.98b`
+- [112] edgar_10k - edgar_10k (2026-03-11; Shares Outstanding)
+  - Fact: `Annual Reports: shares_outstanding: 847m`
+- [113] SEC EDGAR - SEC EDGAR (2026-03-11; R&D Expense)
+  - Fact: `Annual Reports: research_and_development: 2.08b`
+- [114] edgar_10q - edgar_10q (2026-03-11; Total Revenue)
+  - Fact: `Quarterly Reports: total_revenue: 14.1b`
+- [115] edgar_10q - edgar_10q (2026-03-11; Net Income)
+  - Fact: `Quarterly Reports: net_income: 8.2b`
+- [116] edgar_10q - edgar_10q (2026-03-11; Total Assets)
+  - Fact: `Quarterly Reports: total_assets: 170b`
+- [117] edgar_10q - edgar_10q (2026-03-11; Total Liabilities)
+  - Fact: `Quarterly Reports: total_liabilities: 90b`
+- [118] edgar_10k - edgar_10k (2025-12-18; Total Revenue)
+  - Fact: `Annual Reports: total_revenue: 44.8b`
+- [119] edgar_10k - edgar_10k (2025-12-18; Net Income)
+  - Fact: `Annual Reports: net_income: 22.7b`
+- [120] edgar_10k - edgar_10k (2025-12-18; Total Assets)
+  - Fact: `Annual Reports: total_assets: 171b`
+- [121] edgar_10k - edgar_10k (2025-12-18; Total Liabilities)
+  - Fact: `Annual Reports: total_liabilities: 89.8b`
+- [122] SEC EDGAR - SEC EDGAR (2025-12-18; Total Debt)
+  - Fact: `Annual Reports: total_debt: 67.1b`
+- [123] SEC EDGAR - SEC EDGAR (2025-12-18; R&D Expense)
+  - Fact: `Annual Reports: research_and_development: 11b`
+- [124] SEC EDGAR - SEC EDGAR (2026-03-11; Gross Profit)
+  - Fact: `Annual Reports: gross_profit: 4.18b`
+- [125] SEC EDGAR - SEC EDGAR (2026-03-11; Operating Cash Flow)
+  - Fact: `Annual Reports: operating_cash_flow: 1.75b`
+- [126] SEC EDGAR - SEC EDGAR (2025-12-03; Operating Cash Flow)
+  - Fact: `Quarterly Reports: operating_cash_flow: 1.38b`
+- [127] SEC EDGAR - SEC EDGAR (2025-08-29; Operating Cash Flow)
+  - Fact: `Quarterly Reports: operating_cash_flow: 794m`
+- [128] SEC EDGAR - SEC EDGAR (2025-03-12; Operating Cash Flow)
+  - Fact: `Annual Reports: operating_cash_flow: 1.68b`
+- [129] SEC EDGAR - SEC EDGAR (2025-03-12; R&D Expense)
+  - Fact: `Annual Reports: research_and_development: 1.95b`
+- [130] SEC EDGAR - SEC EDGAR (2024-03-13; Operating Cash Flow)
+  - Fact: `Annual Reports: operating_cash_flow: 1.37b`
+- [131] SEC EDGAR - SEC EDGAR (2024-03-13; R&D Expense)
+  - Fact: `Annual Reports: research_and_development: 1.9b`
+- [132] SEC EDGAR - SEC EDGAR (2023-03-09; Operating Cash Flow)
+  - Fact: `Annual Reports: operating_cash_flow: 1.29b`
+- [133] SEC EDGAR - SEC EDGAR (2023-03-09; R&D Expense)
+  - Fact: `Annual Reports: research_and_development: 1.78b`
+- [134] SEC EDGAR - SEC EDGAR (2026-03-11; Operating Cash Flow)
+  - Fact: `Quarterly Reports: operating_cash_flow: 8.26b`
+- [135] SEC EDGAR - SEC EDGAR (2025-12-18; Operating Cash Flow)
+  - Fact: `Annual Reports: operating_cash_flow: 27.5b`
+- [136] SEC EDGAR - SEC EDGAR (2025-09-10; Operating Cash Flow)
+  - Fact: `Quarterly Reports: operating_cash_flow: 19.8b`
+- [137] SEC EDGAR - SEC EDGAR (2025-06-11; Operating Cash Flow)
+  - Fact: `Quarterly Reports: operating_cash_flow: 12.7b`
+- [138] edgar_10k - edgar_10k (2024-12-20; Total Revenue)
+  - Fact: `Annual Reports: total_revenue: 30.4b`
+- [139] SEC EDGAR - SEC EDGAR (2024-12-20; Operating Cash Flow)
+  - Fact: `Annual Reports: operating_cash_flow: 20b`
+- [140] SEC EDGAR - SEC EDGAR (2024-12-20; R&D Expense)
+  - Fact: `Annual Reports: research_and_development: 9.31b`
+- [141] SEC EDGAR - SEC EDGAR (2024-09-11; Operating Cash Flow)
+  - Fact: `Quarterly Reports: operating_cash_flow: 14.4b`
+- [142] SEC EDGAR - SEC EDGAR (2024-06-13; Operating Cash Flow)
+  - Fact: `Quarterly Reports: operating_cash_flow: 9.39b`
+- [143] SEC EDGAR - SEC EDGAR (2026-03-11; Cash & Equivalents)
+  - Fact: `Annual Reports: cash_and_cash_equivalents: 2.64b`
+- [144] SEC EDGAR - SEC EDGAR (2026-03-11; Cash & Equivalents)
+  - Fact: `Quarterly Reports: cash_and_cash_equivalents: 14.2b`
+- [145] SEC EDGAR - SEC EDGAR (2025-12-18; Cash & Equivalents)
+  - Fact: `Annual Reports: cash_and_cash_equivalents: 16.2b`
+- [146] SEC EDGAR - SEC EDGAR (2025-09-10; Cash & Equivalents)
+  - Fact: `Quarterly Reports: cash_and_cash_equivalents: 10.7b`
+- [147] SEC EDGAR - SEC EDGAR (2025-06-11; Cash & Equivalents)
+  - Fact: `Quarterly Reports: cash_and_cash_equivalents: 9.47b`
+- [148] SEC EDGAR - SEC EDGAR (2025-03-12; Cash & Equivalents)
+  - Fact: `Quarterly Reports: cash_and_cash_equivalents: 9.31b`
+- [149] SEC EDGAR - SEC EDGAR (2024-12-20; Cash & Equivalents)
+  - Fact: `Annual Reports: cash_and_cash_equivalents: 9.35b`
+- [150] SEC EDGAR - SEC EDGAR (2024-09-11; Cash & Equivalents)
+  - Fact: `Quarterly Reports: cash_and_cash_equivalents: 9.95b`
+- [151] SEC EDGAR - SEC EDGAR (2024-06-13; Cash & Equivalents)
+  - Fact: `Quarterly Reports: cash_and_cash_equivalents: 9.81b`
+- [152] SEC EDGAR - SEC EDGAR (2024-03-14; Cash & Equivalents)
+  - Fact: `Quarterly Reports: cash_and_cash_equivalents: 11.9b`
+- [153] SEC EDGAR - SEC EDGAR (2020-12-18; Total Debt)
+  - Fact: `Annual Reports: total_debt: 41.5b`
+- [154] edgar_10k - edgar_10k (2026-03-11; Shareholders' Equity)
+  - Fact: `Annual Reports: shareholders_equity: 14.3b`
+- [155] SEC EDGAR - SEC EDGAR (2026-03-11; EPS Diluted (XBRL))
+  - Fact: `Annual Reports: eps_diluted_xbrl: 3.07`
+- [156] SEC EDGAR - SEC EDGAR (2026-03-11; EPS Diluted (XBRL))
+  - Fact: `Quarterly Reports: eps_diluted_xbrl: 1.5`
+- [157] edgar_10k - edgar_10k (2025-12-18; Shares Outstanding)
+  - Fact: `Annual Reports: shares_outstanding: 4.69b`
+- [158] SEC EDGAR - SEC EDGAR (2025-12-18; EPS Diluted (XBRL))
+  - Fact: `Annual Reports: eps_diluted_xbrl: 4.77`
+- [159] edgar_10k - edgar_10k (2024-12-20; Net Income)
+  - Fact: `Annual Reports: net_income: 5.89b`
+- [160] edgar_10k - edgar_10k (2024-12-20; Shares Outstanding)
+  - Fact: `Annual Reports: shares_outstanding: 4.69b`
+- [161] SEC EDGAR - SEC EDGAR (2024-12-20; EPS Diluted (XBRL))
+  - Fact: `Annual Reports: eps_diluted_xbrl: 1.23`
+- [162] edgar_10k - edgar_10k (2025-03-12; Net Income)
+  - Fact: `Annual Reports: net_income: -885m`
+- [163] SEC EDGAR - SEC EDGAR (2025-03-12; Net Income/Loss)
+  - Fact: `Annual Reports: net_income_loss: -885m`
+- [164] SEC EDGAR - SEC EDGAR (2025-03-12; EPS Diluted (XBRL))
+  - Fact: `Annual Reports: eps_diluted_xbrl: -1.02`
+- [165] edgar_10k - edgar_10k (2024-03-13; Net Income)
+  - Fact: `Annual Reports: net_income: -933m`
+- [166] SEC EDGAR - SEC EDGAR (2024-03-13; Net Income/Loss)
+  - Fact: `Annual Reports: net_income_loss: -933m`
+- [167] SEC EDGAR - SEC EDGAR (2024-03-13; EPS Diluted (XBRL))
+  - Fact: `Annual Reports: eps_diluted_xbrl: -1.08`
+- [168] edgar_10q - edgar_10q (2024-12-04; Net Income)
+  - Fact: `Quarterly Reports: net_income: -676m`
+- [169] SEC EDGAR - SEC EDGAR (2024-12-04; Net Income/Loss)
+  - Fact: `Quarterly Reports: net_income_loss: -676m`
+- [170] SEC EDGAR - SEC EDGAR (2024-12-04; EPS Diluted (XBRL))
+  - Fact: `Quarterly Reports: eps_diluted_xbrl: -0.78`
+- [171] edgar_10q - edgar_10q (2024-08-30; Net Income)
+  - Fact: `Quarterly Reports: net_income: -193m`
+- [172] SEC EDGAR - SEC EDGAR (2024-08-30; Net Income/Loss)
+  - Fact: `Quarterly Reports: net_income_loss: -193m`
+- [173] SEC EDGAR - SEC EDGAR (2024-08-30; EPS Diluted (XBRL))
+  - Fact: `Quarterly Reports: eps_diluted_xbrl: -0.22`
+
+

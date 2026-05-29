@@ -1,0 +1,9 @@
+slug: hasbro-mattel
+archetype: strategic_alternatives
+question: Should Hasbro be valued as a standalone toy and entertainment company or as a strategic acquisition candidate for Mattel?
+roles:
+  target: Hasbro
+  buyer: Mattel
+seed_entities:
+  - Hasbro
+  - Mattel
