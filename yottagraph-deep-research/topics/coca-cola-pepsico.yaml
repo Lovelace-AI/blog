@@ -1,0 +1,10 @@
+slug: coca-cola-pepsico
+archetype: competitive_financial_profile
+question: Which company has the stronger financial profile to sustain leadership in global beverages and snacks?
+roles:
+  company_a: Coca-Cola
+  company_b: PepsiCo
+market_theme: global beverage and snack leadership
+seed_entities:
+  - Coca-Cola
+  - PepsiCo

@@ -1,0 +1,63 @@
+{
+  "datasource": "deep-research",
+  "agent": "deep-research-max-preview-04-2026",
+  "passed": true,
+  "iterations": 1,
+  "report_words": 5672,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.8): The report provides an exceptional, decision-grade analysis that uses precise 2026 financial projections and current antitrust data to definitively prove the mathematical and legal impossibility of the merger. [financial_grounding=10, target_specificity=10, buyer_logic=9, deal_feasibility=10, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 5672,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 100,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Target Standalone Case",
+          "Strategic Buyer Case",
+          "Deal Feasibility",
+          "Valuation",
+          "Alternative Paths"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "target_specificity": 10,
+          "buyer_logic": 9,
+          "deal_feasibility": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.83,
+        "reason": "The report provides an exceptional, decision-grade analysis that uses precise 2026 financial projections and current antitrust data to definitively prove the mathematical and legal impossibility of the merger.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 20301,
+          "output_tokens": 124,
+          "thought_tokens": 0,
+          "total_tokens": 20425
+        }
+      }
+    }
+  },
+  "total_input_tokens": 176261,
+  "total_output_tokens": 103111,
+  "total_elapsed_s": 1169.5,
+  "rejudged_with_modified_judge": true,
+  "rejudge_model": "gemini-3-flash-preview",
+  "judge_scale": "1-10"
+}

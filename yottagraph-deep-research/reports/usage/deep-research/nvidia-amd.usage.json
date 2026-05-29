@@ -1,0 +1,63 @@
+{
+  "datasource": "deep-research",
+  "agent": "deep-research-max-preview-04-2026",
+  "passed": true,
+  "iterations": 1,
+  "report_words": 6887,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=10.0): The report provides an exceptional, decision-grade comparative analysis with precise quantification of revenue, margins, and capital returns, supported by sophisticated technical context and a rigorous assessment of systemic risks like power grid constraints. [financial_grounding=10, company_a_specificity=10, company_b_specificity=10, risk_assessment=10, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 6887,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 30,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Company A Financial Profile",
+          "Company B Financial Profile",
+          "Head-to-Head Comparison",
+          "Risk Analysis",
+          "Valuation"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "company_a_specificity": 10,
+          "company_b_specificity": 10,
+          "risk_assessment": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 10.0,
+        "reason": "The report provides an exceptional, decision-grade comparative analysis with precise quantification of revenue, margins, and capital returns, supported by sophisticated technical context and a rigorous assessment of systemic risks like power grid constraints.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 17157,
+          "output_tokens": 132,
+          "thought_tokens": 0,
+          "total_tokens": 17289
+        }
+      }
+    }
+  },
+  "total_input_tokens": 2128,
+  "total_output_tokens": 93050,
+  "total_elapsed_s": 1078.4,
+  "rejudged_with_modified_judge": true,
+  "rejudge_model": "gemini-3-flash-preview",
+  "judge_scale": "1-10"
+}

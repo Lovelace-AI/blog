@@ -1,0 +1,10 @@
+slug: nvidia-amd
+archetype: competitive_financial_profile
+question: Which company has the stronger financial profile to sustain AI accelerator market leadership?
+roles:
+  company_a: NVIDIA
+  company_b: Advanced Micro Devices
+market_theme: AI accelerator market leadership
+seed_entities:
+  - NVIDIA
+  - Advanced Micro Devices

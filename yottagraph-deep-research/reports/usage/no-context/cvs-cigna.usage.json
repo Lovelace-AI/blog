@@ -1,0 +1,64 @@
+{
+  "datasource": "no-context",
+  "model": "gemini-3-flash-preview",
+  "passed": false,
+  "report_words": 3987,
+  "verdict": {
+    "passed": false,
+    "reason": "LLM scorecard failed (mean=4.7, threshold=0.0): The report provides a logically sound strategic framework but fails fundamentally on execution by lacking a single valid citation and relying on 'approximate' or 'illustrative' data rather than specific, audited financial evidence. [financial_grounding=4, target_specificity=5, buyer_logic=5, deal_feasibility=6, analytical_coherence=7, citation_coverage=1]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3987,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 0,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Target Standalone Case",
+          "Strategic Buyer Case",
+          "Deal Feasibility",
+          "Valuation",
+          "Alternative Paths"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": false,
+        "scores": {
+          "financial_grounding": 4,
+          "target_specificity": 5,
+          "buyer_logic": 5,
+          "deal_feasibility": 6,
+          "analytical_coherence": 7,
+          "citation_coverage": 1
+        },
+        "mean_score": 4.67,
+        "reason": "The report provides a logically sound strategic framework but fails fundamentally on execution by lacking a single valid citation and relying on 'approximate' or 'illustrative' data rather than specific, audited financial evidence.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 7652,
+          "output_tokens": 123,
+          "thought_tokens": 0,
+          "total_tokens": 7775
+        }
+      }
+    }
+  },
+  "elapsed_s": 63.9,
+  "usage": {
+    "input_tokens": 593,
+    "output_tokens": 5988,
+    "thought_tokens": 1502,
+    "total_tokens": 8083
+  },
+  "total_elapsed_s": 72.3
+}

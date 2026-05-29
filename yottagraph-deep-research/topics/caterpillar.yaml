@@ -1,0 +1,7 @@
+slug: caterpillar
+archetype: single_company_investment_memo
+question: Is Caterpillar financially and strategically attractive based on public filings?
+roles:
+  company: Caterpillar
+seed_entities:
+  - Caterpillar

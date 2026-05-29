@@ -1,0 +1,135 @@
+{
+  "datasource": "structured-retrieval",
+  "model": "gemini-3.1-flash-lite-preview",
+  "passed": true,
+  "total_plan_calls": 10,
+  "items_retrieved": 1443,
+  "items_in_context": 250,
+  "unique_sources": 35,
+  "report_words": 3578,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.8): The report provides an exceptionally detailed and quantified analysis of UnitedHealth Group, utilizing specific segment-level data, a comprehensive multi-year financial performance table, and a thorough examination of regulatory and operational risks. [financial_grounding=10, business_specificity=10, growth_specificity=9, risk_assessment=10, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3578,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 151,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Business Model And Segments",
+          "Financial Profile",
+          "Growth Drivers",
+          "Risk Factors",
+          "Investment View"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "business_specificity": 10,
+          "growth_specificity": 9,
+          "risk_assessment": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.83,
+        "reason": "The report provides an exceptionally detailed and quantified analysis of UnitedHealth Group, utilizing specific segment-level data, a comprehensive multi-year financial performance table, and a thorough examination of regulatory and operational risks.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 10155,
+          "output_tokens": 127,
+          "thought_tokens": 0,
+          "total_tokens": 10282
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 201.8,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 30038,
+  "total_synthesis_elapsed_s": 41.8,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 73530,
+      "output_tokens": 20208,
+      "thought_tokens": 1730,
+      "total_tokens": 95468
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4042,
+        "output_tokens": 557,
+        "thought_tokens": 0,
+        "total_tokens": 4599
+      },
+      "curator": {
+        "input_tokens": 29295,
+        "output_tokens": 11026,
+        "thought_tokens": 0,
+        "total_tokens": 40321
+      },
+      "synthesis": {
+        "input_tokens": 30038,
+        "output_tokens": 8498,
+        "thought_tokens": 1730,
+        "total_tokens": 40266
+      },
+      "judge": {
+        "input_tokens": 10155,
+        "output_tokens": 127,
+        "thought_tokens": 0,
+        "total_tokens": 10282
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 4042,
+        "output_tokens": 557,
+        "thought_tokens": 0,
+        "total_tokens": 4599
+      },
+      {
+        "phase": "curator",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 29295,
+        "output_tokens": 11026,
+        "thought_tokens": 0,
+        "total_tokens": 40321,
+        "elapsed_s": 34.3
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 30038,
+        "output_tokens": 8498,
+        "thought_tokens": 1730,
+        "total_tokens": 40266,
+        "elapsed_s": 41.8
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 10155,
+        "output_tokens": 127,
+        "thought_tokens": 0,
+        "total_tokens": 10282
+      }
+    ]
+  }
+}

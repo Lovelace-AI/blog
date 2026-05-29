@@ -1,0 +1,169 @@
+{
+  "datasource": "structured-retrieval",
+  "model": "gemini-3.1-flash-lite-preview",
+  "passed": true,
+  "total_plan_calls": 29,
+  "items_retrieved": 2755,
+  "items_in_context": 320,
+  "unique_sources": 24,
+  "report_words": 3155,
+  "iterations": 2,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.3): The report provides an exceptional level of quantified financial detail and specific evidence for both companies, though it slightly lacks a deep dive into the specific antitrust hurdles of a near-monopoly toy merger. [financial_grounding=10, target_specificity=9, buyer_logic=9, deal_feasibility=9, analytical_coherence=9, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3155,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 134,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Target Standalone Case",
+          "Strategic Buyer Case",
+          "Deal Feasibility",
+          "Valuation",
+          "Alternative Paths"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "target_specificity": 9,
+          "buyer_logic": 9,
+          "deal_feasibility": 9,
+          "analytical_coherence": 9,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.33,
+        "reason": "The report provides an exceptional level of quantified financial detail and specific evidence for both companies, though it slightly lacks a deep dive into the specific antitrust hurdles of a near-monopoly toy merger.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 10161,
+          "output_tokens": 123,
+          "thought_tokens": 0,
+          "total_tokens": 10284
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 406.9,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 72885,
+  "total_synthesis_elapsed_s": 70.7,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 184844,
+      "output_tokens": 39886,
+      "thought_tokens": 3553,
+      "total_tokens": 228283
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 8279,
+        "output_tokens": 1513,
+        "thought_tokens": 0,
+        "total_tokens": 9792
+      },
+      "curator": {
+        "input_tokens": 82813,
+        "output_tokens": 20575,
+        "thought_tokens": 0,
+        "total_tokens": 103388
+      },
+      "synthesis": {
+        "input_tokens": 72885,
+        "output_tokens": 17537,
+        "thought_tokens": 3553,
+        "total_tokens": 93975
+      },
+      "judge": {
+        "input_tokens": 20867,
+        "output_tokens": 261,
+        "thought_tokens": 0,
+        "total_tokens": 21128
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 4065,
+        "output_tokens": 898,
+        "thought_tokens": 0,
+        "total_tokens": 4963
+      },
+      {
+        "phase": "curator",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 41970,
+        "output_tokens": 10698,
+        "thought_tokens": 0,
+        "total_tokens": 52668,
+        "elapsed_s": 39.3
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 32906,
+        "output_tokens": 9041,
+        "thought_tokens": 1805,
+        "total_tokens": 43752,
+        "elapsed_s": 37.8
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 10706,
+        "output_tokens": 138,
+        "thought_tokens": 0,
+        "total_tokens": 10844
+      },
+      {
+        "phase": "planner",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 4214,
+        "output_tokens": 615,
+        "thought_tokens": 0,
+        "total_tokens": 4829
+      },
+      {
+        "phase": "curator",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 40843,
+        "output_tokens": 9877,
+        "thought_tokens": 0,
+        "total_tokens": 50720,
+        "elapsed_s": 35.8
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 39979,
+        "output_tokens": 8496,
+        "thought_tokens": 1748,
+        "total_tokens": 50223,
+        "elapsed_s": 32.9
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 10161,
+        "output_tokens": 123,
+        "thought_tokens": 0,
+        "total_tokens": 10284
+      }
+    ]
+  }
+}

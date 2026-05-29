@@ -1,0 +1,135 @@
+{
+  "datasource": "structured-retrieval",
+  "model": "gemini-3.1-flash-lite-preview",
+  "passed": true,
+  "total_plan_calls": 12,
+  "items_retrieved": 1368,
+  "items_in_context": 204,
+  "unique_sources": 14,
+  "report_words": 4468,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.2): The report provides an exceptionally detailed and well-cited analysis of JPMorgan Chase, effectively balancing high-level strategic initiatives like AI and branch expansion with granular financial data and a comprehensive risk profile. [financial_grounding=9, business_specificity=9, growth_specificity=9, risk_assessment=9, analytical_coherence=9, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 4468,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 186,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Business Model And Segments",
+          "Financial Profile",
+          "Growth Drivers",
+          "Risk Factors",
+          "Investment View"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 9,
+          "business_specificity": 9,
+          "growth_specificity": 9,
+          "risk_assessment": 9,
+          "analytical_coherence": 9,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.17,
+        "reason": "The report provides an exceptionally detailed and well-cited analysis of JPMorgan Chase, effectively balancing high-level strategic initiatives like AI and branch expansion with granular financial data and a comprehensive risk profile.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 12435,
+          "output_tokens": 120,
+          "thought_tokens": 0,
+          "total_tokens": 12555
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 231.2,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 24112,
+  "total_synthesis_elapsed_s": 47.2,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 70924,
+      "output_tokens": 20150,
+      "thought_tokens": 1776,
+      "total_tokens": 92850
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4041,
+        "output_tokens": 624,
+        "thought_tokens": 0,
+        "total_tokens": 4665
+      },
+      "curator": {
+        "input_tokens": 30336,
+        "output_tokens": 8627,
+        "thought_tokens": 0,
+        "total_tokens": 38963
+      },
+      "synthesis": {
+        "input_tokens": 24112,
+        "output_tokens": 10779,
+        "thought_tokens": 1776,
+        "total_tokens": 36667
+      },
+      "judge": {
+        "input_tokens": 12435,
+        "output_tokens": 120,
+        "thought_tokens": 0,
+        "total_tokens": 12555
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 4041,
+        "output_tokens": 624,
+        "thought_tokens": 0,
+        "total_tokens": 4665
+      },
+      {
+        "phase": "curator",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 30336,
+        "output_tokens": 8627,
+        "thought_tokens": 0,
+        "total_tokens": 38963,
+        "elapsed_s": 28.2
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 24112,
+        "output_tokens": 10779,
+        "thought_tokens": 1776,
+        "total_tokens": 36667,
+        "elapsed_s": 47.2
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 12435,
+        "output_tokens": 120,
+        "thought_tokens": 0,
+        "total_tokens": 12555
+      }
+    ]
+  }
+}

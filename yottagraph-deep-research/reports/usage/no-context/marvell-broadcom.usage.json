@@ -1,0 +1,64 @@
+{
+  "datasource": "no-context",
+  "model": "gemini-3-flash-preview",
+  "passed": false,
+  "report_words": 4267,
+  "verdict": {
+    "passed": false,
+    "reason": "LLM scorecard failed (mean=4.7, threshold=0.0): The report provides a logically sound strategic framework but fails fundamentally on evidence standards, as every single material claim and financial figure is marked as [UNCITED]. [financial_grounding=4, target_specificity=5, buyer_logic=6, deal_feasibility=5, analytical_coherence=7, citation_coverage=1]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 4267,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 0,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Target Standalone Case",
+          "Strategic Buyer Case",
+          "Deal Feasibility",
+          "Valuation",
+          "Alternative Paths"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": false,
+        "scores": {
+          "financial_grounding": 4,
+          "target_specificity": 5,
+          "buyer_logic": 6,
+          "deal_feasibility": 5,
+          "analytical_coherence": 7,
+          "citation_coverage": 1
+        },
+        "mean_score": 4.67,
+        "reason": "The report provides a logically sound strategic framework but fails fundamentally on evidence standards, as every single material claim and financial figure is marked as [UNCITED].",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 8428,
+          "output_tokens": 113,
+          "thought_tokens": 0,
+          "total_tokens": 8541
+        }
+      }
+    }
+  },
+  "elapsed_s": 50.6,
+  "usage": {
+    "input_tokens": 600,
+    "output_tokens": 6761,
+    "thought_tokens": 1482,
+    "total_tokens": 8843
+  },
+  "total_elapsed_s": 52.8
+}

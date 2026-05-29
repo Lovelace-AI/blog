@@ -1,0 +1,63 @@
+{
+  "datasource": "deep-research",
+  "agent": "deep-research-max-preview-04-2026",
+  "passed": true,
+  "iterations": 1,
+  "report_words": 8190,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.7): The report provides an exceptional, decision-grade analysis with precise quantification of Costco's negative cash conversion cycle and membership dynamics, though it slightly hedges on specific historical special dividend totals. [financial_grounding=10, business_specificity=10, growth_specificity=9, risk_assessment=9, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 8190,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 85,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Business Model And Segments",
+          "Financial Profile",
+          "Growth Drivers",
+          "Risk Factors",
+          "Investment View"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "business_specificity": 10,
+          "growth_specificity": 9,
+          "risk_assessment": 9,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.67,
+        "reason": "The report provides an exceptional, decision-grade analysis with precise quantification of Costco's negative cash conversion cycle and membership dynamics, though it slightly hedges on specific historical special dividend totals.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 29308,
+          "output_tokens": 122,
+          "thought_tokens": 0,
+          "total_tokens": 29430
+        }
+      }
+    }
+  },
+  "total_input_tokens": 3862958,
+  "total_output_tokens": 142178,
+  "total_elapsed_s": 1567.6,
+  "rejudged_with_modified_judge": true,
+  "rejudge_model": "gemini-3-flash-preview",
+  "judge_scale": "1-10"
+}

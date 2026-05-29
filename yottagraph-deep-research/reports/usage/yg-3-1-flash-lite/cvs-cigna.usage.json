@@ -1,0 +1,135 @@
+{
+  "datasource": "structured-retrieval",
+  "model": "gemini-3.1-flash-lite-preview",
+  "passed": true,
+  "total_plan_calls": 18,
+  "items_retrieved": 2335,
+  "items_in_context": 239,
+  "unique_sources": 17,
+  "report_words": 3090,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.7): The report provides an exceptional level of quantified financial evidence and regulatory context, correctly identifying that CVS's larger asset base and the current antitrust climate make a Cigna acquisition highly improbable compared to the standalone case. [financial_grounding=10, target_specificity=9, buyer_logic=9, deal_feasibility=10, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3090,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 111,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Target Standalone Case",
+          "Strategic Buyer Case",
+          "Deal Feasibility",
+          "Valuation",
+          "Alternative Paths"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "target_specificity": 9,
+          "buyer_logic": 9,
+          "deal_feasibility": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.67,
+        "reason": "The report provides an exceptional level of quantified financial evidence and regulatory context, correctly identifying that CVS's larger asset base and the current antitrust climate make a Cigna acquisition highly improbable compared to the standalone case.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 8899,
+          "output_tokens": 128,
+          "thought_tokens": 0,
+          "total_tokens": 9027
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 417.6,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 26113,
+  "total_synthesis_elapsed_s": 163.9,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 82068,
+      "output_tokens": 17554,
+      "thought_tokens": 1607,
+      "total_tokens": 101229
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4066,
+        "output_tokens": 817,
+        "thought_tokens": 0,
+        "total_tokens": 4883
+      },
+      "curator": {
+        "input_tokens": 42990,
+        "output_tokens": 9374,
+        "thought_tokens": 0,
+        "total_tokens": 52364
+      },
+      "synthesis": {
+        "input_tokens": 26113,
+        "output_tokens": 7235,
+        "thought_tokens": 1607,
+        "total_tokens": 34955
+      },
+      "judge": {
+        "input_tokens": 8899,
+        "output_tokens": 128,
+        "thought_tokens": 0,
+        "total_tokens": 9027
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 4066,
+        "output_tokens": 817,
+        "thought_tokens": 0,
+        "total_tokens": 4883
+      },
+      {
+        "phase": "curator",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 42990,
+        "output_tokens": 9374,
+        "thought_tokens": 0,
+        "total_tokens": 52364,
+        "elapsed_s": 30.0
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 26113,
+        "output_tokens": 7235,
+        "thought_tokens": 1607,
+        "total_tokens": 34955,
+        "elapsed_s": 163.9
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 8899,
+        "output_tokens": 128,
+        "thought_tokens": 0,
+        "total_tokens": 9027
+      }
+    ]
+  }
+}

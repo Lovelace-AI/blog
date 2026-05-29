@@ -1,0 +1,138 @@
+{
+  "datasource": "structured-retrieval",
+  "model": "gemini-3.1-flash-lite-preview",
+  "passed": true,
+  "total_plan_calls": 10,
+  "items_retrieved": 1232,
+  "items_in_context": 216,
+  "unique_sources": 63,
+  "report_words": 2951,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.8): The report provides an exceptional level of factual detail, including a 15-year financial time series and highly specific operational initiatives, though the risk section includes some broader macroeconomic factors alongside company-specific legal risks. [financial_grounding=10, business_specificity=10, growth_specificity=10, risk_assessment=9, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 2951,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 109,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Business Model And Segments",
+          "Financial Profile",
+          "Growth Drivers",
+          "Risk Factors",
+          "Investment View"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "business_specificity": 10,
+          "growth_specificity": 10,
+          "risk_assessment": 9,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.83,
+        "reason": "The report provides an exceptional level of factual detail, including a 15-year financial time series and highly specific operational initiatives, though the risk section includes some broader macroeconomic factors alongside company-specific legal risks.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 9144,
+          "output_tokens": 129,
+          "thought_tokens": 0,
+          "total_tokens": 9273
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 220.2,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 34613,
+  "total_synthesis_elapsed_s": 62.9,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 126850,
+      "output_tokens": 21659,
+      "thought_tokens": 1876,
+      "total_tokens": 150385
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4045,
+        "output_tokens": 536,
+        "thought_tokens": 0,
+        "total_tokens": 4581
+      },
+      "curator": {
+        "input_tokens": 80198,
+        "output_tokens": 13506,
+        "thought_tokens": 0,
+        "total_tokens": 93704
+      },
+      "synthesis": {
+        "input_tokens": 34613,
+        "output_tokens": 7481,
+        "thought_tokens": 1876,
+        "total_tokens": 43970
+      },
+      "judge": {
+        "input_tokens": 7994,
+        "output_tokens": 136,
+        "thought_tokens": 0,
+        "total_tokens": 8130
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 4045,
+        "output_tokens": 536,
+        "thought_tokens": 0,
+        "total_tokens": 4581
+      },
+      {
+        "phase": "curator",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 80198,
+        "output_tokens": 13506,
+        "thought_tokens": 0,
+        "total_tokens": 93704,
+        "elapsed_s": 37.7
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 34613,
+        "output_tokens": 7481,
+        "thought_tokens": 1876,
+        "total_tokens": 43970,
+        "elapsed_s": 62.9
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 7994,
+        "output_tokens": 136,
+        "thought_tokens": 0,
+        "total_tokens": 8130
+      }
+    ]
+  },
+  "rejudged_with_modified_judge": true,
+  "judge_scale": "1-10",
+  "rejudge_model": "gemini-3-flash-preview"
+}

@@ -1,0 +1,7 @@
+slug: costco
+archetype: single_company_investment_memo
+question: Is Costco financially and strategically attractive as a long-term compounder based on public filings?
+roles:
+  company: Costco
+seed_entities:
+  - Costco

@@ -1,0 +1,64 @@
+{
+  "datasource": "no-context",
+  "model": "gemini-3-flash-preview",
+  "passed": false,
+  "report_words": 3493,
+  "verdict": {
+    "passed": false,
+    "reason": "LLM scorecard failed (mean=4.2, threshold=0.0): The report provides a logical qualitative framework but fails fundamentally on evidence standards, as every material claim and financial figure is marked as [UNCITED] and lacks specific source attribution. [financial_grounding=4, company_a_specificity=5, company_b_specificity=5, risk_assessment=4, analytical_coherence=6, citation_coverage=1]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3493,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 0,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Company A Financial Profile",
+          "Company B Financial Profile",
+          "Head-to-Head Comparison",
+          "Risk Analysis",
+          "Valuation"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": false,
+        "scores": {
+          "financial_grounding": 4,
+          "company_a_specificity": 5,
+          "company_b_specificity": 5,
+          "risk_assessment": 4,
+          "analytical_coherence": 6,
+          "citation_coverage": 1
+        },
+        "mean_score": 4.17,
+        "reason": "The report provides a logical qualitative framework but fails fundamentally on evidence standards, as every material claim and financial figure is marked as [UNCITED] and lacks specific source attribution.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 7153,
+          "output_tokens": 120,
+          "thought_tokens": 0,
+          "total_tokens": 7273
+        }
+      }
+    }
+  },
+  "elapsed_s": 59.0,
+  "usage": {
+    "input_tokens": 611,
+    "output_tokens": 5490,
+    "thought_tokens": 1733,
+    "total_tokens": 7834
+  },
+  "total_elapsed_s": 61.2
+}

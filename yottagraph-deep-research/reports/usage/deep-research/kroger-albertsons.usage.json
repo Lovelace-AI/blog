@@ -1,0 +1,63 @@
+{
+  "datasource": "deep-research",
+  "agent": "deep-research-max-preview-04-2026",
+  "passed": true,
+  "iterations": 1,
+  "report_words": 5994,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.8): The report provides an exceptionally detailed, data-driven analysis of the post-merger landscape, utilizing specific 2025/2026 financial projections and legal developments to definitively argue for a standalone valuation. [financial_grounding=10, target_specificity=10, buyer_logic=9, deal_feasibility=10, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 5994,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 123,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Target Standalone Case",
+          "Strategic Buyer Case",
+          "Deal Feasibility",
+          "Valuation",
+          "Alternative Paths"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "target_specificity": 10,
+          "buyer_logic": 9,
+          "deal_feasibility": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.83,
+        "reason": "The report provides an exceptionally detailed, data-driven analysis of the post-merger landscape, utilizing specific 2025/2026 financial projections and legal developments to definitively argue for a standalone valuation.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 24745,
+          "output_tokens": 132,
+          "thought_tokens": 0,
+          "total_tokens": 24877
+        }
+      }
+    }
+  },
+  "total_input_tokens": 32882,
+  "total_output_tokens": 114762,
+  "total_elapsed_s": 998.7,
+  "rejudged_with_modified_judge": true,
+  "rejudge_model": "gemini-3-flash-preview",
+  "judge_scale": "1-10"
+}

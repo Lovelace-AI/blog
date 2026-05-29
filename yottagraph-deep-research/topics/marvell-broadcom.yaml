@@ -1,0 +1,9 @@
+slug: marvell-broadcom
+archetype: strategic_alternatives
+question: Should Marvell Technology be valued as a standalone AI infrastructure compounder or as a strategic acquisition candidate for Broadcom?
+roles:
+  target: Marvell Technology
+  buyer: Broadcom
+seed_entities:
+  - Marvell Technology
+  - Broadcom

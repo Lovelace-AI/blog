@@ -1,0 +1,135 @@
+{
+  "datasource": "structured-retrieval",
+  "model": "gemini-3.1-flash-lite-preview",
+  "passed": true,
+  "total_plan_calls": 14,
+  "items_retrieved": 1488,
+  "items_in_context": 202,
+  "unique_sources": 11,
+  "report_words": 4624,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.8): The report provides an exceptionally detailed and quantified comparison of NVIDIA and AMD, utilizing specific 10-K/10-Q data and strategic partnership evidence to build a highly coherent thesis. [financial_grounding=10, company_a_specificity=10, company_b_specificity=10, risk_assessment=9, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 4624,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 163,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Company A Financial Profile",
+          "Company B Financial Profile",
+          "Head-to-Head Comparison",
+          "Risk Analysis",
+          "Valuation"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "company_a_specificity": 10,
+          "company_b_specificity": 10,
+          "risk_assessment": 9,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.83,
+        "reason": "The report provides an exceptionally detailed and quantified comparison of NVIDIA and AMD, utilizing specific 10-K/10-Q data and strategic partnership evidence to build a highly coherent thesis.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 13032,
+          "output_tokens": 129,
+          "thought_tokens": 0,
+          "total_tokens": 13161
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 228.6,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 24853,
+  "total_synthesis_elapsed_s": 50.7,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 79372,
+      "output_tokens": 21543,
+      "thought_tokens": 2072,
+      "total_tokens": 102987
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4072,
+        "output_tokens": 703,
+        "thought_tokens": 0,
+        "total_tokens": 4775
+      },
+      "curator": {
+        "input_tokens": 37415,
+        "output_tokens": 9340,
+        "thought_tokens": 0,
+        "total_tokens": 46755
+      },
+      "synthesis": {
+        "input_tokens": 24853,
+        "output_tokens": 11371,
+        "thought_tokens": 2072,
+        "total_tokens": 38296
+      },
+      "judge": {
+        "input_tokens": 13032,
+        "output_tokens": 129,
+        "thought_tokens": 0,
+        "total_tokens": 13161
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 4072,
+        "output_tokens": 703,
+        "thought_tokens": 0,
+        "total_tokens": 4775
+      },
+      {
+        "phase": "curator",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 37415,
+        "output_tokens": 9340,
+        "thought_tokens": 0,
+        "total_tokens": 46755,
+        "elapsed_s": 28.6
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 24853,
+        "output_tokens": 11371,
+        "thought_tokens": 2072,
+        "total_tokens": 38296,
+        "elapsed_s": 50.7
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 13032,
+        "output_tokens": 129,
+        "thought_tokens": 0,
+        "total_tokens": 13161
+      }
+    ]
+  }
+}

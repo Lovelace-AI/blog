@@ -1,0 +1,135 @@
+{
+  "datasource": "structured-retrieval",
+  "model": "gemini-3.1-flash-lite-preview",
+  "passed": true,
+  "total_plan_calls": 16,
+  "items_retrieved": 1603,
+  "items_in_context": 280,
+  "unique_sources": 31,
+  "report_words": 3351,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.3): The report provides an exceptional level of quantified financial detail and comparative analysis, though it is slightly stronger on Mastercard's shareholder return data than on Visa's specific valuation metrics. [financial_grounding=10, company_a_specificity=9, company_b_specificity=10, risk_assessment=8, analytical_coherence=9, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3351,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 160,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Company A Financial Profile",
+          "Company B Financial Profile",
+          "Head-to-Head Comparison",
+          "Risk Analysis",
+          "Valuation"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "company_a_specificity": 9,
+          "company_b_specificity": 10,
+          "risk_assessment": 8,
+          "analytical_coherence": 9,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.33,
+        "reason": "The report provides an exceptional level of quantified financial detail and comparative analysis, though it is slightly stronger on Mastercard's shareholder return data than on Visa's specific valuation metrics.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 8333,
+          "output_tokens": 124,
+          "thought_tokens": 0,
+          "total_tokens": 8457
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 271.5,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 23629,
+  "total_synthesis_elapsed_s": 33.8,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 71987,
+      "output_tokens": 17265,
+      "thought_tokens": 1862,
+      "total_tokens": 91114
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4073,
+        "output_tokens": 783,
+        "thought_tokens": 0,
+        "total_tokens": 4856
+      },
+      "curator": {
+        "input_tokens": 35952,
+        "output_tokens": 9687,
+        "thought_tokens": 0,
+        "total_tokens": 45639
+      },
+      "synthesis": {
+        "input_tokens": 23629,
+        "output_tokens": 6671,
+        "thought_tokens": 1862,
+        "total_tokens": 32162
+      },
+      "judge": {
+        "input_tokens": 8333,
+        "output_tokens": 124,
+        "thought_tokens": 0,
+        "total_tokens": 8457
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 4073,
+        "output_tokens": 783,
+        "thought_tokens": 0,
+        "total_tokens": 4856
+      },
+      {
+        "phase": "curator",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 35952,
+        "output_tokens": 9687,
+        "thought_tokens": 0,
+        "total_tokens": 45639,
+        "elapsed_s": 29.3
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 23629,
+        "output_tokens": 6671,
+        "thought_tokens": 1862,
+        "total_tokens": 32162,
+        "elapsed_s": 33.8
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 8333,
+        "output_tokens": 124,
+        "thought_tokens": 0,
+        "total_tokens": 8457
+      }
+    ]
+  }
+}
