@@ -286,9 +286,9 @@ Ollama). All 12 topics passed the judge on the first or second iteration.
 | `exxon-chevron` | 9.83 | 114,270 | 5,229 | 3,188 |
 | `costco` | 9.83 | 102,813 | 4,765 | 2,944 |
 | `caterpillar` | 10.00 | 106,272 | 4,450 | 2,701 |
-| `jpmorgan` | 9.50 | 123,127 | 4,685 | 3,098 |
+| `jpmorgan` | 9.50 | 108,890 | 4,685 | 3,098 |
 | `unitedhealth` | 9.50 | 109,750 | 5,367 | 3,152 |
-| **Average** | **9.83** | **114,799** | **4,945** | **3,197** |
+| **Average** | **9.83** | **113,612** | **4,945** | **3,197** |
 
 Latency for the Gemma 4 local runs is driven mostly by synthesis on the 31B
 model over local Ollama:
@@ -305,9 +305,9 @@ model over local Ollama:
 | `exxon-chevron` | 1,330.1s | 904.0s |
 | `costco` | 1,189.3s | 835.9s |
 | `caterpillar` | 1,199.0s | 735.7s |
-| `jpmorgan` | 1,531.8s | 870.1s |
+| `jpmorgan` | 1,273.4s | 727.3s |
 | `unitedhealth` | 1,350.7s | 928.4s |
-| **Average** | **1,298.4s** | **819.1s** |
+| **Average** | **1,276.9s** | **807.2s** |
 
 Gemma 4 31B local runs average **~22 minutes** total, versus **~4.8 minutes**
 for Flash Lite (API) and **~17 minutes** for Deep Research Max. Synthesis
