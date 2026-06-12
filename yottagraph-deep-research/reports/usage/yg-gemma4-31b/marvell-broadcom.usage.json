@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemma4:31b-it-q8_0",
+  "passed": true,
+  "total_plan_calls": 30,
+  "items_retrieved": 3047,
+  "items_in_context": 215,
+  "unique_sources": 17,
+  "report_words": 4609,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.8): The report provides an exceptionally detailed and quantified analysis of both firms, utilizing specific SEC filing data and strategic market forecasts to build a highly coherent case for Marvell's standalone valuation. [financial_grounding=10, target_specificity=10, buyer_logic=10, deal_feasibility=9, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 4609,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 230,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Target Standalone Case",
+          "Strategic Buyer Case",
+          "Deal Feasibility",
+          "Valuation",
+          "Alternative Paths"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "target_specificity": 10,
+          "buyer_logic": 10,
+          "deal_feasibility": 9,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.83,
+        "reason": "The report provides an exceptionally detailed and quantified analysis of both firms, utilizing specific SEC filing data and strategic market forecasts to build a highly coherent case for Marvell's standalone valuation.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 10523,
+          "output_tokens": 124,
+          "thought_tokens": 0,
+          "total_tokens": 10647
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 973.1,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 25853,
+  "total_synthesis_elapsed_s": 631.0,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 81254,
+      "output_tokens": 25488,
+      "thought_tokens": 0,
+      "total_tokens": 106742
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4090,
+        "output_tokens": 173,
+        "thought_tokens": 0,
+        "total_tokens": 4263
+      },
+      "curator": {
+        "input_tokens": 40788,
+        "output_tokens": 14794,
+        "thought_tokens": 0,
+        "total_tokens": 55582
+      },
+      "synthesis": {
+        "input_tokens": 25853,
+        "output_tokens": 10397,
+        "thought_tokens": 0,
+        "total_tokens": 36250
+      },
+      "judge": {
+        "input_tokens": 10523,
+        "output_tokens": 124,
+        "thought_tokens": 0,
+        "total_tokens": 10647
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 4090,
+        "output_tokens": 173,
+        "thought_tokens": 0,
+        "total_tokens": 4263
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 40788,
+        "output_tokens": 14794,
+        "thought_tokens": 0,
+        "total_tokens": 55582,
+        "elapsed_s": 261.1
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 25853,
+        "output_tokens": 10397,
+        "thought_tokens": 0,
+        "total_tokens": 36250,
+        "elapsed_s": 631.0
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 10523,
+        "output_tokens": 124,
+        "thought_tokens": 0,
+        "total_tokens": 10647
+      }
+    ]
+  }
+}

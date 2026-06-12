@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemma4:31b-it-q8_0",
+  "passed": true,
+  "total_plan_calls": 30,
+  "items_retrieved": 4189,
+  "items_in_context": 217,
+  "unique_sources": 16,
+  "report_words": 5638,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.8): The report provides an exceptional factual foundation, utilizing specific balance sheet and income statement data to demonstrate that CVS's scale makes a Cigna acquisition mathematically improbable, while effectively integrating niche regulatory risks like Tennessee's SB 2040. [financial_grounding=10, target_specificity=10, buyer_logic=9, deal_feasibility=10, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 5638,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 231,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Target Standalone Case",
+          "Strategic Buyer Case",
+          "Deal Feasibility",
+          "Valuation",
+          "Alternative Paths"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "target_specificity": 10,
+          "buyer_logic": 9,
+          "deal_feasibility": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.83,
+        "reason": "The report provides an exceptional factual foundation, utilizing specific balance sheet and income statement data to demonstrate that CVS's scale makes a Cigna acquisition mathematically improbable, while effectively integrating niche regulatory risks like Tennessee's SB 2040.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 14330,
+          "output_tokens": 136,
+          "thought_tokens": 0,
+          "total_tokens": 14466
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 1303.8,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 24842,
+  "total_synthesis_elapsed_s": 864.3,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 83630,
+      "output_tokens": 32615,
+      "thought_tokens": 0,
+      "total_tokens": 116245
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4087,
+        "output_tokens": 107,
+        "thought_tokens": 0,
+        "total_tokens": 4194
+      },
+      "curator": {
+        "input_tokens": 40371,
+        "output_tokens": 17963,
+        "thought_tokens": 0,
+        "total_tokens": 58334
+      },
+      "synthesis": {
+        "input_tokens": 24842,
+        "output_tokens": 14409,
+        "thought_tokens": 0,
+        "total_tokens": 39251
+      },
+      "judge": {
+        "input_tokens": 14330,
+        "output_tokens": 136,
+        "thought_tokens": 0,
+        "total_tokens": 14466
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 4087,
+        "output_tokens": 107,
+        "thought_tokens": 0,
+        "total_tokens": 4194
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 40371,
+        "output_tokens": 17963,
+        "thought_tokens": 0,
+        "total_tokens": 58334,
+        "elapsed_s": 331.0
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 24842,
+        "output_tokens": 14409,
+        "thought_tokens": 0,
+        "total_tokens": 39251,
+        "elapsed_s": 864.3
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 14330,
+        "output_tokens": 136,
+        "thought_tokens": 0,
+        "total_tokens": 14466
+      }
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemma4:31b-it-q8_0",
+  "passed": true,
+  "total_plan_calls": 30,
+  "items_retrieved": 3700,
+  "items_in_context": 149,
+  "unique_sources": 8,
+  "report_words": 3918,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=10.0): The report is exceptionally well-grounded, utilizing specific SEC filing data, real-time stock movements, and detailed regulatory litigation facts to build a compelling case for Albertsons' standalone viability. [financial_grounding=10, target_specificity=10, buyer_logic=10, deal_feasibility=10, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3918,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 115,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Target Standalone Case",
+          "Strategic Buyer Case",
+          "Deal Feasibility",
+          "Valuation",
+          "Alternative Paths"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "target_specificity": 10,
+          "buyer_logic": 10,
+          "deal_feasibility": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 10.0,
+        "reason": "The report is exceptionally well-grounded, utilizing specific SEC filing data, real-time stock movements, and detailed regulatory litigation facts to build a compelling case for Albertsons' standalone viability.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 9414,
+          "output_tokens": 127,
+          "thought_tokens": 0,
+          "total_tokens": 9541
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 1106.9,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 22801,
+  "total_synthesis_elapsed_s": 564.9,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 76743,
+      "output_tokens": 33829,
+      "thought_tokens": 0,
+      "total_tokens": 110572
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4085,
+        "output_tokens": 61,
+        "thought_tokens": 0,
+        "total_tokens": 4146
+      },
+      "curator": {
+        "input_tokens": 40443,
+        "output_tokens": 24287,
+        "thought_tokens": 0,
+        "total_tokens": 64730
+      },
+      "synthesis": {
+        "input_tokens": 22801,
+        "output_tokens": 9354,
+        "thought_tokens": 0,
+        "total_tokens": 32155
+      },
+      "judge": {
+        "input_tokens": 9414,
+        "output_tokens": 127,
+        "thought_tokens": 0,
+        "total_tokens": 9541
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 4085,
+        "output_tokens": 61,
+        "thought_tokens": 0,
+        "total_tokens": 4146
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 40443,
+        "output_tokens": 24287,
+        "thought_tokens": 0,
+        "total_tokens": 64730,
+        "elapsed_s": 422.9
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 22801,
+        "output_tokens": 9354,
+        "thought_tokens": 0,
+        "total_tokens": 32155,
+        "elapsed_s": 564.9
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 9414,
+        "output_tokens": 127,
+        "thought_tokens": 0,
+        "total_tokens": 9541
+      }
+    ]
+  }
+}

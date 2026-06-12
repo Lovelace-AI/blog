@@ -188,9 +188,11 @@ retrieval, curation, and writing:
    topic-specific, fact-focused 1-10 rubric. Usage is recorded for planner,
    curator, synthesis, and judge phases.
 
-The model names are configured in `run_direct.py`; the report set summarized
-below uses `gemini-3.1-flash-lite-preview` for Yottagraph planning, curation,
-and synthesis, and `gemini-3-flash-preview` for judging.
+The model names are configured in `run_direct.py`; the Flash Lite report set
+summarized below uses `gemini-3.1-flash-lite-preview` for Yottagraph planning,
+curation, and synthesis, and `gemini-3-flash-preview` for judging. The Gemma 4
+31B report set uses `gemma4:12b` for planning and curation and
+`gemma4:31b-it-q8_0` for synthesis via local Ollama.
 
 ## Report Artifacts
 
@@ -199,11 +201,14 @@ Committed final report artifacts live under `reports/`:
 - `reports/deep-research/` — Gemini Deep Research Max reports for all 12 topics.
 - `reports/yg-3-1-flash-lite/` — live Yottagraph reports for all 12 topics,
   generated with `gemini-3.1-flash-lite-preview`.
+- `reports/yg-gemma4-31b/` — live Yottagraph reports for all 12 topics,
+  generated with `gemma4:12b` for planning/curation and `gemma4:31b-it-q8_0`
+  for synthesis.
 - `reports/no-context/` — Gemini 3 Flash reports generated with only the topic
   prompt/outline and no retrieval or tool context.
-- `reports/usage/deep-research/` and `reports/usage/yg-3-1-flash-lite/` —
-  final usage and judge JSONs for each committed report, with no-context usage
-  under `reports/usage/no-context/`.
+- `reports/usage/deep-research/`, `reports/usage/yg-3-1-flash-lite/`, and
+  `reports/usage/yg-gemma4-31b/` — final usage and judge JSONs for each
+  committed report, with no-context usage under `reports/usage/no-context/`.
 
 Additional local run artifacts such as plans, facts, evidence, curation files,
 raw Deep Research responses, and usage JSONs are written under ignored
@@ -214,10 +219,10 @@ raw Deep Research responses, and usage JSONs are written under ignored
 The tables below summarize the latest local artifacts available when this README
 was updated. Scores are LLM judge mean scores on a **1-10** scale using the
 fact-focused rubric in `topic_spec.py`. Deep Research token counts are `usage.total_tokens` from `DEEP_RESEARCH_RAW_iter1.json`, including tool-use and thought tokens.
-The YG table reports recorded pipeline tokens for planner, curator, and
+The YG tables report recorded pipeline tokens for planner, curator, and
 synthesis phases, excluding the single-pass judge. This section compares
-**Gemini Deep Research Max** against the
-completed **Live Yottagraph / Gemini 3.1 Flash Lite Preview** reports.
+**Gemini Deep Research Max** against completed **Live Yottagraph** reports using
+Gemini 3.1 Flash Lite Preview and local Gemma 4 31B synthesis.
 
 ### Gemini Deep Research Max
 
@@ -263,15 +268,60 @@ Across the YG runs, recorded non-judge LLM tokens total **1,395,400**:
 planner **61,932** (**4.4%**), curator **783,916** (**56.2%**), and
 synthesis **549,552** (**39.4%**).
 
-### Latency Breakdown
+### Live Yottagraph / Gemma 4 31B (local Ollama)
 
-YG total latency is wall-clock runtime for the full YG pipeline, including
-planning, structured retrieval, evidence formatting, curation, synthesis,
-judging, and artifact writes. YG LLM-only latency is the sum of recorded LLM
-phase elapsed times in the usage JSONs; the current artifacts record curation
-and synthesis elapsed time, while planner and judge elapsed time were not
-persisted separately. Deep Research total latency is the wall-clock latency
-reported by the Deep Research run.
+Planning and curation: `gemma4:12b` (11.9B, Q4_K_M, 262K context, local
+Ollama). Synthesis: `gemma4:31b-it-q8_0` (31.3B, Q8_0, 262K context, local
+Ollama). All 12 topics passed the judge on the first or second iteration.
+
+| Topic | Mean score | Tokens | Words | Words excl. bibliography |
+|---|---:|---:|---:|---:|
+| `marvell-broadcom` | 9.83 | 106,742 | 4,609 | 3,215 |
+| `cvs-cigna` | 9.83 | 116,245 | 5,638 | 3,722 |
+| `kroger-albertsons` | 10.00 | 110,572 | 3,918 | 3,109 |
+| `hasbro-mattel` | 10.00 | 125,498 | 5,431 | 3,447 |
+| `nvidia-amd` | 9.83 | 127,385 | 5,809 | 3,694 |
+| `coca-cola-pepsico` | 10.00 | 127,459 | 4,707 | 3,158 |
+| `visa-mastercard` | 9.83 | 107,451 | 4,733 | 2,940 |
+| `exxon-chevron` | 9.83 | 114,270 | 5,229 | 3,188 |
+| `costco` | 9.83 | 102,813 | 4,765 | 2,944 |
+| `caterpillar` | 10.00 | 106,272 | 4,450 | 2,701 |
+| `jpmorgan` | 9.50 | 123,127 | 4,685 | 3,098 |
+| `unitedhealth` | 9.50 | 109,750 | 5,367 | 3,152 |
+| **Average** | **9.83** | **114,799** | **4,945** | **3,197** |
+
+Latency for the Gemma 4 local runs is driven mostly by synthesis on the 31B
+model over local Ollama:
+
+| Topic | Total latency | Synthesis LLM latency |
+|---|---:|---:|
+| `marvell-broadcom` | 973.1s | 631.0s |
+| `cvs-cigna` | 1,303.8s | 864.3s |
+| `kroger-albertsons` | 1,106.9s | 564.9s |
+| `hasbro-mattel` | 1,500.6s | 947.4s |
+| `nvidia-amd` | 1,477.9s | 978.1s |
+| `coca-cola-pepsico` | 1,420.9s | 782.9s |
+| `visa-mastercard` | 1,197.1s | 786.7s |
+| `exxon-chevron` | 1,330.1s | 904.0s |
+| `costco` | 1,189.3s | 835.9s |
+| `caterpillar` | 1,199.0s | 735.7s |
+| `jpmorgan` | 1,531.8s | 870.1s |
+| `unitedhealth` | 1,350.7s | 928.4s |
+| **Average** | **1,298.4s** | **819.1s** |
+
+Gemma 4 31B local runs average **~22 minutes** total, versus **~4.8 minutes**
+for Flash Lite (API) and **~17 minutes** for Deep Research Max. Synthesis
+accounts for roughly **63%** of wall-clock time.
+
+### Flash Lite Latency Breakdown
+
+YG Flash Lite total latency is wall-clock runtime for the full YG pipeline,
+including planning, structured retrieval, evidence formatting, curation,
+synthesis, judging, and artifact writes. YG Flash Lite LLM-only latency is the
+sum of recorded LLM phase elapsed times in the usage JSONs; the current
+artifacts record curation and synthesis elapsed time, while planner and judge
+elapsed time were not persisted separately. Deep Research total latency is the
+wall-clock latency reported by the Deep Research run.
 
 | Topic | YG total latency | YG LLM-only latency | Deep Research total latency |
 |---|---:|---:|---:|
@@ -292,7 +342,7 @@ reported by the Deep Research run.
 On average, YG total latency is **3.6x faster** than Deep Research, while YG
 LLM-only latency is **10.3x faster** than Deep Research.
 
-### Estimated Cost Reduction
+### Flash Lite Estimated Cost Reduction
 
 Cost estimates use published Gemini API prices available at the time of the
 experiment:
@@ -323,13 +373,17 @@ experiment:
 
 ## Takeaways
 
-- Deep Research Max remains ahead on average under the stricter 1-10 judge, but
-  the gap is narrow: 9.87 average for Deep Research versus 9.67 for YG.
+- Deep Research Max and YG Gemma 4 31B are effectively matched under the
+  stricter 1-10 judge: **9.87** for Deep Research versus **9.83** for YG Gemma
+  4 31B, with YG Flash Lite at **9.67**.
+- The YG Gemma 4 31B run matches Deep Research quality while running entirely
+  on local open-weight models with no API cost for synthesis.
 - The YG pipeline uses structured retrieval, entity matching, section-aware
   evidence curation, source-backed citations, and model-specific output
   filenames.
 - The Flash Lite YG run completed all 12 topics. All reports are committed under
-  `reports/yg-3-1-flash-lite/`.
+  `reports/yg-3-1-flash-lite/`. The Gemma 4 31B reports are committed under
+  `reports/yg-gemma4-31b/`.
 - YG Flash Lite matches or exceeds Deep Research on several topics while using
   far fewer model tokens in the recorded pipeline. Remaining gaps are concentrated
   in archetype-sensitive dimensions such as deal feasibility and comparative

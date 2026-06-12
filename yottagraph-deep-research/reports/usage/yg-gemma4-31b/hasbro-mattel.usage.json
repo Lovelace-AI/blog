@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemma4:31b-it-q8_0",
+  "passed": true,
+  "total_plan_calls": 30,
+  "items_retrieved": 4398,
+  "items_in_context": 232,
+  "unique_sources": 22,
+  "report_words": 5431,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=10.0): The report provides an exceptional evidence-based analysis, utilizing specific SEC-derived financial volatility data, SIC code complementarity, and shared institutional ownership to build a highly coherent case for a standalone valuation. [financial_grounding=10, target_specificity=10, buyer_logic=10, deal_feasibility=10, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 5431,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 264,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Target Standalone Case",
+          "Strategic Buyer Case",
+          "Deal Feasibility",
+          "Valuation",
+          "Alternative Paths"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "target_specificity": 10,
+          "buyer_logic": 10,
+          "deal_feasibility": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 10.0,
+        "reason": "The report provides an exceptional evidence-based analysis, utilizing specific SEC-derived financial volatility data, SIC code complementarity, and shared institutional ownership to build a highly coherent case for a standalone valuation.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 14611,
+          "output_tokens": 127,
+          "thought_tokens": 0,
+          "total_tokens": 14738
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 1500.6,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 28683,
+  "total_synthesis_elapsed_s": 947.4,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 87926,
+      "output_tokens": 37572,
+      "thought_tokens": 0,
+      "total_tokens": 125498
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4086,
+        "output_tokens": 119,
+        "thought_tokens": 0,
+        "total_tokens": 4205
+      },
+      "curator": {
+        "input_tokens": 40546,
+        "output_tokens": 21972,
+        "thought_tokens": 0,
+        "total_tokens": 62518
+      },
+      "synthesis": {
+        "input_tokens": 28683,
+        "output_tokens": 15354,
+        "thought_tokens": 0,
+        "total_tokens": 44037
+      },
+      "judge": {
+        "input_tokens": 14611,
+        "output_tokens": 127,
+        "thought_tokens": 0,
+        "total_tokens": 14738
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 4086,
+        "output_tokens": 119,
+        "thought_tokens": 0,
+        "total_tokens": 4205
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 40546,
+        "output_tokens": 21972,
+        "thought_tokens": 0,
+        "total_tokens": 62518,
+        "elapsed_s": 400.2
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 28683,
+        "output_tokens": 15354,
+        "thought_tokens": 0,
+        "total_tokens": 44037,
+        "elapsed_s": 947.4
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 14611,
+        "output_tokens": 127,
+        "thought_tokens": 0,
+        "total_tokens": 14738
+      }
+    ]
+  }
+}
