@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemma4:31b-it-q8_0",
+  "passed": true,
+  "total_plan_calls": 16,
+  "items_retrieved": 2773,
+  "items_in_context": 176,
+  "unique_sources": 13,
+  "report_words": 4765,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.8): The report provides an exceptionally detailed and well-cited analysis of Costco's financial trajectory, membership-driven business model, and global expansion, with the only minor weakness being a slightly less quantified impact of specific regulatory risks. [financial_grounding=10, business_specificity=10, growth_specificity=10, risk_assessment=9, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 4765,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 241,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Business Model And Segments",
+          "Financial Profile",
+          "Growth Drivers",
+          "Risk Factors",
+          "Investment View"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "business_specificity": 10,
+          "growth_specificity": 10,
+          "risk_assessment": 9,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.83,
+        "reason": "The report provides an exceptionally detailed and well-cited analysis of Costco's financial trajectory, membership-driven business model, and global expansion, with the only minor weakness being a slightly less quantified impact of specific regulatory risks.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 12890,
+          "output_tokens": 131,
+          "thought_tokens": 0,
+          "total_tokens": 13021
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 1189.3,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 23733,
+  "total_synthesis_elapsed_s": 835.9,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 72975,
+      "output_tokens": 29838,
+      "thought_tokens": 0,
+      "total_tokens": 102813
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4066,
+        "output_tokens": 61,
+        "thought_tokens": 0,
+        "total_tokens": 4127
+      },
+      "curator": {
+        "input_tokens": 32286,
+        "output_tokens": 15927,
+        "thought_tokens": 0,
+        "total_tokens": 48213
+      },
+      "synthesis": {
+        "input_tokens": 23733,
+        "output_tokens": 13719,
+        "thought_tokens": 0,
+        "total_tokens": 37452
+      },
+      "judge": {
+        "input_tokens": 12890,
+        "output_tokens": 131,
+        "thought_tokens": 0,
+        "total_tokens": 13021
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 4066,
+        "output_tokens": 61,
+        "thought_tokens": 0,
+        "total_tokens": 4127
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 32286,
+        "output_tokens": 15927,
+        "thought_tokens": 0,
+        "total_tokens": 48213,
+        "elapsed_s": 273.7
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 23733,
+        "output_tokens": 13719,
+        "thought_tokens": 0,
+        "total_tokens": 37452,
+        "elapsed_s": 835.9
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 12890,
+        "output_tokens": 131,
+        "thought_tokens": 0,
+        "total_tokens": 13021
+      }
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemma4:31b-it-q8_0",
+  "passed": true,
+  "total_plan_calls": 36,
+  "items_retrieved": 1201,
+  "items_in_context": 69,
+  "unique_sources": 0,
+  "report_words": 4027,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=10.0): The report provides an exceptionally detailed and data-driven analysis, utilizing specific production volumes, reserve data, and corporate financial metrics to build a logically sound thesis for gold's price trajectory. [supply_demand_grounding=10, producer_specificity=10, risk_assessment=10, market_dynamics=10, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 4027,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 133,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Market Overview",
+          "Supply Landscape",
+          "Demand Landscape",
+          "Key Producers And Market Participants",
+          "Geopolitical And Macro Risk",
+          "Price Outlook"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "supply_demand_grounding": 10,
+          "producer_specificity": 10,
+          "risk_assessment": 10,
+          "market_dynamics": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 10.0,
+        "reason": "The report provides an exceptionally detailed and data-driven analysis, utilizing specific production volumes, reserve data, and corporate financial metrics to build a logically sound thesis for gold's price trajectory.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 8597,
+          "output_tokens": 127,
+          "thought_tokens": 0,
+          "total_tokens": 8724
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 707.2,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 16189,
+  "total_synthesis_elapsed_s": 504.0,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 46599,
+      "output_tokens": 15330,
+      "thought_tokens": 0,
+      "total_tokens": 61929
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4185,
+        "output_tokens": 41,
+        "thought_tokens": 0,
+        "total_tokens": 4226
+      },
+      "curator": {
+        "input_tokens": 17628,
+        "output_tokens": 6282,
+        "thought_tokens": 0,
+        "total_tokens": 23910
+      },
+      "synthesis": {
+        "input_tokens": 16189,
+        "output_tokens": 8880,
+        "thought_tokens": 0,
+        "total_tokens": 25069
+      },
+      "judge": {
+        "input_tokens": 8597,
+        "output_tokens": 127,
+        "thought_tokens": 0,
+        "total_tokens": 8724
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 4185,
+        "output_tokens": 41,
+        "thought_tokens": 0,
+        "total_tokens": 4226
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 17628,
+        "output_tokens": 6282,
+        "thought_tokens": 0,
+        "total_tokens": 23910,
+        "elapsed_s": 105.7
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 16189,
+        "output_tokens": 8880,
+        "thought_tokens": 0,
+        "total_tokens": 25069,
+        "elapsed_s": 504.0
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 8597,
+        "output_tokens": 127,
+        "thought_tokens": 0,
+        "total_tokens": 8724
+      }
+    ]
+  }
+}

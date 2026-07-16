@@ -1,0 +1,14 @@
+slug: wti-crude-oil
+archetype: commodity_supply_chain_outlook
+question: What are the key supply, demand, and geopolitical drivers behind WTI crude oil's price trajectory in H2 2026?
+market_theme: global oil market
+seed_entities:
+  - name: Crude Petroleum and Natural Gas
+    flavors: [industry]
+  - name: Petroleum Refining
+    flavors: [industry]
+  - ExxonMobil
+  - Chevron
+  - Saudi Aramco
+  - OPEC
+  - ConocoPhillips

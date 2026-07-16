@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemma4:31b-it-q8_0",
+  "passed": true,
+  "total_plan_calls": 16,
+  "items_retrieved": 2955,
+  "items_in_context": 174,
+  "unique_sources": 13,
+  "report_words": 4685,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.5): The report provides an exceptionally detailed financial and risk profile using specific longitudinal data from SEC filings, though it slightly lacks a granular revenue breakdown by business segment. [financial_grounding=10, business_specificity=9, growth_specificity=9, risk_assessment=10, analytical_coherence=9, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 4685,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 226,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Business Model And Segments",
+          "Financial Profile",
+          "Growth Drivers",
+          "Risk Factors",
+          "Investment View"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "business_specificity": 9,
+          "growth_specificity": 9,
+          "risk_assessment": 10,
+          "analytical_coherence": 9,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.5,
+        "reason": "The report provides an exceptionally detailed financial and risk profile using specific longitudinal data from SEC filings, though it slightly lacks a granular revenue breakdown by business segment.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 12128,
+          "output_tokens": 115,
+          "thought_tokens": 0,
+          "total_tokens": 12243
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 1273.4,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 22026,
+  "total_synthesis_elapsed_s": 727.3,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 73019,
+      "output_tokens": 35871,
+      "thought_tokens": 0,
+      "total_tokens": 108890
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4062,
+        "output_tokens": 61,
+        "thought_tokens": 0,
+        "total_tokens": 4123
+      },
+      "curator": {
+        "input_tokens": 34803,
+        "output_tokens": 23600,
+        "thought_tokens": 0,
+        "total_tokens": 58403
+      },
+      "synthesis": {
+        "input_tokens": 22026,
+        "output_tokens": 12095,
+        "thought_tokens": 0,
+        "total_tokens": 34121
+      },
+      "judge": {
+        "input_tokens": 12128,
+        "output_tokens": 115,
+        "thought_tokens": 0,
+        "total_tokens": 12243
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 4062,
+        "output_tokens": 61,
+        "thought_tokens": 0,
+        "total_tokens": 4123
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 34803,
+        "output_tokens": 23600,
+        "thought_tokens": 0,
+        "total_tokens": 58403,
+        "elapsed_s": 420.4
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 22026,
+        "output_tokens": 12095,
+        "thought_tokens": 0,
+        "total_tokens": 34121,
+        "elapsed_s": 727.3
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 12128,
+        "output_tokens": 115,
+        "thought_tokens": 0,
+        "total_tokens": 12243
+      }
+    ]
+  }
+}

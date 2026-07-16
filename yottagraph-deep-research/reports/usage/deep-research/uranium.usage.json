@@ -1,0 +1,60 @@
+{
+  "datasource": "deep-research",
+  "agent": "deep-research-max-preview-04-2026",
+  "passed": true,
+  "iterations": 1,
+  "report_words": 5515,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.8): The report provides an exceptionally detailed and quantified analysis of the uranium market, effectively linking specific tech-sector demand (Microsoft, Amazon, Meta) with granular supply constraints and geopolitical shifts. [supply_demand_grounding=10, producer_specificity=9, risk_assessment=10, market_dynamics=10, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 5515,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 134,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Market Overview",
+          "Supply Landscape",
+          "Demand Landscape",
+          "Key Producers And Market Participants",
+          "Geopolitical And Macro Risk",
+          "Price Outlook"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "supply_demand_grounding": 10,
+          "producer_specificity": 9,
+          "risk_assessment": 10,
+          "market_dynamics": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.83,
+        "reason": "The report provides an exceptionally detailed and quantified analysis of the uranium market, effectively linking specific tech-sector demand (Microsoft, Amazon, Meta) with granular supply constraints and geopolitical shifts.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 26647,
+          "output_tokens": 125,
+          "thought_tokens": 0,
+          "total_tokens": 26772
+        }
+      }
+    }
+  },
+  "total_input_tokens": 1178896,
+  "total_output_tokens": 126551,
+  "total_elapsed_s": 1005.0
+}

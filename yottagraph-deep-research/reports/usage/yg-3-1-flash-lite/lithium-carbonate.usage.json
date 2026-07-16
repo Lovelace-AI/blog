@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemini-3.1-flash-lite-preview",
+  "passed": true,
+  "total_plan_calls": 16,
+  "items_retrieved": 639,
+  "items_in_context": 116,
+  "unique_sources": 0,
+  "report_words": 3020,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.3): The report provides exceptional producer-level detail and specific 2026-dated data points, though it occasionally substitutes broader battery metal CAGR for specific lithium carbonate volume forecasts. [supply_demand_grounding=9, producer_specificity=10, risk_assessment=9, market_dynamics=9, analytical_coherence=9, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3020,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 63,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Market Overview",
+          "Supply Landscape",
+          "Demand Landscape",
+          "Key Producers And Market Participants",
+          "Geopolitical And Macro Risk",
+          "Price Outlook"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "supply_demand_grounding": 9,
+          "producer_specificity": 10,
+          "risk_assessment": 9,
+          "market_dynamics": 9,
+          "analytical_coherence": 9,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.33,
+        "reason": "The report provides exceptional producer-level detail and specific 2026-dated data points, though it occasionally substitutes broader battery metal CAGR for specific lithium carbonate volume forecasts.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 7720,
+          "output_tokens": 121,
+          "thought_tokens": 0,
+          "total_tokens": 7841
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 65.6,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 18656,
+  "total_synthesis_elapsed_s": 33.4,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 41927,
+      "output_tokens": 11937,
+      "thought_tokens": 2068,
+      "total_tokens": 55932
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 3884,
+        "output_tokens": 670,
+        "thought_tokens": 0,
+        "total_tokens": 4554
+      },
+      "curator": {
+        "input_tokens": 11667,
+        "output_tokens": 5132,
+        "thought_tokens": 0,
+        "total_tokens": 16799
+      },
+      "synthesis": {
+        "input_tokens": 18656,
+        "output_tokens": 6014,
+        "thought_tokens": 2068,
+        "total_tokens": 26738
+      },
+      "judge": {
+        "input_tokens": 7720,
+        "output_tokens": 121,
+        "thought_tokens": 0,
+        "total_tokens": 7841
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 3884,
+        "output_tokens": 670,
+        "thought_tokens": 0,
+        "total_tokens": 4554
+      },
+      {
+        "phase": "curator",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 11667,
+        "output_tokens": 5132,
+        "thought_tokens": 0,
+        "total_tokens": 16799,
+        "elapsed_s": 16.6
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 18656,
+        "output_tokens": 6014,
+        "thought_tokens": 2068,
+        "total_tokens": 26738,
+        "elapsed_s": 33.4
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 7720,
+        "output_tokens": 121,
+        "thought_tokens": 0,
+        "total_tokens": 7841
+      }
+    ]
+  }
+}

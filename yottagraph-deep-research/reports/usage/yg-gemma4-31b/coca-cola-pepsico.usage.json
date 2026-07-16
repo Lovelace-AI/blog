@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemma4:31b-it-q8_0",
+  "passed": true,
+  "total_plan_calls": 30,
+  "items_retrieved": 4941,
+  "items_in_context": 151,
+  "unique_sources": 9,
+  "report_words": 4707,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=10.0): The report provides an exceptional comparative analysis with precise, multi-period financial data for both firms, a sophisticated risk matrix, and a clear, evidence-backed thesis regarding Coca-Cola's superior efficiency versus PepsiCo's scale. [financial_grounding=10, company_a_specificity=10, company_b_specificity=10, risk_assessment=10, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 4707,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 180,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Company A Financial Profile",
+          "Company B Financial Profile",
+          "Head-to-Head Comparison",
+          "Risk Analysis",
+          "Valuation"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "company_a_specificity": 10,
+          "company_b_specificity": 10,
+          "risk_assessment": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 10.0,
+        "reason": "The report provides an exceptional comparative analysis with precise, multi-period financial data for both firms, a sophisticated risk matrix, and a clear, evidence-backed thesis regarding Coca-Cola's superior efficiency versus PepsiCo's scale.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 12913,
+          "output_tokens": 139,
+          "thought_tokens": 0,
+          "total_tokens": 13052
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 1420.9,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 23847,
+  "total_synthesis_elapsed_s": 782.9,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 84407,
+      "output_tokens": 43052,
+      "thought_tokens": 0,
+      "total_tokens": 127459
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4096,
+        "output_tokens": 61,
+        "thought_tokens": 0,
+        "total_tokens": 4157
+      },
+      "curator": {
+        "input_tokens": 43551,
+        "output_tokens": 29708,
+        "thought_tokens": 0,
+        "total_tokens": 73259
+      },
+      "synthesis": {
+        "input_tokens": 23847,
+        "output_tokens": 13144,
+        "thought_tokens": 0,
+        "total_tokens": 36991
+      },
+      "judge": {
+        "input_tokens": 12913,
+        "output_tokens": 139,
+        "thought_tokens": 0,
+        "total_tokens": 13052
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 4096,
+        "output_tokens": 61,
+        "thought_tokens": 0,
+        "total_tokens": 4157
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 43551,
+        "output_tokens": 29708,
+        "thought_tokens": 0,
+        "total_tokens": 73259,
+        "elapsed_s": 530.3
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 23847,
+        "output_tokens": 13144,
+        "thought_tokens": 0,
+        "total_tokens": 36991,
+        "elapsed_s": 782.9
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 12913,
+        "output_tokens": 139,
+        "thought_tokens": 0,
+        "total_tokens": 13052
+      }
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemma4:31b-it-q8_0",
+  "passed": true,
+  "total_plan_calls": 30,
+  "items_retrieved": 4215,
+  "items_in_context": 275,
+  "unique_sources": 25,
+  "report_words": 5229,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.8): The report provides an exceptionally detailed and quantified comparative analysis, utilizing multi-year financial trends and specific project-level data to support a coherent thesis on scale-driven leadership. [financial_grounding=10, company_a_specificity=10, company_b_specificity=10, risk_assessment=9, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 5229,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 269,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Situation Overview",
+          "Company A Financial Profile",
+          "Company B Financial Profile",
+          "Head-to-Head Comparison",
+          "Risk Analysis",
+          "Valuation"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "financial_grounding": 10,
+          "company_a_specificity": 10,
+          "company_b_specificity": 10,
+          "risk_assessment": 9,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.83,
+        "reason": "The report provides an exceptionally detailed and quantified comparative analysis, utilizing multi-year financial trends and specific project-level data to support a coherent thesis on scale-driven leadership.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 14388,
+          "output_tokens": 125,
+          "thought_tokens": 0,
+          "total_tokens": 14513
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 1330.1,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 27167,
+  "total_synthesis_elapsed_s": 904.0,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 84484,
+      "output_tokens": 29786,
+      "thought_tokens": 0,
+      "total_tokens": 114270
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4092,
+        "output_tokens": 61,
+        "thought_tokens": 0,
+        "total_tokens": 4153
+      },
+      "curator": {
+        "input_tokens": 38837,
+        "output_tokens": 15015,
+        "thought_tokens": 0,
+        "total_tokens": 53852
+      },
+      "synthesis": {
+        "input_tokens": 27167,
+        "output_tokens": 14585,
+        "thought_tokens": 0,
+        "total_tokens": 41752
+      },
+      "judge": {
+        "input_tokens": 14388,
+        "output_tokens": 125,
+        "thought_tokens": 0,
+        "total_tokens": 14513
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 4092,
+        "output_tokens": 61,
+        "thought_tokens": 0,
+        "total_tokens": 4153
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 38837,
+        "output_tokens": 15015,
+        "thought_tokens": 0,
+        "total_tokens": 53852,
+        "elapsed_s": 281.9
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 27167,
+        "output_tokens": 14585,
+        "thought_tokens": 0,
+        "total_tokens": 41752,
+        "elapsed_s": 904.0
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 14388,
+        "output_tokens": 125,
+        "thought_tokens": 0,
+        "total_tokens": 14513
+      }
+    ]
+  }
+}

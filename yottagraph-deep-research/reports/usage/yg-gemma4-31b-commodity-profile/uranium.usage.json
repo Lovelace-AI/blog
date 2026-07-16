@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemma4:31b-it-q8_0",
+  "passed": true,
+  "total_plan_calls": 36,
+  "items_retrieved": 794,
+  "items_in_context": 42,
+  "unique_sources": 0,
+  "report_words": 5183,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.3): The report provides exceptional producer-specific data and high-quality quantification of supply volumes and regulatory milestones, though it lacks specific spot/term price data to anchor the final outlook. [supply_demand_grounding=9, producer_specificity=10, risk_assessment=9, market_dynamics=9, analytical_coherence=9, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 5183,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 117,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Market Overview",
+          "Supply Landscape",
+          "Demand Landscape",
+          "Key Producers And Market Participants",
+          "Geopolitical And Macro Risk",
+          "Price Outlook"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "supply_demand_grounding": 9,
+          "producer_specificity": 10,
+          "risk_assessment": 9,
+          "market_dynamics": 9,
+          "analytical_coherence": 9,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.33,
+        "reason": "The report provides exceptional producer-specific data and high-quality quantification of supply volumes and regulatory milestones, though it lacks specific spot/term price data to anchor the final outlook.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 10987,
+          "output_tokens": 121,
+          "thought_tokens": 0,
+          "total_tokens": 11108
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 777.3,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 7457,
+  "total_synthesis_elapsed_s": 576.7,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 37512,
+      "output_tokens": 20099,
+      "thought_tokens": 0,
+      "total_tokens": 57611
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4200,
+        "output_tokens": 119,
+        "thought_tokens": 0,
+        "total_tokens": 4319
+      },
+      "curator": {
+        "input_tokens": 14868,
+        "output_tokens": 9224,
+        "thought_tokens": 0,
+        "total_tokens": 24092
+      },
+      "synthesis": {
+        "input_tokens": 7457,
+        "output_tokens": 10635,
+        "thought_tokens": 0,
+        "total_tokens": 18092
+      },
+      "judge": {
+        "input_tokens": 10987,
+        "output_tokens": 121,
+        "thought_tokens": 0,
+        "total_tokens": 11108
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 4200,
+        "output_tokens": 119,
+        "thought_tokens": 0,
+        "total_tokens": 4319
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 14868,
+        "output_tokens": 9224,
+        "thought_tokens": 0,
+        "total_tokens": 24092,
+        "elapsed_s": 150.7
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 7457,
+        "output_tokens": 10635,
+        "thought_tokens": 0,
+        "total_tokens": 18092,
+        "elapsed_s": 576.7
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 10987,
+        "output_tokens": 121,
+        "thought_tokens": 0,
+        "total_tokens": 11108
+      }
+    ]
+  }
+}

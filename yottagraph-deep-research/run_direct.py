@@ -23,6 +23,9 @@ import json
 import os
 import sys
 import time
+import urllib.error
+import urllib.parse
+import urllib.request
 from pathlib import Path
 from typing import Any, Protocol
 
@@ -30,6 +33,8 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 REPORTS_DIR = SCRIPT_DIR / "reports"
 NO_CONTEXT_MODEL = "gemini-3-flash-preview"
 DEFAULT_SYNTHESIS_MODEL = "gemini-3.1-flash-lite-preview"
+OLLAMA_BASE_URL = "http://localhost:11434"
+OLLAMA_NUM_CTX = 131072
 
 sys.path.insert(0, str(SCRIPT_DIR))
 from judge import evaluate_report, judge_inputs_for_topic  # noqa: E402
@@ -197,12 +202,89 @@ def usage_dict(usage: Any) -> dict[str, int]:
     """Return a stable token usage dict from google-genai usage metadata."""
     if usage is None:
         return {"input_tokens": 0, "output_tokens": 0, "thought_tokens": 0, "total_tokens": 0}
+    input_tokens = int(getattr(usage, "prompt_token_count", 0) or 0)
+    output_tokens = int(getattr(usage, "candidates_token_count", 0) or 0)
+    thought_tokens = int(getattr(usage, "thoughts_token_count", 0) or 0)
+    total_tokens = int(getattr(usage, "total_token_count", 0) or 0)
+    if total_tokens == 0:
+        total_tokens = input_tokens + output_tokens + thought_tokens
     return {
-        "input_tokens": int(getattr(usage, "prompt_token_count", 0) or 0),
-        "output_tokens": int(getattr(usage, "candidates_token_count", 0) or 0),
-        "thought_tokens": int(getattr(usage, "thoughts_token_count", 0) or 0),
-        "total_tokens": int(getattr(usage, "total_token_count", 0) or 0),
+        "input_tokens": input_tokens,
+        "output_tokens": output_tokens,
+        "thought_tokens": thought_tokens,
+        "total_tokens": total_tokens,
     }
+
+
+def is_ollama_model(model: str) -> bool:
+    """Treat colon-delimited or non-Gemini model names as local Ollama models."""
+    return ":" in model or not model.startswith("gemini")
+
+
+class OllamaUsage:
+    """Minimal usage object compatible with usage_dict()."""
+
+    def __init__(self, prompt_tokens: int, completion_tokens: int) -> None:
+        self.prompt_token_count = prompt_tokens
+        self.candidates_token_count = completion_tokens
+        self.thoughts_token_count = 0
+        self.total_token_count = prompt_tokens + completion_tokens
+
+
+def ollama_chat_url() -> str:
+    """Return the native Ollama chat endpoint for OLLAMA_BASE_URL."""
+    parsed = urllib.parse.urlsplit(OLLAMA_BASE_URL)
+    path = parsed.path.rstrip("/")
+    if path.endswith("/v1"):
+        path = path[:-3]
+    return urllib.parse.urlunsplit(
+        (parsed.scheme, parsed.netloc, f"{path}/api/chat", parsed.query, parsed.fragment)
+    )
+
+
+def generate_ollama_content(
+    *,
+    model: str,
+    system_instruction: str,
+    prompt: str,
+    temperature: float,
+    max_output_tokens: int,
+) -> tuple[str, dict[str, int]]:
+    """Call a local Ollama /api/chat server and return text plus token usage."""
+    messages = []
+    if system_instruction:
+        messages.append({"role": "system", "content": system_instruction})
+    messages.append({"role": "user", "content": prompt})
+
+    payload = {
+        "model": model,
+        "messages": messages,
+        "stream": False,
+        "options": {
+            "num_ctx": OLLAMA_NUM_CTX,
+            "num_predict": max_output_tokens,
+            "temperature": temperature,
+        },
+    }
+    request = urllib.request.Request(
+        ollama_chat_url(),
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=1800) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"Ollama chat failed with HTTP {exc.code}: {body}") from exc
+
+    text = ((data.get("message") or {}).get("content") or "")
+    usage = OllamaUsage(
+        prompt_tokens=int(data.get("prompt_eval_count") or 0),
+        completion_tokens=int(data.get("eval_count") or 0),
+    )
+    return text, usage_dict(usage)
 
 
 def build_genai_client() -> Any:
@@ -226,7 +308,18 @@ def generate_content(
     max_output_tokens: int = 32768,
     thinking_level: str | None = None,
 ) -> tuple[str, dict[str, int], float]:
-    """Call Gemini once and return text, usage, and elapsed seconds."""
+    """Call Gemini or local Ollama once and return text, usage, and elapsed seconds."""
+    if is_ollama_model(model):
+        start = time.monotonic()
+        text, usage = generate_ollama_content(
+            model=model,
+            system_instruction=system_instruction,
+            prompt=prompt,
+            temperature=temperature,
+            max_output_tokens=max_output_tokens,
+        )
+        return text, usage, round(time.monotonic() - start, 1)
+
     from google.genai import types  # type: ignore[import]
 
     client = build_genai_client()
@@ -431,6 +524,8 @@ def write_artifacts(
 
 
 def main() -> None:
+    global OLLAMA_BASE_URL, OLLAMA_NUM_CTX
+
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--mode",
@@ -448,7 +543,21 @@ def main() -> None:
     parser.add_argument("--n-sources", type=int)
     parser.add_argument("--evidence-file", type=Path)
     parser.add_argument("--report-file", type=Path)
+    parser.add_argument(
+        "--ollama-url",
+        default=OLLAMA_BASE_URL,
+        help=f"Base URL for local Ollama models (default: {OLLAMA_BASE_URL}).",
+    )
+    parser.add_argument(
+        "--ollama-num-ctx",
+        type=int,
+        default=OLLAMA_NUM_CTX,
+        help=f"Context window requested for local Ollama models (default: {OLLAMA_NUM_CTX}).",
+    )
     args = parser.parse_args()
+
+    OLLAMA_BASE_URL = args.ollama_url
+    OLLAMA_NUM_CTX = args.ollama_num_ctx
 
     topics = list_topic_slugs() if args.topic == "all" else [args.topic]
     for topic_slug in topics:

@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemma4:31b-it-q8_0",
+  "passed": true,
+  "total_plan_calls": 35,
+  "items_retrieved": 802,
+  "items_in_context": 72,
+  "unique_sources": 0,
+  "report_words": 3491,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.3): The report provides exceptional producer-level detail and specific project milestones, though it lacks current spot price data which is a noted gap. [supply_demand_grounding=9, producer_specificity=10, risk_assessment=9, market_dynamics=9, analytical_coherence=9, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3491,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 125,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Market Overview",
+          "Supply Landscape",
+          "Demand Landscape",
+          "Key Producers And Market Participants",
+          "Geopolitical And Macro Risk",
+          "Price Outlook"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "supply_demand_grounding": 9,
+          "producer_specificity": 10,
+          "risk_assessment": 9,
+          "market_dynamics": 9,
+          "analytical_coherence": 9,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.33,
+        "reason": "The report provides exceptional producer-level detail and specific project milestones, though it lacks current spot price data which is a noted gap.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 7967,
+          "output_tokens": 112,
+          "thought_tokens": 0,
+          "total_tokens": 8079
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 768.6,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 18108,
+  "total_synthesis_elapsed_s": 453.3,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 44882,
+      "output_tokens": 24454,
+      "thought_tokens": 0,
+      "total_tokens": 69336
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 3885,
+        "output_tokens": 88,
+        "thought_tokens": 0,
+        "total_tokens": 3973
+      },
+      "curator": {
+        "input_tokens": 14922,
+        "output_tokens": 16384,
+        "thought_tokens": 0,
+        "total_tokens": 31306
+      },
+      "synthesis": {
+        "input_tokens": 18108,
+        "output_tokens": 7870,
+        "thought_tokens": 0,
+        "total_tokens": 25978
+      },
+      "judge": {
+        "input_tokens": 7967,
+        "output_tokens": 112,
+        "thought_tokens": 0,
+        "total_tokens": 8079
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 3885,
+        "output_tokens": 88,
+        "thought_tokens": 0,
+        "total_tokens": 3973
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 14922,
+        "output_tokens": 16384,
+        "thought_tokens": 0,
+        "total_tokens": 31306,
+        "elapsed_s": 278.1
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 18108,
+        "output_tokens": 7870,
+        "thought_tokens": 0,
+        "total_tokens": 25978,
+        "elapsed_s": 453.3
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 7967,
+        "output_tokens": 112,
+        "thought_tokens": 0,
+        "total_tokens": 8079
+      }
+    ]
+  }
+}

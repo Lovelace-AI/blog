@@ -1,0 +1,14 @@
+slug: lithium-carbonate
+archetype: commodity_supply_chain_outlook
+question: What are the key supply, demand, and geopolitical drivers shaping lithium carbonate prices and supply chain resilience through 2026?
+market_theme: lithium and EV battery materials supply chain
+seed_entities:
+  - name: Lithium
+    flavors: [commodity]
+  - name: Chemical and Fertilizer Mineral Mining
+    flavors: [industry]
+  - Albemarle Corporation
+  - SQM
+  - Livent Corporation
+  - Piedmont Lithium
+  - Tesla

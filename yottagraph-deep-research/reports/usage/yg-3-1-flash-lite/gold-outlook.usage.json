@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemini-3.1-flash-lite-preview",
+  "passed": true,
+  "total_plan_calls": 18,
+  "items_retrieved": 900,
+  "items_in_context": 60,
+  "unique_sources": 0,
+  "report_words": 3336,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.3): The report provides exceptional producer-level detail and specific supply-side data, though it slightly lacks quantification of the exact magnitude of central bank selling relative to total global demand. [supply_demand_grounding=9, producer_specificity=10, risk_assessment=9, market_dynamics=9, analytical_coherence=9, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3336,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 91,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Market Overview",
+          "Supply Landscape",
+          "Demand Landscape",
+          "Key Producers And Market Participants",
+          "Geopolitical And Macro Risk",
+          "Price Outlook"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "supply_demand_grounding": 9,
+          "producer_specificity": 10,
+          "risk_assessment": 9,
+          "market_dynamics": 9,
+          "analytical_coherence": 9,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.33,
+        "reason": "The report provides exceptional producer-level detail and specific supply-side data, though it slightly lacks quantification of the exact magnitude of central bank selling relative to total global demand.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 9620,
+          "output_tokens": 120,
+          "thought_tokens": 0,
+          "total_tokens": 9740
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 58.1,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 13747,
+  "total_synthesis_elapsed_s": 31.7,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 41964,
+      "output_tokens": 12818,
+      "thought_tokens": 1722,
+      "total_tokens": 56504
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 3853,
+        "output_tokens": 758,
+        "thought_tokens": 0,
+        "total_tokens": 4611
+      },
+      "curator": {
+        "input_tokens": 14744,
+        "output_tokens": 4027,
+        "thought_tokens": 0,
+        "total_tokens": 18771
+      },
+      "synthesis": {
+        "input_tokens": 13747,
+        "output_tokens": 7913,
+        "thought_tokens": 1722,
+        "total_tokens": 23382
+      },
+      "judge": {
+        "input_tokens": 9620,
+        "output_tokens": 120,
+        "thought_tokens": 0,
+        "total_tokens": 9740
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 3853,
+        "output_tokens": 758,
+        "thought_tokens": 0,
+        "total_tokens": 4611
+      },
+      {
+        "phase": "curator",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 14744,
+        "output_tokens": 4027,
+        "thought_tokens": 0,
+        "total_tokens": 18771,
+        "elapsed_s": 12.9
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 13747,
+        "output_tokens": 7913,
+        "thought_tokens": 1722,
+        "total_tokens": 23382,
+        "elapsed_s": 31.7
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 9620,
+        "output_tokens": 120,
+        "thought_tokens": 0,
+        "total_tokens": 9740
+      }
+    ]
+  }
+}

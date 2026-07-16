@@ -33,16 +33,17 @@ retrieval adapter, private tool declarations, and executable retrieval calls.
 ## Research Topics
 
 Topics are YAML specs in `topics/`. Each spec declares a question, seed
-entities, and one of three report archetypes:
+entities, and one of four report archetypes:
 
 - `strategic_alternatives` — target standalone case versus strategic buyer case.
 - `competitive_financial_profile` — two-company financial comparison for a market/theme.
 - `single_company_investment_memo` — one-company diligence memo.
+- `commodity_supply_chain_outlook` — commodity supply/demand, producers, and price outlook.
 
 ## Report Archetypes
 
-`topic_spec.py` defines the report archetypes, required sections, judge
-dimensions, and core financial properties used by the benchmark.
+`topic_spec.py` defines the report archetypes, required sections, and judge
+dimensions used by the benchmark.
 
 ### `strategic_alternatives`
 
@@ -112,6 +113,30 @@ Judge dimensions:
 - `analytical_coherence`
 - `citation_coverage`
 
+### `commodity_supply_chain_outlook`
+
+Commodity supply-chain and price outlook. Topics seed industry and/or commodity
+nodes plus named producers so retrieval can expand peer relationships without
+an issuer/SEC-filing anchor.
+
+Required sections:
+
+1. Market Overview
+2. Supply Landscape
+3. Demand Landscape
+4. Key Producers And Market Participants
+5. Geopolitical And Macro Risk
+6. Price Outlook
+
+Judge dimensions:
+
+- `supply_demand_grounding`
+- `producer_specificity`
+- `risk_assessment`
+- `market_dynamics`
+- `analytical_coherence`
+- `citation_coverage`
+
 Available topics:
 
 | Topic | Archetype | Sector |
@@ -128,6 +153,12 @@ Available topics:
 | `caterpillar` | single-company investment memo | industrials |
 | `jpmorgan` | single-company investment memo | banking |
 | `unitedhealth` | single-company investment memo | healthcare |
+| `wti-crude-oil` | commodity supply chain outlook | oil |
+| `gold-outlook` | commodity supply chain outlook | precious metals |
+| `rare-earth-minerals` | commodity supply chain outlook | critical minerals |
+| `lithium-carbonate` | commodity supply chain outlook | battery materials |
+| `uranium` | commodity supply chain outlook | nuclear fuel |
+| `cobalt` | commodity supply chain outlook | battery materials |
 
 ## Reproducing the Public Artifacts
 
@@ -188,22 +219,31 @@ retrieval, curation, and writing:
    topic-specific, fact-focused 1-10 rubric. Usage is recorded for planner,
    curator, synthesis, and judge phases.
 
-The model names are configured in `run_direct.py`; the report set summarized
-below uses `gemini-3.1-flash-lite-preview` for Yottagraph planning, curation,
-and synthesis, and `gemini-3-flash-preview` for judging.
+The model names are configured in `run_direct.py`; the Flash Lite report set
+summarized below uses `gemini-3.1-flash-lite-preview` for Yottagraph planning,
+curation, and synthesis, and `gemini-3-flash-preview` for judging. The Gemma 4
+31B report set uses `gemma4:12b` for planning and curation and
+`gemma4:31b-it-q8_0` for synthesis via local Ollama.
 
 ## Report Artifacts
 
 Committed final report artifacts live under `reports/`:
 
-- `reports/deep-research/` — Gemini Deep Research Max reports for all 12 topics.
-- `reports/yg-3-1-flash-lite/` — live Yottagraph reports for all 12 topics,
+- `reports/deep-research/` — Gemini Deep Research Max reports for the original
+  12 topics plus the 6 commodity topics.
+- `reports/yg-3-1-flash-lite/` — live Yottagraph reports for all 18 topics,
   generated with `gemini-3.1-flash-lite-preview`.
+- `reports/yg-gemma4-31b/` — live Yottagraph reports for all 18 topics,
+  generated with `gemma4:12b` for planning/curation and `gemma4:31b-it-q8_0`
+  for synthesis via local Ollama. Commodity reports in this directory are the
+  baseline runs without the commodity-profile tool.
+- `reports/yg-gemma4-31b-commodity-profile/` — the same local Gemma 4 stack on
+  the 6 commodity topics after exposing USGS mineral commodity statistics
+  through the commodity-profile retrieval tool.
 - `reports/no-context/` — Gemini 3 Flash reports generated with only the topic
-  prompt/outline and no retrieval or tool context.
-- `reports/usage/deep-research/` and `reports/usage/yg-3-1-flash-lite/` —
-  final usage and judge JSONs for each committed report, with no-context usage
-  under `reports/usage/no-context/`.
+  prompt/outline and no retrieval or tool context (original 12 topics).
+- `reports/usage/...` — final usage and judge JSONs for each committed report
+  track above, plus no-context usage under `reports/usage/no-context/`.
 
 Additional local run artifacts such as plans, facts, evidence, curation files,
 raw Deep Research responses, and usage JSONs are written under ignored
@@ -214,10 +254,10 @@ raw Deep Research responses, and usage JSONs are written under ignored
 The tables below summarize the latest local artifacts available when this README
 was updated. Scores are LLM judge mean scores on a **1-10** scale using the
 fact-focused rubric in `topic_spec.py`. Deep Research token counts are `usage.total_tokens` from `DEEP_RESEARCH_RAW_iter1.json`, including tool-use and thought tokens.
-The YG table reports recorded pipeline tokens for planner, curator, and
+The YG tables report recorded pipeline tokens for planner, curator, and
 synthesis phases, excluding the single-pass judge. This section compares
-**Gemini Deep Research Max** against the
-completed **Live Yottagraph / Gemini 3.1 Flash Lite Preview** reports.
+**Gemini Deep Research Max** against completed **Live Yottagraph** reports using
+Gemini 3.1 Flash Lite Preview and local Gemma 4 31B synthesis.
 
 ### Gemini Deep Research Max
 
@@ -263,15 +303,60 @@ Across the YG runs, recorded non-judge LLM tokens total **1,395,400**:
 planner **61,932** (**4.4%**), curator **783,916** (**56.2%**), and
 synthesis **549,552** (**39.4%**).
 
-### Latency Breakdown
+### Live Yottagraph / Gemma 4 31B (local Ollama)
 
-YG total latency is wall-clock runtime for the full YG pipeline, including
-planning, structured retrieval, evidence formatting, curation, synthesis,
-judging, and artifact writes. YG LLM-only latency is the sum of recorded LLM
-phase elapsed times in the usage JSONs; the current artifacts record curation
-and synthesis elapsed time, while planner and judge elapsed time were not
-persisted separately. Deep Research total latency is the wall-clock latency
-reported by the Deep Research run.
+Planning and curation: `gemma4:12b` (11.9B, Q4_K_M, 262K context, local
+Ollama). Synthesis: `gemma4:31b-it-q8_0` (31.3B, Q8_0, 262K context, local
+Ollama). All 12 topics passed the judge on the first or second iteration.
+
+| Topic | Mean score | Tokens | Words | Words excl. bibliography |
+|---|---:|---:|---:|---:|
+| `marvell-broadcom` | 9.83 | 106,742 | 4,609 | 3,215 |
+| `cvs-cigna` | 9.83 | 116,245 | 5,638 | 3,722 |
+| `kroger-albertsons` | 10.00 | 110,572 | 3,918 | 3,109 |
+| `hasbro-mattel` | 10.00 | 125,498 | 5,431 | 3,447 |
+| `nvidia-amd` | 9.83 | 127,385 | 5,809 | 3,694 |
+| `coca-cola-pepsico` | 10.00 | 127,459 | 4,707 | 3,158 |
+| `visa-mastercard` | 9.83 | 107,451 | 4,733 | 2,940 |
+| `exxon-chevron` | 9.83 | 114,270 | 5,229 | 3,188 |
+| `costco` | 9.83 | 102,813 | 4,765 | 2,944 |
+| `caterpillar` | 10.00 | 106,272 | 4,450 | 2,701 |
+| `jpmorgan` | 9.50 | 108,890 | 4,685 | 3,098 |
+| `unitedhealth` | 9.50 | 109,750 | 5,367 | 3,152 |
+| **Average** | **9.83** | **113,612** | **4,945** | **3,197** |
+
+Latency for the Gemma 4 local runs is driven mostly by synthesis on the 31B
+model over local Ollama:
+
+| Topic | Total latency | Synthesis LLM latency |
+|---|---:|---:|
+| `marvell-broadcom` | 973.1s | 631.0s |
+| `cvs-cigna` | 1,303.8s | 864.3s |
+| `kroger-albertsons` | 1,106.9s | 564.9s |
+| `hasbro-mattel` | 1,500.6s | 947.4s |
+| `nvidia-amd` | 1,477.9s | 978.1s |
+| `coca-cola-pepsico` | 1,420.9s | 782.9s |
+| `visa-mastercard` | 1,197.1s | 786.7s |
+| `exxon-chevron` | 1,330.1s | 904.0s |
+| `costco` | 1,189.3s | 835.9s |
+| `caterpillar` | 1,199.0s | 735.7s |
+| `jpmorgan` | 1,273.4s | 727.3s |
+| `unitedhealth` | 1,350.7s | 928.4s |
+| **Average** | **1,276.9s** | **807.2s** |
+
+Gemma 4 31B local runs average **~22 minutes** total, versus **~4.8 minutes**
+for Flash Lite (API) and **~17 minutes** for Deep Research Max. Synthesis
+accounts for roughly **63%** of wall-clock time.
+
+### Flash Lite Latency Breakdown
+
+YG Flash Lite total latency is wall-clock runtime for the full YG pipeline,
+including planning, structured retrieval, evidence formatting, curation,
+synthesis, judging, and artifact writes. YG Flash Lite LLM-only latency is the
+sum of recorded LLM phase elapsed times in the usage JSONs; the current
+artifacts record curation and synthesis elapsed time, while planner and judge
+elapsed time were not persisted separately. Deep Research total latency is the
+wall-clock latency reported by the Deep Research run.
 
 | Topic | YG total latency | YG LLM-only latency | Deep Research total latency |
 |---|---:|---:|---:|
@@ -292,7 +377,7 @@ reported by the Deep Research run.
 On average, YG total latency is **3.6x faster** than Deep Research, while YG
 LLM-only latency is **10.3x faster** than Deep Research.
 
-### Estimated Cost Reduction
+### Flash Lite Estimated Cost Reduction
 
 Cost estimates use published Gemini API prices available at the time of the
 experiment:
@@ -321,15 +406,114 @@ experiment:
 | `unitedhealth` | $5.96 | $0.049 | 122.7x |
 | **Average** | **$7.12** | **$0.061** | **117.7x** |
 
+## Commodity Cohort Results
+
+New archetype: `commodity_supply_chain_outlook`. Topics seed both **industry**
+nodes (`flavors: [industry]`) and producer **organizations**, then retrieve via
+industry peer expansion plus producer news/landscape tools. Scores use the
+commodity judge dimensions (`supply_demand_grounding`, `producer_specificity`,
+`risk_assessment`, `market_dynamics`, `analytical_coherence`,
+`citation_coverage`).
+
+### Three-way scoreboard (baseline commodity retrieval)
+
+| Topic | YG Flash Lite | YG Gemma 4 31B | Deep Research |
+|---|---:|---:|---:|
+| `wti-crude-oil` | 10.00 | 10.00 | 9.83 |
+| `gold-outlook` | 9.33 | 9.50 | 10.00 |
+| `rare-earth-minerals` | 9.17 | 9.50 | 10.00 |
+| `lithium-carbonate` | 9.33 | 9.33 | 10.00 |
+| `uranium` | 9.33 | 9.33 | 9.83 |
+| `cobalt` | 9.17 | 8.83 | 10.00 |
+| **Average** | **9.39** | **9.42** | **9.94** |
+
+All 18 commodity track runs passed the judge (mean ≥ 8.8, no dim failures on
+the final reports).
+
+### Deep Research Max (commodity)
+
+| Topic | Mean score | Tokens | Words |
+|---|---:|---:|---:|
+| `wti-crude-oil` | 9.83 | 1,948,073 | 5,103 |
+| `gold-outlook` | 10.00 | 1,474,793 | 6,926 |
+| `rare-earth-minerals` | 10.00 | 1,254,247 | 5,642 |
+| `lithium-carbonate` | 10.00 | 1,650,137 | 6,453 |
+| `uranium` | 9.83 | 1,305,447 | 5,515 |
+| `cobalt` | 10.00 | 1,485,654 | 6,617 |
+| **Average** | **9.94** | **1,519,725** | **6,043** |
+
+### Live Yottagraph / Gemini 3.1 Flash Lite Preview (commodity)
+
+| Topic | Mean score | Tokens | Words | Words excl. bibliography |
+|---|---:|---:|---:|---:|
+| `wti-crude-oil` | 10.00 | 58,336 | 3,278 | 2,246 |
+| `gold-outlook` | 9.33 | 56,504 | 3,336 | 2,532 |
+| `rare-earth-minerals` | 9.17 | 58,988 | 3,501 | 2,017 |
+| `lithium-carbonate` | 9.33 | 55,932 | 3,020 | 2,606 |
+| `uranium` | 9.33 | 47,305 | 3,136 | 2,061 |
+| `cobalt` | 9.17 | 252,524 | 4,149 | 2,323 |
+| **Average** | **9.39** | **88,265** | **3,403** | **2,298** |
+
+### Live Yottagraph / Gemma 4 31B (commodity, no commodity-profile tool)
+
+| Topic | Mean score | Tokens | Words | Words excl. bibliography | Total latency |
+|---|---:|---:|---:|---:|---:|
+| `wti-crude-oil` | 10.00 | 63,481 | 4,078 | 3,210 | 1,059.7s |
+| `gold-outlook` | 9.50 | 59,922 | 3,719 | 2,879 | 728.7s |
+| `rare-earth-minerals` | 9.50 | 58,312 | 3,598 | 3,183 | 926.4s |
+| `lithium-carbonate` | 9.33 | 55,830 | 3,760 | 2,937 | 793.0s |
+| `uranium` | 9.33 | 69,336 | 3,491 | 2,728 | 768.6s |
+| `cobalt` | 8.83 | 212,441 | 3,956 | 3,029 | 2,600.8s |
+| **Average** | **9.42** | **86,554** | **3,767** | **2,994** | **1,146.2s** |
+
+### Gemma 4 A/B: commodity-profile tool
+
+Exposing USGS mineral commodity statistics through the commodity-profile tool
+moves local Gemma from **9.42 → 9.67** against Deep Research's **9.94**. Cobalt
+jumps **8.83 → 9.50**; gold ties Deep Research at **10.00**; lithium rises
+**9.33 → 9.67**. WTI and uranium are flat (fuels are outside the USGS mineral
+summaries; uranium observations were empty for this ingest).
+
+| Topic | Deep Research | Gemma (no commodity-profile) | Gemma (with commodity-profile) |
+|---|---:|---:|---:|
+| `wti-crude-oil` | 9.83 | **10.00** | **10.00** |
+| `gold-outlook` | 10.00 | 9.50 | **10.00** |
+| `rare-earth-minerals` | 10.00 | 9.50 | 9.50 |
+| `lithium-carbonate` | 10.00 | 9.33 | 9.67 |
+| `uranium` | 9.83 | 9.33 | 9.33 |
+| `cobalt` | 10.00 | 8.83 | 9.50 |
+| **Average** | **9.94** | **9.42** | **9.67** |
+
+With-tool Gemma reports and usage are under
+`reports/yg-gemma4-31b-commodity-profile/` (avg **66.4k** tokens, **~14.2 min**
+wall-clock).
+
+### Commodity takeaways
+
+- With industry seeds + peer expansion, YG is competitive with Deep Research on
+  commodity outlooks (YG ~9.4 vs DR ~9.9), and matches or beats DR on
+  `wti-crude-oil` (YG 10.0 vs DR 9.83).
+- The soft spot is coverage, not model size: Gemma still ties Flash Lite on the
+  baseline commodity cohort (**9.42 vs 9.39**), and the commodity-profile tool
+  closes most of the remaining gap without changing the local models.
+- Softest baseline topic is `cobalt` (Gemma 8.83): producer concentration / DRC
+  supply narrative improves once USGS commodity stats enter the dossier
+  (9.50).
+
 ## Takeaways
 
-- Deep Research Max remains ahead on average under the stricter 1-10 judge, but
-  the gap is narrow: 9.87 average for Deep Research versus 9.67 for YG.
+- Deep Research Max and YG Gemma 4 31B are effectively matched under the
+  stricter 1-10 judge: **9.87** for Deep Research versus **9.83** for YG Gemma
+  4 31B, with YG Flash Lite at **9.67**.
+- The YG Gemma 4 31B run matches Deep Research quality while running entirely
+  on local open-weight models with no API cost for synthesis.
 - The YG pipeline uses structured retrieval, entity matching, section-aware
   evidence curation, source-backed citations, and model-specific output
   filenames.
-- The Flash Lite YG run completed all 12 topics. All reports are committed under
-  `reports/yg-3-1-flash-lite/`.
+- The original 12-topic Flash Lite and Gemma report sets remain under
+  `reports/yg-3-1-flash-lite/` and `reports/yg-gemma4-31b/`. Commodity topics
+  are included in those directories (baseline retrieval) plus the with-tool Gemma
+  set under `reports/yg-gemma4-31b-commodity-profile/`.
 - YG Flash Lite matches or exceeds Deep Research on several topics while using
   far fewer model tokens in the recorded pipeline. Remaining gaps are concentrated
   in archetype-sensitive dimensions such as deal feasibility and comparative

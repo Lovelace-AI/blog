@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemma4:31b-it-q8_0",
+  "passed": true,
+  "total_plan_calls": 42,
+  "items_retrieved": 1171,
+  "items_in_context": 68,
+  "unique_sources": 0,
+  "report_words": 3968,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.5): The report provides an exceptional level of quantitative detail on production and reserves, clearly identifies key corporate and state actors, and maintains a high standard of citation throughout. [supply_demand_grounding=10, producer_specificity=10, risk_assessment=9, market_dynamics=9, analytical_coherence=9, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3968,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 120,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Market Overview",
+          "Supply Landscape",
+          "Demand Landscape",
+          "Key Producers And Market Participants",
+          "Geopolitical And Macro Risk",
+          "Price Outlook"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "supply_demand_grounding": 10,
+          "producer_specificity": 10,
+          "risk_assessment": 9,
+          "market_dynamics": 9,
+          "analytical_coherence": 9,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.5,
+        "reason": "The report provides an exceptional level of quantitative detail on production and reserves, clearly identifies key corporate and state actors, and maintains a high standard of citation throughout.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 8561,
+          "output_tokens": 118,
+          "thought_tokens": 0,
+          "total_tokens": 8679
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 750.1,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 13626,
+  "total_synthesis_elapsed_s": 500.3,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 43889,
+      "output_tokens": 17314,
+      "thought_tokens": 0,
+      "total_tokens": 61203
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 4231,
+        "output_tokens": 183,
+        "thought_tokens": 0,
+        "total_tokens": 4414
+      },
+      "curator": {
+        "input_tokens": 17471,
+        "output_tokens": 8042,
+        "thought_tokens": 0,
+        "total_tokens": 25513
+      },
+      "synthesis": {
+        "input_tokens": 13626,
+        "output_tokens": 8971,
+        "thought_tokens": 0,
+        "total_tokens": 22597
+      },
+      "judge": {
+        "input_tokens": 8561,
+        "output_tokens": 118,
+        "thought_tokens": 0,
+        "total_tokens": 8679
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 4231,
+        "output_tokens": 183,
+        "thought_tokens": 0,
+        "total_tokens": 4414
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 17471,
+        "output_tokens": 8042,
+        "thought_tokens": 0,
+        "total_tokens": 25513,
+        "elapsed_s": 140.3
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 13626,
+        "output_tokens": 8971,
+        "thought_tokens": 0,
+        "total_tokens": 22597,
+        "elapsed_s": 500.3
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 8561,
+        "output_tokens": 118,
+        "thought_tokens": 0,
+        "total_tokens": 8679
+      }
+    ]
+  }
+}

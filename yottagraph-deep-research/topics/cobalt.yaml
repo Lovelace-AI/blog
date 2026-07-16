@@ -1,0 +1,16 @@
+slug: cobalt
+archetype: commodity_supply_chain_outlook
+question: What are the supply concentration risks, demand drivers, and price outlook for cobalt as EV battery chemistry evolves?
+market_theme: cobalt supply chain and EV battery materials
+seed_entities:
+  - name: Cobalt
+    flavors: [commodity]
+  - name: Cobalt Ores
+    flavors: [industry]
+  - name: Ferroalloy Ores
+    flavors: [industry]
+  - Glencore
+  - Freeport-McMoRan
+  - Jervois Global
+  - Tesla
+  - LG Energy Solution

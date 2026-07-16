@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemma4:31b-it-q8_0",
+  "passed": true,
+  "total_plan_calls": 41,
+  "items_retrieved": 833,
+  "items_in_context": 62,
+  "unique_sources": 0,
+  "report_words": 3760,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.3): The report provides exceptional producer-level detail and specific operational data, such as the Kwinana ramp-up delay and the Elevra merger, to support a logically sound price outlook through 2026. [supply_demand_grounding=9, producer_specificity=10, risk_assessment=9, market_dynamics=9, analytical_coherence=9, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3760,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 112,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Market Overview",
+          "Supply Landscape",
+          "Demand Landscape",
+          "Key Producers And Market Participants",
+          "Geopolitical And Macro Risk",
+          "Price Outlook"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "supply_demand_grounding": 9,
+          "producer_specificity": 10,
+          "risk_assessment": 9,
+          "market_dynamics": 9,
+          "analytical_coherence": 9,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.33,
+        "reason": "The report provides exceptional producer-level detail and specific operational data, such as the Kwinana ramp-up delay and the Elevra merger, to support a logically sound price outlook through 2026.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 8487,
+          "output_tokens": 129,
+          "thought_tokens": 0,
+          "total_tokens": 8616
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 793.0,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 10556,
+  "total_synthesis_elapsed_s": 449.6,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 38641,
+      "output_tokens": 17189,
+      "thought_tokens": 0,
+      "total_tokens": 55830
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 3905,
+        "output_tokens": 254,
+        "thought_tokens": 0,
+        "total_tokens": 4159
+      },
+      "curator": {
+        "input_tokens": 15693,
+        "output_tokens": 8609,
+        "thought_tokens": 0,
+        "total_tokens": 24302
+      },
+      "synthesis": {
+        "input_tokens": 10556,
+        "output_tokens": 8197,
+        "thought_tokens": 0,
+        "total_tokens": 18753
+      },
+      "judge": {
+        "input_tokens": 8487,
+        "output_tokens": 129,
+        "thought_tokens": 0,
+        "total_tokens": 8616
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 3905,
+        "output_tokens": 254,
+        "thought_tokens": 0,
+        "total_tokens": 4159
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 15693,
+        "output_tokens": 8609,
+        "thought_tokens": 0,
+        "total_tokens": 24302,
+        "elapsed_s": 192.5
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 10556,
+        "output_tokens": 8197,
+        "thought_tokens": 0,
+        "total_tokens": 18753,
+        "elapsed_s": 449.6
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 8487,
+        "output_tokens": 129,
+        "thought_tokens": 0,
+        "total_tokens": 8616
+      }
+    ]
+  }
+}
