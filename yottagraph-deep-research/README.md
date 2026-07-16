@@ -33,16 +33,17 @@ retrieval adapter, private tool declarations, and executable retrieval calls.
 ## Research Topics
 
 Topics are YAML specs in `topics/`. Each spec declares a question, seed
-entities, and one of three report archetypes:
+entities, and one of four report archetypes:
 
 - `strategic_alternatives` — target standalone case versus strategic buyer case.
 - `competitive_financial_profile` — two-company financial comparison for a market/theme.
 - `single_company_investment_memo` — one-company diligence memo.
+- `commodity_supply_chain_outlook` — commodity supply/demand, producers, and price outlook.
 
 ## Report Archetypes
 
-`topic_spec.py` defines the report archetypes, required sections, judge
-dimensions, and core financial properties used by the benchmark.
+`topic_spec.py` defines the report archetypes, required sections, and judge
+dimensions used by the benchmark.
 
 ### `strategic_alternatives`
 
@@ -112,6 +113,30 @@ Judge dimensions:
 - `analytical_coherence`
 - `citation_coverage`
 
+### `commodity_supply_chain_outlook`
+
+Commodity supply-chain and price outlook. Topics seed industry and/or commodity
+nodes plus named producers so retrieval can expand peer relationships without
+an issuer/SEC-filing anchor.
+
+Required sections:
+
+1. Market Overview
+2. Supply Landscape
+3. Demand Landscape
+4. Key Producers And Market Participants
+5. Geopolitical And Macro Risk
+6. Price Outlook
+
+Judge dimensions:
+
+- `supply_demand_grounding`
+- `producer_specificity`
+- `risk_assessment`
+- `market_dynamics`
+- `analytical_coherence`
+- `citation_coverage`
+
 Available topics:
 
 | Topic | Archetype | Sector |
@@ -128,6 +153,12 @@ Available topics:
 | `caterpillar` | single-company investment memo | industrials |
 | `jpmorgan` | single-company investment memo | banking |
 | `unitedhealth` | single-company investment memo | healthcare |
+| `wti-crude-oil` | commodity supply chain outlook | oil |
+| `gold-outlook` | commodity supply chain outlook | precious metals |
+| `rare-earth-minerals` | commodity supply chain outlook | critical minerals |
+| `lithium-carbonate` | commodity supply chain outlook | battery materials |
+| `uranium` | commodity supply chain outlook | nuclear fuel |
+| `cobalt` | commodity supply chain outlook | battery materials |
 
 ## Reproducing the Public Artifacts
 
@@ -198,17 +229,21 @@ curation, and synthesis, and `gemini-3-flash-preview` for judging. The Gemma 4
 
 Committed final report artifacts live under `reports/`:
 
-- `reports/deep-research/` — Gemini Deep Research Max reports for all 12 topics.
-- `reports/yg-3-1-flash-lite/` — live Yottagraph reports for all 12 topics,
+- `reports/deep-research/` — Gemini Deep Research Max reports for the original
+  12 topics plus the 6 commodity topics.
+- `reports/yg-3-1-flash-lite/` — live Yottagraph reports for all 18 topics,
   generated with `gemini-3.1-flash-lite-preview`.
-- `reports/yg-gemma4-31b/` — live Yottagraph reports for all 12 topics,
+- `reports/yg-gemma4-31b/` — live Yottagraph reports for all 18 topics,
   generated with `gemma4:12b` for planning/curation and `gemma4:31b-it-q8_0`
-  for synthesis.
+  for synthesis via local Ollama. Commodity reports in this directory are the
+  baseline runs without the commodity-profile tool.
+- `reports/yg-gemma4-31b-commodity-profile/` — the same local Gemma 4 stack on
+  the 6 commodity topics after exposing USGS mineral commodity statistics
+  through the commodity-profile retrieval tool.
 - `reports/no-context/` — Gemini 3 Flash reports generated with only the topic
-  prompt/outline and no retrieval or tool context.
-- `reports/usage/deep-research/`, `reports/usage/yg-3-1-flash-lite/`, and
-  `reports/usage/yg-gemma4-31b/` — final usage and judge JSONs for each
-  committed report, with no-context usage under `reports/usage/no-context/`.
+  prompt/outline and no retrieval or tool context (original 12 topics).
+- `reports/usage/...` — final usage and judge JSONs for each committed report
+  track above, plus no-context usage under `reports/usage/no-context/`.
 
 Additional local run artifacts such as plans, facts, evidence, curation files,
 raw Deep Research responses, and usage JSONs are written under ignored
@@ -371,6 +406,100 @@ experiment:
 | `unitedhealth` | $5.96 | $0.049 | 122.7x |
 | **Average** | **$7.12** | **$0.061** | **117.7x** |
 
+## Commodity Cohort Results
+
+New archetype: `commodity_supply_chain_outlook`. Topics seed both **industry**
+nodes (`flavors: [industry]`) and producer **organizations**, then retrieve via
+industry peer expansion plus producer news/landscape tools. Scores use the
+commodity judge dimensions (`supply_demand_grounding`, `producer_specificity`,
+`risk_assessment`, `market_dynamics`, `analytical_coherence`,
+`citation_coverage`).
+
+### Three-way scoreboard (baseline commodity retrieval)
+
+| Topic | YG Flash Lite | YG Gemma 4 31B | Deep Research |
+|---|---:|---:|---:|
+| `wti-crude-oil` | 10.00 | 10.00 | 9.83 |
+| `gold-outlook` | 9.33 | 9.50 | 10.00 |
+| `rare-earth-minerals` | 9.17 | 9.50 | 10.00 |
+| `lithium-carbonate` | 9.33 | 9.33 | 10.00 |
+| `uranium` | 9.33 | 9.33 | 9.83 |
+| `cobalt` | 9.17 | 8.83 | 10.00 |
+| **Average** | **9.39** | **9.42** | **9.94** |
+
+All 18 commodity track runs passed the judge (mean ≥ 8.8, no dim failures on
+the final reports).
+
+### Deep Research Max (commodity)
+
+| Topic | Mean score | Tokens | Words |
+|---|---:|---:|---:|
+| `wti-crude-oil` | 9.83 | 1,948,073 | 5,103 |
+| `gold-outlook` | 10.00 | 1,474,793 | 6,926 |
+| `rare-earth-minerals` | 10.00 | 1,254,247 | 5,642 |
+| `lithium-carbonate` | 10.00 | 1,650,137 | 6,453 |
+| `uranium` | 9.83 | 1,305,447 | 5,515 |
+| `cobalt` | 10.00 | 1,485,654 | 6,617 |
+| **Average** | **9.94** | **1,519,725** | **6,043** |
+
+### Live Yottagraph / Gemini 3.1 Flash Lite Preview (commodity)
+
+| Topic | Mean score | Tokens | Words | Words excl. bibliography |
+|---|---:|---:|---:|---:|
+| `wti-crude-oil` | 10.00 | 58,336 | 3,278 | 2,246 |
+| `gold-outlook` | 9.33 | 56,504 | 3,336 | 2,532 |
+| `rare-earth-minerals` | 9.17 | 58,988 | 3,501 | 2,017 |
+| `lithium-carbonate` | 9.33 | 55,932 | 3,020 | 2,606 |
+| `uranium` | 9.33 | 47,305 | 3,136 | 2,061 |
+| `cobalt` | 9.17 | 252,524 | 4,149 | 2,323 |
+| **Average** | **9.39** | **88,265** | **3,403** | **2,298** |
+
+### Live Yottagraph / Gemma 4 31B (commodity, no commodity-profile tool)
+
+| Topic | Mean score | Tokens | Words | Words excl. bibliography | Total latency |
+|---|---:|---:|---:|---:|---:|
+| `wti-crude-oil` | 10.00 | 63,481 | 4,078 | 3,210 | 1,059.7s |
+| `gold-outlook` | 9.50 | 59,922 | 3,719 | 2,879 | 728.7s |
+| `rare-earth-minerals` | 9.50 | 58,312 | 3,598 | 3,183 | 926.4s |
+| `lithium-carbonate` | 9.33 | 55,830 | 3,760 | 2,937 | 793.0s |
+| `uranium` | 9.33 | 69,336 | 3,491 | 2,728 | 768.6s |
+| `cobalt` | 8.83 | 212,441 | 3,956 | 3,029 | 2,600.8s |
+| **Average** | **9.42** | **86,554** | **3,767** | **2,994** | **1,146.2s** |
+
+### Gemma 4 A/B: commodity-profile tool
+
+Exposing USGS mineral commodity statistics through the commodity-profile tool
+moves local Gemma from **9.42 → 9.67** against Deep Research's **9.94**. Cobalt
+jumps **8.83 → 9.50**; gold ties Deep Research at **10.00**; lithium rises
+**9.33 → 9.67**. WTI and uranium are flat (fuels are outside the USGS mineral
+summaries; uranium observations were empty for this ingest).
+
+| Topic | Deep Research | Gemma (no commodity-profile) | Gemma (with commodity-profile) |
+|---|---:|---:|---:|
+| `wti-crude-oil` | 9.83 | **10.00** | **10.00** |
+| `gold-outlook` | 10.00 | 9.50 | **10.00** |
+| `rare-earth-minerals` | 10.00 | 9.50 | 9.50 |
+| `lithium-carbonate` | 10.00 | 9.33 | 9.67 |
+| `uranium` | 9.83 | 9.33 | 9.33 |
+| `cobalt` | 10.00 | 8.83 | 9.50 |
+| **Average** | **9.94** | **9.42** | **9.67** |
+
+With-tool Gemma reports and usage are under
+`reports/yg-gemma4-31b-commodity-profile/` (avg **66.4k** tokens, **~14.2 min**
+wall-clock).
+
+### Commodity takeaways
+
+- With industry seeds + peer expansion, YG is competitive with Deep Research on
+  commodity outlooks (YG ~9.4 vs DR ~9.9), and matches or beats DR on
+  `wti-crude-oil` (YG 10.0 vs DR 9.83).
+- The soft spot is coverage, not model size: Gemma still ties Flash Lite on the
+  baseline commodity cohort (**9.42 vs 9.39**), and the commodity-profile tool
+  closes most of the remaining gap without changing the local models.
+- Softest baseline topic is `cobalt` (Gemma 8.83): producer concentration / DRC
+  supply narrative improves once USGS commodity stats enter the dossier
+  (9.50).
+
 ## Takeaways
 
 - Deep Research Max and YG Gemma 4 31B are effectively matched under the
@@ -381,9 +510,10 @@ experiment:
 - The YG pipeline uses structured retrieval, entity matching, section-aware
   evidence curation, source-backed citations, and model-specific output
   filenames.
-- The Flash Lite YG run completed all 12 topics. All reports are committed under
-  `reports/yg-3-1-flash-lite/`. The Gemma 4 31B reports are committed under
-  `reports/yg-gemma4-31b/`.
+- The original 12-topic Flash Lite and Gemma report sets remain under
+  `reports/yg-3-1-flash-lite/` and `reports/yg-gemma4-31b/`. Commodity topics
+  are included in those directories (baseline retrieval) plus the with-tool Gemma
+  set under `reports/yg-gemma4-31b-commodity-profile/`.
 - YG Flash Lite matches or exceeds Deep Research on several topics while using
   far fewer model tokens in the recorded pipeline. Remaining gaps are concentrated
   in archetype-sensitive dimensions such as deal feasibility and comparative

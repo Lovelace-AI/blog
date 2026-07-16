@@ -1,0 +1,16 @@
+slug: rare-earth-minerals
+archetype: commodity_supply_chain_outlook
+question: What is the supply chain risk landscape for rare earth minerals critical to AI hardware and defense, and which producers and geopolitical actors hold the most leverage?
+market_theme: rare earth and critical minerals supply chain
+seed_entities:
+  - name: Rare Earths
+    flavors: [commodity]
+  - name: Rare Earth Metals
+    flavors: [industry]
+  - name: Miscellaneous Metal Ores
+    flavors: [industry]
+  - MP Materials
+  - Lynas Rare Earths
+  - China Minmetals
+  - United States Geological Survey
+  - Department of Defense

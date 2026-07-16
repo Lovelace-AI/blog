@@ -1,0 +1,15 @@
+slug: uranium
+archetype: commodity_supply_chain_outlook
+question: What are the supply, demand, and geopolitical factors driving uranium's price outlook as nuclear power demand rises globally?
+market_theme: uranium fuel cycle and nuclear energy supply chain
+seed_entities:
+  - name: Uranium
+    flavors: [commodity]
+  - name: Uranium-Radium-Vanadium Ores
+    flavors: [industry]
+  - name: Nuclear Power
+    flavors: [industry]
+  - Cameco Corporation
+  - NexGen Energy
+  - Kazatomprom
+  - Uranium Energy Corp

@@ -1,0 +1,203 @@
+{
+  "datasource": "kg",
+  "model": "gemma4:31b-it-q8_0",
+  "passed": true,
+  "total_plan_calls": 123,
+  "items_retrieved": 2599,
+  "items_in_context": 68,
+  "unique_sources": 0,
+  "report_words": 3956,
+  "iterations": 3,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=8.8): The report provides an exceptionally well-cited and coherent analysis of the cobalt supply chain, specifically excelling in its detailed mapping of producer actions and geopolitical risks like the DRC's ARECOMS, though it lacks specific historical price data and quantified demand volumes. [supply_demand_grounding=8, producer_specificity=9, risk_assessment=9, market_dynamics=8, analytical_coherence=9, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3956,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 121,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Market Overview",
+          "Supply Landscape",
+          "Demand Landscape",
+          "Key Producers And Market Participants",
+          "Geopolitical And Macro Risk",
+          "Price Outlook"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "supply_demand_grounding": 8,
+          "producer_specificity": 9,
+          "risk_assessment": 9,
+          "market_dynamics": 8,
+          "analytical_coherence": 9,
+          "citation_coverage": 10
+        },
+        "mean_score": 8.83,
+        "reason": "The report provides an exceptionally well-cited and coherent analysis of the cobalt supply chain, specifically excelling in its detailed mapping of producer actions and geopolitical risks like the DRC's ARECOMS, though it lacks specific historical price data and quantified demand volumes.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 9001,
+          "output_tokens": 136,
+          "thought_tokens": 0,
+          "total_tokens": 9137
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 2600.8,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 53007,
+  "total_synthesis_elapsed_s": 1521.8,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 142740,
+      "output_tokens": 69701,
+      "thought_tokens": 0,
+      "total_tokens": 212441
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 13359,
+        "output_tokens": 4527,
+        "thought_tokens": 0,
+        "total_tokens": 17886
+      },
+      "curator": {
+        "input_tokens": 50799,
+        "output_tokens": 38399,
+        "thought_tokens": 0,
+        "total_tokens": 89198
+      },
+      "synthesis": {
+        "input_tokens": 53007,
+        "output_tokens": 26397,
+        "thought_tokens": 0,
+        "total_tokens": 79404
+      },
+      "judge": {
+        "input_tokens": 25575,
+        "output_tokens": 378,
+        "thought_tokens": 0,
+        "total_tokens": 25953
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 3908,
+        "output_tokens": 293,
+        "thought_tokens": 0,
+        "total_tokens": 4201
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 17005,
+        "output_tokens": 16384,
+        "thought_tokens": 0,
+        "total_tokens": 33389,
+        "elapsed_s": 262.2
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 18498,
+        "output_tokens": 8187,
+        "thought_tokens": 0,
+        "total_tokens": 26685,
+        "elapsed_s": 474.4
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 7831,
+        "output_tokens": 123,
+        "thought_tokens": 0,
+        "total_tokens": 7954
+      },
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 4725,
+        "output_tokens": 4096,
+        "thought_tokens": 0,
+        "total_tokens": 8821
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 17300,
+        "output_tokens": 12944,
+        "thought_tokens": 0,
+        "total_tokens": 30244,
+        "elapsed_s": 402.4
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 16880,
+        "output_tokens": 9339,
+        "thought_tokens": 0,
+        "total_tokens": 26219,
+        "elapsed_s": 540.1
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 8743,
+        "output_tokens": 119,
+        "thought_tokens": 0,
+        "total_tokens": 8862
+      },
+      {
+        "phase": "planner",
+        "model": "gemma4:12b",
+        "input_tokens": 4726,
+        "output_tokens": 138,
+        "thought_tokens": 0,
+        "total_tokens": 4864
+      },
+      {
+        "phase": "curator",
+        "model": "gemma4:12b",
+        "input_tokens": 16494,
+        "output_tokens": 9071,
+        "thought_tokens": 0,
+        "total_tokens": 25565,
+        "elapsed_s": 149.0
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemma4:31b-it-q8_0",
+        "input_tokens": 17629,
+        "output_tokens": 8871,
+        "thought_tokens": 0,
+        "total_tokens": 26500,
+        "elapsed_s": 507.3
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 9001,
+        "output_tokens": 136,
+        "thought_tokens": 0,
+        "total_tokens": 9137
+      }
+    ]
+  }
+}

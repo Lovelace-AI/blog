@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemini-3.1-flash-lite-preview",
+  "passed": true,
+  "total_plan_calls": 18,
+  "items_retrieved": 609,
+  "items_in_context": 78,
+  "unique_sources": 0,
+  "report_words": 3136,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=9.3): The report provides exceptional producer-level detail and specific production volumes (e.g., Kazatomprom's 67.2M lb output) while effectively linking tech-sector demand to structural price shifts, though it slightly lacks historical price context. [supply_demand_grounding=9, producer_specificity=10, risk_assessment=9, market_dynamics=9, analytical_coherence=9, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3136,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 103,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Market Overview",
+          "Supply Landscape",
+          "Demand Landscape",
+          "Key Producers And Market Participants",
+          "Geopolitical And Macro Risk",
+          "Price Outlook"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "supply_demand_grounding": 9,
+          "producer_specificity": 10,
+          "risk_assessment": 9,
+          "market_dynamics": 9,
+          "analytical_coherence": 9,
+          "citation_coverage": 10
+        },
+        "mean_score": 9.33,
+        "reason": "The report provides exceptional producer-level detail and specific production volumes (e.g., Kazatomprom's 67.2M lb output) while effectively linking tech-sector demand to structural price shifts, though it slightly lacks historical price context.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 8089,
+          "output_tokens": 137,
+          "thought_tokens": 0,
+          "total_tokens": 8226
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 59.8,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 10750,
+  "total_synthesis_elapsed_s": 32.8,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 34983,
+      "output_tokens": 10444,
+      "thought_tokens": 1878,
+      "total_tokens": 47305
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 3864,
+        "output_tokens": 758,
+        "thought_tokens": 0,
+        "total_tokens": 4622
+      },
+      "curator": {
+        "input_tokens": 12280,
+        "output_tokens": 3163,
+        "thought_tokens": 0,
+        "total_tokens": 15443
+      },
+      "synthesis": {
+        "input_tokens": 10750,
+        "output_tokens": 6386,
+        "thought_tokens": 1878,
+        "total_tokens": 19014
+      },
+      "judge": {
+        "input_tokens": 8089,
+        "output_tokens": 137,
+        "thought_tokens": 0,
+        "total_tokens": 8226
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 3864,
+        "output_tokens": 758,
+        "thought_tokens": 0,
+        "total_tokens": 4622
+      },
+      {
+        "phase": "curator",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 12280,
+        "output_tokens": 3163,
+        "thought_tokens": 0,
+        "total_tokens": 15443,
+        "elapsed_s": 11.2
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 10750,
+        "output_tokens": 6386,
+        "thought_tokens": 1878,
+        "total_tokens": 19014,
+        "elapsed_s": 32.8
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 8089,
+        "output_tokens": 137,
+        "thought_tokens": 0,
+        "total_tokens": 8226
+      }
+    ]
+  }
+}

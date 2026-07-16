@@ -100,7 +100,55 @@ ARCHETYPES: dict[str, Archetype] = {
             ("citation_coverage", "material claims have inline citations"),
         ],
     ),
+    "commodity_supply_chain_outlook": Archetype(
+        name="commodity_supply_chain_outlook",
+        report_kind="commodity supply chain and price outlook report",
+        sections=[
+            "Market Overview",
+            "Supply Landscape",
+            "Demand Landscape",
+            "Key Producers And Market Participants",
+            "Geopolitical And Macro Risk",
+            "Price Outlook",
+        ],
+        dimensions=[
+            (
+                "supply_demand_grounding",
+                "specific cited supply and demand data, production volumes, and inventory levels",
+            ),
+            (
+                "producer_specificity",
+                "concrete cited evidence about key producers, their capacity, and recent actions",
+            ),
+            (
+                "risk_assessment",
+                "evidence-backed geopolitical, regulatory, and macro risks with specific named actors",
+            ),
+            (
+                "market_dynamics",
+                "cited evidence for price drivers, market structure, and historical price context",
+            ),
+            (
+                "analytical_coherence",
+                "price outlook follows logically from the supply/demand/risk evidence",
+            ),
+            ("citation_coverage", "material claims have inline citations"),
+        ],
+    ),
 }
+
+
+@dataclass(frozen=True)
+class SeedEntity:
+    """A topic seed entity.
+
+    ``flavors`` optionally narrows entity resolution (e.g. ``industry`` or
+    ``commodity`` versus the default ``organization``). String-only YAML seeds
+    remain valid and default to organization.
+    """
+
+    name: str
+    flavors: tuple[str, ...] = ("organization",)
 
 
 @dataclass(frozen=True)
@@ -108,13 +156,61 @@ class TopicSpec:
     slug: str
     archetype: str
     question: str
-    seed_entities: list[str]
+    seed_entities: list[SeedEntity]
     roles: dict[str, str] = field(default_factory=dict)
     market_theme: str = ""
 
     @property
     def archetype_config(self) -> Archetype:
         return ARCHETYPES[self.archetype]
+
+    @property
+    def seed_names(self) -> list[str]:
+        return [seed.name for seed in self.seed_entities]
+
+
+def _normalize_seed_entities(raw_seeds: Any) -> list[SeedEntity]:
+    """Accept string seeds or ``{name, flavors}`` mappings from topic YAML."""
+    if not isinstance(raw_seeds, list) or not raw_seeds:
+        raise ValueError("seed_entities must be a non-empty list")
+    seeds: list[SeedEntity] = []
+    for item in raw_seeds:
+        if isinstance(item, str):
+            name = item.strip()
+            if not name:
+                raise ValueError("seed_entities entries must be non-empty strings")
+            seeds.append(SeedEntity(name=name))
+            continue
+        if isinstance(item, dict):
+            name = str(item.get("name") or "").strip()
+            if not name:
+                raise ValueError(f"seed mapping missing name: {item!r}")
+            flavors_raw = item.get("flavors")
+            if flavors_raw is None and item.get("flavor") is not None:
+                flavors_raw = [item.get("flavor")]
+            if flavors_raw is None:
+                flavors = ("organization",)
+            elif isinstance(flavors_raw, str):
+                text = flavors_raw.strip()
+                if text.startswith("[") and text.endswith("]"):
+                    inner = text[1:-1].strip()
+                    flavors = tuple(
+                        part.strip().strip("'\"")
+                        for part in inner.split(",")
+                        if part.strip()
+                    )
+                else:
+                    flavors = (text,)
+            elif isinstance(flavors_raw, list) and flavors_raw:
+                flavors = tuple(str(f).strip() for f in flavors_raw if str(f).strip())
+            else:
+                raise ValueError(f"invalid flavors for seed {name!r}: {flavors_raw!r}")
+            if not flavors:
+                raise ValueError(f"seed {name!r} has empty flavors")
+            seeds.append(SeedEntity(name=name, flavors=flavors))
+            continue
+        raise ValueError(f"unsupported seed_entities entry: {item!r}")
+    return seeds
 
 
 def load_topic_spec(slug: str, topics_dir: Path = TOPICS_DIR) -> TopicSpec:
@@ -131,7 +227,7 @@ def load_topic_spec(slug: str, topics_dir: Path = TOPICS_DIR) -> TopicSpec:
         question=raw["question"],
         roles=raw.get("roles", {}) or {},
         market_theme=raw.get("market_theme", "") or "",
-        seed_entities=raw["seed_entities"],
+        seed_entities=_normalize_seed_entities(raw["seed_entities"]),
     )
 
 
@@ -143,11 +239,21 @@ def _load_yaml_mapping(path: Path) -> dict[str, Any]:
 
     data: dict[str, Any] = {}
     current_key: str | None = None
+    current_list_item: dict[str, Any] | None = None
+    current_list_subkey: str | None = None
     for raw_line in text.splitlines():
         line = raw_line.rstrip()
         if not line or line.lstrip().startswith("#"):
             continue
         if not line.startswith(" ") and ":" in line:
+            if (
+                current_key is not None
+                and current_list_item is not None
+                and isinstance(data.get(current_key), list)
+            ):
+                data[current_key].append(current_list_item)
+                current_list_item = None
+                current_list_subkey = None
             key, value = line.split(":", 1)
             key = key.strip()
             value = value.strip()
@@ -160,15 +266,61 @@ def _load_yaml_mapping(path: Path) -> dict[str, Any]:
         if current_key is None:
             continue
         stripped = line.strip()
+        indent = len(line) - len(line.lstrip(" "))
         if stripped.startswith("- "):
+            if (
+                current_list_item is not None
+                and isinstance(data.get(current_key), list)
+            ):
+                data[current_key].append(current_list_item)
+                current_list_item = None
+                current_list_subkey = None
             if not isinstance(data[current_key], list):
                 data[current_key] = []
-            data[current_key].append(_unquote(stripped[2:].strip()))
-        elif ":" in stripped:
+            item_body = stripped[2:].strip()
+            if ":" in item_body and not item_body.startswith(("http://", "https://")):
+                ikey, ivalue = item_body.split(":", 1)
+                current_list_item = {ikey.strip(): _unquote(ivalue.strip())}
+                current_list_subkey = None
+            else:
+                data[current_key].append(_unquote(item_body))
+                current_list_item = None
+                current_list_subkey = None
+            continue
+        if current_list_item is not None and ":" in stripped and indent >= 4:
+            key, value = stripped.split(":", 1)
+            key = key.strip()
+            value = value.strip()
+            if value:
+                current_list_item[key] = _unquote(value)
+                current_list_subkey = None
+            else:
+                current_list_item[key] = []
+                current_list_subkey = key
+            continue
+        if (
+            current_list_item is not None
+            and current_list_subkey is not None
+            and stripped.startswith("- ")
+            and indent >= 6
+        ):
+            sub = current_list_item.setdefault(current_list_subkey, [])
+            if not isinstance(sub, list):
+                sub = []
+                current_list_item[current_list_subkey] = sub
+            sub.append(_unquote(stripped[2:].strip()))
+            continue
+        if ":" in stripped and current_list_item is None:
             key, value = stripped.split(":", 1)
             if not isinstance(data[current_key], dict):
                 data[current_key] = {}
             data[current_key][key.strip()] = _unquote(value.strip())
+    if (
+        current_key is not None
+        and current_list_item is not None
+        and isinstance(data.get(current_key), list)
+    ):
+        data[current_key].append(current_list_item)
     return data
 
 
@@ -214,9 +366,14 @@ def outline_text(spec: TopicSpec) -> str:
     lines = [f"# {spec.question}", "", "## Required Entities"]
     for role, entity in spec.roles.items():
         lines.append(f"- **{role.replace('_', ' ').title()}**: {entity}")
-    for entity in spec.seed_entities:
-        if entity not in spec.roles.values():
-            lines.append(f"- {entity}")
+    role_values = set(spec.roles.values())
+    for seed in spec.seed_entities:
+        if seed.name in role_values:
+            continue
+        flavor_note = ""
+        if seed.flavors != ("organization",):
+            flavor_note = f" [{', '.join(seed.flavors)}]"
+        lines.append(f"- {seed.name}{flavor_note}")
     if spec.market_theme:
         lines.extend(["", f"Market/theme: {spec.market_theme}"])
     lines.extend(["", "## Required Sections"])

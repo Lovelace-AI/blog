@@ -1,0 +1,135 @@
+{
+  "datasource": "kg",
+  "model": "gemini-3.1-flash-lite-preview",
+  "passed": true,
+  "total_plan_calls": 15,
+  "items_retrieved": 917,
+  "items_in_context": 74,
+  "unique_sources": 0,
+  "report_words": 3278,
+  "iterations": 1,
+  "verdict": {
+    "passed": true,
+    "reason": "LLM scorecard passed (mean=10.0): The report provides an exceptionally detailed and quantified analysis of the 2026 oil market, utilizing specific production volumes, spare capacity revisions, and named geopolitical events to build a logically sound price trajectory. [supply_demand_grounding=10, producer_specificity=10, risk_assessment=10, market_dynamics=10, analytical_coherence=10, citation_coverage=10]",
+    "criteria": {
+      "depth": {
+        "passed": true,
+        "value": 3278,
+        "threshold": 1500,
+        "unit": "words"
+      },
+      "cited_lines": {
+        "passed": true,
+        "value": 111,
+        "unit": "lines with citations"
+      },
+      "sections": {
+        "passed": true,
+        "value": 6,
+        "found": [
+          "Market Overview",
+          "Supply Landscape",
+          "Demand Landscape",
+          "Key Producers And Market Participants",
+          "Geopolitical And Macro Risk",
+          "Price Outlook"
+        ],
+        "missing": []
+      },
+      "llm_scorecard": {
+        "passed": true,
+        "scores": {
+          "supply_demand_grounding": 10,
+          "producer_specificity": 10,
+          "risk_assessment": 10,
+          "market_dynamics": 10,
+          "analytical_coherence": 10,
+          "citation_coverage": 10
+        },
+        "mean_score": 10.0,
+        "reason": "The report provides an exceptionally detailed and quantified analysis of the 2026 oil market, utilizing specific production volumes, spare capacity revisions, and named geopolitical events to build a logically sound price trajectory.",
+        "model": "gemini-3-flash-preview",
+        "usage": {
+          "input_tokens": 9471,
+          "output_tokens": 130,
+          "thought_tokens": 0,
+          "total_tokens": 9601
+        }
+      }
+    }
+  },
+  "total_elapsed_s": 117.3,
+  "setup_elapsed_s": 0.0,
+  "total_synthesis_input_tokens": 14246,
+  "total_synthesis_elapsed_s": 81.9,
+  "llm_usage": {
+    "total": {
+      "input_tokens": 44715,
+      "output_tokens": 12213,
+      "thought_tokens": 1408,
+      "total_tokens": 58336
+    },
+    "by_phase": {
+      "planner": {
+        "input_tokens": 3887,
+        "output_tokens": 631,
+        "thought_tokens": 0,
+        "total_tokens": 4518
+      },
+      "curator": {
+        "input_tokens": 17111,
+        "output_tokens": 3690,
+        "thought_tokens": 0,
+        "total_tokens": 20801
+      },
+      "synthesis": {
+        "input_tokens": 14246,
+        "output_tokens": 7762,
+        "thought_tokens": 1408,
+        "total_tokens": 23416
+      },
+      "judge": {
+        "input_tokens": 9471,
+        "output_tokens": 130,
+        "thought_tokens": 0,
+        "total_tokens": 9601
+      }
+    },
+    "events": [
+      {
+        "phase": "planner",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 3887,
+        "output_tokens": 631,
+        "thought_tokens": 0,
+        "total_tokens": 4518
+      },
+      {
+        "phase": "curator",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 17111,
+        "output_tokens": 3690,
+        "thought_tokens": 0,
+        "total_tokens": 20801,
+        "elapsed_s": 22.7
+      },
+      {
+        "phase": "synthesis",
+        "model": "gemini-3.1-flash-lite-preview",
+        "input_tokens": 14246,
+        "output_tokens": 7762,
+        "thought_tokens": 1408,
+        "total_tokens": 23416,
+        "elapsed_s": 81.9
+      },
+      {
+        "phase": "judge",
+        "model": "gemini-3-flash-preview",
+        "input_tokens": 9471,
+        "output_tokens": 130,
+        "thought_tokens": 0,
+        "total_tokens": 9601
+      }
+    ]
+  }
+}

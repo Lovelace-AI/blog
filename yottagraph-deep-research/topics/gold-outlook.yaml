@@ -1,0 +1,15 @@
+slug: gold-outlook
+archetype: commodity_supply_chain_outlook
+question: What factors are driving gold toward the $4,000+ range, and what are the key downside risks to that thesis?
+market_theme: gold market and safe-haven demand
+seed_entities:
+  - name: Gold
+    flavors: [commodity]
+  - name: Gold Ores
+    flavors: [industry]
+  - name: Metal Mining
+    flavors: [industry]
+  - Newmont Corporation
+  - Barrick Gold
+  - Agnico Eagle Mines
+  - World Gold Council
